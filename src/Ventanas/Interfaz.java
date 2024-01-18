@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package so.proyecto1;
+package Ventanas;
 
 /**
  *
@@ -580,7 +580,7 @@ public class Interfaz extends javax.swing.JFrame {
                                                         .addComponent(jLabel13)
                                                         .addComponent(jLabel9))
                                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addComponent(jTextField40, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
+                                                        .addComponent(jTextField40, javax.swing.GroupLayout.Alignment.TRAILING)
                                                         .addComponent(jTextField39, javax.swing.GroupLayout.Alignment.TRAILING)
                                                         .addComponent(jTextField38, javax.swing.GroupLayout.Alignment.TRAILING)))
                                                 .addGap(18, 18, 18)))
@@ -624,7 +624,7 @@ public class Interfaz extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jButton27))
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+                                        .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jTextField15, javax.swing.GroupLayout.Alignment.LEADING))))
                             .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
@@ -693,19 +693,17 @@ public class Interfaz extends javax.swing.JFrame {
                                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                     .addComponent(jLabel33)
                                                     .addGap(18, 18, 18)
-                                                    .addComponent(jButton30)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                                    .addComponent(jButton30))
                                                 .addGroup(layout.createSequentialGroup()
                                                     .addComponent(jLabel35)
                                                     .addGap(52, 52, 52)))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel4)
-                                                .addGap(100, 100, 100)))
+                                            .addComponent(jLabel4))
+                                        .addGap(6, 6, 6)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                                 .addComponent(jTextField17, javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jTextField16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)))
+                                                .addComponent(jTextField16, javax.swing.GroupLayout.Alignment.LEADING)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jButton29))
                                     .addComponent(jLabel37)))
