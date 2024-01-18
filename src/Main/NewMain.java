@@ -9,7 +9,7 @@ package Main;
  *
  * @author User
  */
-public class SOProyecto1 {
+public class NewMain {
 
     /**
      * @param args the command line arguments
