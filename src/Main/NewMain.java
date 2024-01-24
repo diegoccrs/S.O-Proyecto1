@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Main;
-
+import Ventanas.Interfaz;
 /**
  *
  * @author User
@@ -16,6 +16,9 @@ public class NewMain {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Interfaz inicio = new Interfaz();
+        inicio.setLocationRelativeTo(null);
+        inicio.show();
     }
     
 }
