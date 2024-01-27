@@ -6,12 +6,12 @@ package Ventanas;
 
 /**
  *
- * @author Kevin
+ * @author Diego
  */
 public class Interfaz extends javax.swing.JFrame {
 
     /**
-     * Creates new form Interfaz2
+     * Creates new form Interfaz
      */
     public Interfaz() {
         initComponents();
