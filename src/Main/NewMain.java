@@ -12,9 +12,13 @@ import Worker.Assembler;
 import Worker.Developer;
 import Worker.Worker;
 import java.util.concurrent.Semaphore;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  *
- * @author User
+ * @author Diego
  */
 public class NewMain {
 
@@ -49,6 +53,14 @@ public class NewMain {
         trabajador5.start();
         ensamblador1.start();
         
+        //Creacion de archivo TXT 
+        try {
+            File file = new File("datos.txt");
+            FileWriter fileWriter = new FileWriter(file, true);
+            fileWriter.write("Duración en segundos del dia: \nDeadline de entrega: \nCantidad inicial  de trabajadores: \nCantidad inicial de ensambladores: ");
+            fileWriter.close();
+        } catch (IOException ex) {
+            System.out.println(ex);
     }
-    
+  }
 }
