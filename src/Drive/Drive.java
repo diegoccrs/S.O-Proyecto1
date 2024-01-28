@@ -4,6 +4,7 @@
  */
 package Drive;
 
+import Main.ManejadorInterfaz;
 import java.util.concurrent.Semaphore;
 
 /**
@@ -24,6 +25,10 @@ public class Drive {
     
     //Semaforos
     private Semaphore salarioAccMutex = new Semaphore(1);
+    private Semaphore diasMutex = new Semaphore(1);
+    
+    private int deadline;
+    private int estadoDeadline;
     
     //Salario acumulado
     private float animadoresAcc = 0;
@@ -51,7 +56,10 @@ public class Drive {
     private int faltas = 0;
     private int salarioDescontado = 0;
     
-    public Drive(){
+    
+    public Drive(int deadline){
+        this.deadline = deadline;
+        this.estadoDeadline = deadline;
     }
     
     public void addSalary(int type,float salary){
@@ -471,6 +479,56 @@ public class Drive {
      */
     public void setDirectorAcc(float directorAcc) {
         this.directorAcc = directorAcc;
+    }
+
+    /**
+     * @return the diasMutex
+     */
+    public Semaphore getDiasMutex() {
+        return diasMutex;
+    }
+
+    /**
+     * @param diasMutex the diasMutex to set
+     */
+    public void setDiasMutex(Semaphore diasMutex) {
+        this.diasMutex = diasMutex;
+    }
+
+    /**
+     * @return the deadline
+     */
+    public int getDeadline() {
+        return deadline;
+    }
+
+    /**
+     * @param deadline the deadline to set
+     */
+    public void setDeadline(int deadline) {
+        this.deadline = deadline;
+    }
+
+    /**
+     * @return the estadoDeadline
+     */
+    public int getEstadoDeadline() {
+        return estadoDeadline;
+    }
+
+    /**
+     * @param estadoDeadline the estadoDeadline to set
+     */
+    public void setEstadoDeadline(int estadoDeadlineNuevo) {
+        if(estadoDeadlineNuevo == -1){ //SI ES IGUAL A -1, REINICIA EL CONTADOR
+            this.estadoDeadline = deadline;
+            ManejadorInterfaz.getInterfaz().cambiarDiasLanzamientoDisney(estadoDeadline);
+        }else{ // SINO ES IGUAL A 0, SIGUE DISMINUYENDO DE 1 EN 1
+            this.estadoDeadline = estadoDeadlineNuevo;
+            ManejadorInterfaz.getInterfaz().cambiarDiasLanzamientoDisney(estadoDeadline);
+        }
+                
+        
     }
 
 }

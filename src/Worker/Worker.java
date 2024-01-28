@@ -4,6 +4,7 @@
  */
 package Worker;
 
+import Companies.Company;
 import Drive.Drive;
 import static java.lang.Thread.sleep;
 import java.util.concurrent.Semaphore;
@@ -15,24 +16,22 @@ import java.util.logging.Logger;
  * @author Kevin
  */
 public abstract class Worker extends Thread{
+    private Company compania;
     private float salario;
     private float salarioAcumulado;
     private String nombre;
     private Semaphore mutex;
     private int tipo;
-    private Drive drive;
     private float CantidadDeTrabajoPorDia;
-    private int TipoCompania;
     
-    public Worker(int tipo,float salario, String nombre, Semaphore mutex,Drive drive,int tipoCompania) {
+    public Worker(int tipo,float salario, String nombre, Semaphore mutex,Company compania) {
            this.salarioAcumulado = 0;
            this.salario = salario;
            this.nombre = nombre;
            this.mutex = mutex;
            this.tipo = tipo;
-           this.drive = drive;
            this.CantidadDeTrabajoPorDia = obtainCantidadPorDia();
-           this.TipoCompania = tipoCompania;
+           this.compania = compania;
            
            
     }
@@ -50,6 +49,8 @@ public abstract class Worker extends Thread{
             numero_retorno = (float) 0.34;
         }else if(this.getTipo() == 5){
             numero_retorno = (float) 0.5;
+        }else if(this.getTipo() == 6){
+            numero_retorno = (float) 1.0;
         }
         
         return numero_retorno;
@@ -129,20 +130,6 @@ public abstract class Worker extends Thread{
     }
 
     /**
-     * @return the drive
-     */
-    public Drive getDrive() {
-        return drive;
-    }
-
-    /**
-     * @param drive the drive to set
-     */
-    public void setDrive(Drive drive) {
-        this.drive = drive;
-    }
-
-    /**
      * @return the CantidadDeTrabajoPorDia
      */
     public float getCantidadDeTrabajoPorDia() {
@@ -157,18 +144,19 @@ public abstract class Worker extends Thread{
     }
 
     /**
-     * @return the TipoCompania
+     * @return the compania
      */
-    public int getTipoCompania() {
-        return TipoCompania;
+    public Company getCompania() {
+        return compania;
     }
 
     /**
-     * @param TipoCompania the TipoCompania to set
+     * @param compania the compania to set
      */
-    public void setTipoCompania(int TipoCompania) {
-        this.TipoCompania = TipoCompania;
+    public void setCompania(Company compania) {
+        this.compania = compania;
     }
+
 }
 
 

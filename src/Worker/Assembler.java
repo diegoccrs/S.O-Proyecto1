@@ -4,6 +4,7 @@
  */
 package Worker;
 
+import Companies.Company;
 import Drive.Drive;
 import static java.lang.Thread.sleep;
 import java.util.concurrent.Semaphore;
@@ -15,12 +16,10 @@ import java.util.logging.Logger;
  * @author Kevin
  */
 public class Assembler extends Worker{
-    int duracionDia;
     float salarioAcc;
     float acc;
-    public Assembler(int type,float salary, String name, Semaphore mutex,Drive drive,int CompanyType) {
-        super(type,salary, name, mutex,drive,CompanyType);
-        this.duracionDia = 1000;
+    public Assembler(int type,float salary, String name, Semaphore mutex,Company compania) {
+        super(type,salary, name, mutex,compania);
         this.salarioAcc = 0;
         this.acc = 0;
     }
@@ -32,7 +31,7 @@ public class Assembler extends Worker{
                 obtainSalary();
                 work();
                 //System.out.println("Trabajador: "+ this.name + " gana: "+this.salaryAcc+"$");
-                sleep(this.duracionDia);
+                sleep(this.getCompania().getDuracionDia());
             } catch (InterruptedException ex) {
                 Logger.getLogger(Developer.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -49,22 +48,22 @@ public class Assembler extends Worker{
     private boolean verificarPartesNecesarias(){
         boolean respuesta = false;
         //Si es Cartoon Network y el drive tiene suficientes partes para hacer un capitulo estandar entrara en el siguiente if
-        if(this.getTipoCompania() == 0 && this.getDrive().getGuiones() >= 1 && this.getDrive().getEscenarios() >= 2 && this.getDrive().getAnimaciones() >= 6 && this.getDrive().getDoblajes() >= 5){
+        if(this.getCompania().getTipoCompania() == 0 && this.getCompania().getDrive().getGuiones() >= 1 && this.getCompania().getDrive().getEscenarios() >= 2 && this.getCompania().getDrive().getAnimaciones() >= 6 && this.getCompania().getDrive().getDoblajes() >= 5){
             //si al assembler le toca hacer un capitulo estandar entrara en el siguiente if
-            if((this.getDrive().getCapitulosEstandar()+this.getDrive().getCapitulosPlotTwist()+1)%4 != 0){
+            if((this.getCompania().getDrive().getCapitulosEstandar()+this.getCompania().getDrive().getCapitulosPlotTwist()+1)%4 != 0){
                 respuesta = true;
             //si al assembler le toca hacer un capitulo PlotTwist y el drive tiene los guiones plotTwist necesarios, entrara en el siguiente else if
-            }else if(((this.getDrive().getCapitulosEstandar()+this.getDrive().getCapitulosPlotTwist()+1)%4 == 0) && this.getDrive().getGuionesPlotTwist() >= 1){
+            }else if(((this.getCompania().getDrive().getCapitulosEstandar()+this.getCompania().getDrive().getCapitulosPlotTwist()+1)%4 == 0) && this.getCompania().getDrive().getGuionesPlotTwist() >= 1){
                 respuesta = true;
             }
             
         //Si es Disney channel y el drive tiene suficientes partes para hacer un capitulo estandar entrara en el siguiente if
-        }else if(this.getTipoCompania() == 1 && this.getDrive().getGuiones() >= 1 && this.getDrive().getEscenarios() >= 1 && this.getDrive().getAnimaciones() >= 2 && this.getDrive().getDoblajes() >= 4){
+        }else if(this.getCompania().getTipoCompania() == 1 && this.getCompania().getDrive().getGuiones() >= 1 && this.getCompania().getDrive().getEscenarios() >= 1 && this.getCompania().getDrive().getAnimaciones() >= 2 && this.getCompania().getDrive().getDoblajes() >= 4){
             //si le toca hacer un capitulo estandar entrara
-            if((this.getDrive().getCapitulosEstandar()+this.getDrive().getCapitulosPlotTwist()+1)%3 != 0){
+            if((this.getCompania().getDrive().getCapitulosEstandar()+this.getCompania().getDrive().getCapitulosPlotTwist()+1)%3 != 0){
                 respuesta = true;
             //si al assembler le toca hacer un capitulo PlotTwist y el drive tiene los guiones plotTwist necesarios, entrara en el siguiente else if
-            }else if(((this.getDrive().getCapitulosEstandar()+this.getDrive().getCapitulosPlotTwist()+1)%3 == 0) && this.getDrive().getGuionesPlotTwist() >= 3){
+            }else if(((this.getCompania().getDrive().getCapitulosEstandar()+this.getCompania().getDrive().getCapitulosPlotTwist()+1)%3 == 0) && this.getCompania().getDrive().getGuionesPlotTwist() >= 3){
                 respuesta = true;
             }
         }
@@ -79,7 +78,7 @@ public class Assembler extends Worker{
             if (this.acc >= 1){
                     try {
                         this.getMutex().acquire(); //wait
-                        this.getDrive().addChapter(this.getTipoCompania());//critica
+                        this.getCompania().getDrive().addChapter(this.getCompania().getTipoCompania());//critica
                         this.getMutex().release();// signal
                         this.acc = 0;
 

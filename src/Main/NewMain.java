@@ -7,15 +7,14 @@ package Main;
 import Companies.Company;
 import Drive.Drive;
 import EDD.Nodo;
-import Ventanas.Interfaz;
 import Worker.Assembler;
 import Worker.Developer;
+import Worker.ProjectManager;
 import Worker.Worker;
 import java.util.concurrent.Semaphore;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
 /**
  *
  * @author Diego
@@ -30,16 +29,18 @@ public class NewMain {
         //Interfaz inicio = new Interfaz();
         //inicio.setLocationRelativeTo(null);
         //inicio.show();
+        ManejadorInterfaz.getInterfaz().show();
         Semaphore mutex = new Semaphore(1);
-        Drive drive = new Drive();
-        Company compania = new Company(drive,0);
+        Drive drive = new Drive(7);
+        Company compania = new Company(drive,0,1000);
      
-        Developer trabajador1 = new Developer(0,240, "perez", mutex,drive,1);
-        Developer trabajador2 = new Developer(1,100, "Juan", mutex,drive,1);
-        Developer trabajador3 = new Developer(2,300, "Julián", mutex,drive,1);
-        Developer trabajador4 = new Developer(3,300, "alvaro", mutex,drive,1);
-        Developer trabajador5 = new Developer(4,300, "pepe", mutex,drive,1);
-        Assembler ensamblador1 = new Assembler(5,40,"albeto",mutex,drive,1);
+        Developer trabajador1 = new Developer(0,240, "perez", mutex,compania);
+        Developer trabajador2 = new Developer(1,100, "Juan", mutex,compania);
+        Developer trabajador3 = new Developer(2,300, "Julián", mutex,compania);
+        Developer trabajador4 = new Developer(3,300, "alvaro", mutex,compania);
+        Developer trabajador5 = new Developer(4,300, "pepe", mutex,compania);
+        Assembler ensamblador1 = new Assembler(5,40,"albeto",mutex,compania);
+        ProjectManager pm = new ProjectManager(6,240,"pedro",mutex,compania);
         
         //compania..insertBegin(trabajador1);
         //compania.getDevelopers().insertBegin(ensamblador1);
@@ -52,6 +53,7 @@ public class NewMain {
         trabajador4.start();
         trabajador5.start();
         ensamblador1.start();
+        pm.start();
         
         //Creacion de archivo TXT 
         try {
@@ -61,6 +63,8 @@ public class NewMain {
             fileWriter.close();
         } catch (IOException ex) {
             System.out.println(ex);
+        }
+        
     }
-  }
+    
 }
