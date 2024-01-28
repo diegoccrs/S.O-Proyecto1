@@ -14,6 +14,7 @@ import java.util.concurrent.Semaphore;
  * @author Kevin
  */
 public class Company {
+    private int duracionDia;
     private int tipoCompania;
     private Drive drive;
     private float ganancias; //Ganancias
@@ -26,7 +27,7 @@ public class Company {
     private ListaDoble actoresDoblaje; //Actores de doblaje
     private ListaDoble guionistasPlotTwist; //guionistas de plotTwist
     
-    public Company(Drive drive,int companyType) {
+    public Company(Drive drive,int companyType,int duracionDia) {
         this.tipoCompania = companyType;
         this.drive = drive;
         this.ganancias = 0;
@@ -38,6 +39,7 @@ public class Company {
         this.guionistas = new ListaDoble();
         this.actoresDoblaje = new ListaDoble();
         this.guionistasPlotTwist = new ListaDoble();
+        this.duracionDia = duracionDia;
     }
 
     /**
@@ -194,5 +196,18 @@ public class Company {
         this.guionistasPlotTwist = guionistasPlotTwist;
     }
 
+    /**
+     * @return the duracionDia
+     */
+    public int getDuracionDia() {
+        return duracionDia;
+    }
+
+    /**
+     * @param duracionDia the duracionDia to set
+     */
+    public void setDuracionDia(int duracionDia) {
+        this.duracionDia = duracionDia;
+    }
     
 }

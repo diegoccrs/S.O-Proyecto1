@@ -1,13 +1,15 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Ventanas;
 
+import Companies.Company;
+import Drive.Drive;
+
 /**
  *
- * @author User
+ * @author Kevin
  */
 public class Interfaz extends javax.swing.JFrame {
 
@@ -19,6 +21,10 @@ public class Interfaz extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
+    
+    public void cambiarDiasLanzamientoDisney(int t){
+        diasEntregaDisney.setText(Integer.toString(t));
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -29,7 +35,9 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -46,131 +54,127 @@ public class Interfaz extends javax.swing.JFrame {
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        velmaInventarioIntroMaximo = new javax.swing.JTextField();
+        velmaInventarioCreditosMaximo = new javax.swing.JTextField();
+        velmaInventarioInicioMaximo = new javax.swing.JTextField();
+        velmaInventarioCierreMaximo = new javax.swing.JTextField();
+        velmaInventarioPlottwistMaximo = new javax.swing.JTextField();
+        velmaInventarioIntroMaximo1 = new javax.swing.JTextField();
+        velmaInventarioCreditosMaximo1 = new javax.swing.JTextField();
+        velmaInventarioInicioMaximo1 = new javax.swing.JTextField();
+        velmaInventarioCierreMaximo1 = new javax.swing.JTextField();
+        velmaInventarioPlottwistMaximo1 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        velmaPMFaltas = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        pmActividad = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        pmSalario = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        pmActividad1 = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        pmActividad2 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        pmActividad3 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        pmActividad4 = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
         jButton21 = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
         jButton22 = new javax.swing.JButton();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jLabel32 = new javax.swing.JLabel();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jLabel33 = new javax.swing.JLabel();
-        jButton30 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField38 = new javax.swing.JTextField();
-        jTextField39 = new javax.swing.JTextField();
-        jTextField40 = new javax.swing.JTextField();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jTextField41 = new javax.swing.JTextField();
-        jButton7 = new javax.swing.JButton();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        textoDLC = new javax.swing.JLabel();
-        textoGuiones = new javax.swing.JLabel();
-        textoNiveles = new javax.swing.JLabel();
-        textoSprites = new javax.swing.JLabel();
-        textoSistemas = new javax.swing.JLabel();
-        guionProgressBar = new javax.swing.JProgressBar();
-        levelsProgressBar = new javax.swing.JProgressBar();
-        spritesProgressBar = new javax.swing.JProgressBar();
-        siistemasProgressBar = new javax.swing.JProgressBar();
-        DLCProgressBar = new javax.swing.JProgressBar();
-        dlcsLabel = new javax.swing.JLabel();
-        guionesLabel = new javax.swing.JLabel();
-        spritesLabel = new javax.swing.JLabel();
-        sistemasLabel = new javax.swing.JLabel();
-        guionesCostosLabel = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        textoDLC1 = new javax.swing.JLabel();
-        DLCProgressBar1 = new javax.swing.JProgressBar();
-        dlcsLabel1 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        guionesCostosLabel1 = new javax.swing.JLabel();
-        guionesCostosLabel3 = new javax.swing.JLabel();
-        guionesCostosLabel6 = new javax.swing.JLabel();
-        textoDLC2 = new javax.swing.JLabel();
-        textoGuiones1 = new javax.swing.JLabel();
-        textoNiveles1 = new javax.swing.JLabel();
-        textoSprites1 = new javax.swing.JLabel();
-        textoSistemas1 = new javax.swing.JLabel();
-        guionProgressBar1 = new javax.swing.JProgressBar();
-        levelsProgressBar1 = new javax.swing.JProgressBar();
-        spritesProgressBar1 = new javax.swing.JProgressBar();
-        siistemasProgressBar1 = new javax.swing.JProgressBar();
-        DLCProgressBar2 = new javax.swing.JProgressBar();
-        dlcsLabel2 = new javax.swing.JLabel();
-        guionesLabel1 = new javax.swing.JLabel();
-        nivelesLabel1 = new javax.swing.JLabel();
-        spritesLabel1 = new javax.swing.JLabel();
-        sistemasLabel1 = new javax.swing.JLabel();
-        guionesCostosLabel4 = new javax.swing.JLabel();
-        textoDLC3 = new javax.swing.JLabel();
-        DLCProgressBar3 = new javax.swing.JProgressBar();
-        dlcsLabel3 = new javax.swing.JLabel();
-        guionesCostosLabel5 = new javax.swing.JLabel();
-        guionesCostosLabel7 = new javax.swing.JLabel();
-        guionesCostosLabel8 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jTextField42 = new javax.swing.JTextField();
-        jTextField43 = new javax.swing.JTextField();
-        jTextField44 = new javax.swing.JTextField();
         jLabel50 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
-        jTextField45 = new javax.swing.JTextField();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        nivelesLabel2 = new javax.swing.JLabel();
-
-        jLabel1.setText("jLabel1");
+        jLabel25 = new javax.swing.JLabel();
+        velmaInventarioIntroMaximo2 = new javax.swing.JTextField();
+        velmaInventarioCreditosMaximo2 = new javax.swing.JTextField();
+        velmaInventarioInicioMaximo2 = new javax.swing.JTextField();
+        velmaInventarioCierreMaximo2 = new javax.swing.JTextField();
+        velmaInventarioPlottwistMaximo2 = new javax.swing.JTextField();
+        velmaInventarioIntroMaximo3 = new javax.swing.JTextField();
+        velmaInventarioCreditosMaximo3 = new javax.swing.JTextField();
+        velmaInventarioInicioMaximo3 = new javax.swing.JTextField();
+        velmaInventarioCierreMaximo3 = new javax.swing.JTextField();
+        velmaInventarioPlottwistMaximo3 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        velmaPMFaltas1 = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        pmActividad5 = new javax.swing.JTextField();
+        jLabel40 = new javax.swing.JLabel();
+        pmSalario1 = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        pmActividad6 = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        pmActividad7 = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        pmActividad8 = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        diasEntregaDisney = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setText("CANTIDAD DE TRABAJADORES ACTIVOS");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, -1, -1));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jTabbedPane1.addTab("Inicio", jPanel1);
 
-        jLabel5.setText("1.GUIONISTAS ");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, -1, -1));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setText("2.DISEÑADORES DE ESCENARIOS");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
+        jLabel3.setText("TRABAJADORES");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
-        jLabel9.setText("3.ANIMADORES DE PERSONAJES");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, -1));
+        jLabel5.setText("GUIONISTAS ");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
-        jLabel11.setText("4.ACTORES DE DOBLAJE");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, -1, -1));
+        jLabel7.setText("DISEÑADORES DE ESCENARIOS");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
-        jLabel13.setText("5.GUIONISTAS DE PLOT TWIST");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, -1, -1));
+        jLabel9.setText("ANIMADORES DE PERSONAJES");
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+
+        jLabel11.setText("ACTORES DE DOBLAJE");
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+
+        jLabel13.setText("GUIONISTAS DE PLOT TWIST");
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
         jButton1.setText("-");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -178,7 +182,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, -1, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
 
         jButton2.setText("-");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -186,7 +190,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, -1, -1));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
 
         jButton3.setText("-");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -194,7 +198,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, -1, -1));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
 
         jButton4.setText("-");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -202,7 +206,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, -1, -1));
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
 
         jButton5.setText("-");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -210,7 +214,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, -1, -1));
+        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
 
         jButton11.setText("+");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -218,7 +222,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton11ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, -1, -1));
+        jPanel2.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
 
         jButton12.setText("+");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -226,7 +230,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton12ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, -1, -1));
+        jPanel2.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
 
         jButton13.setText("+");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
@@ -234,7 +238,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton13ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, -1, -1));
+        jPanel2.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
 
         jButton14.setText("+");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -242,7 +246,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton14ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, -1, -1));
+        jPanel2.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
 
         jButton15.setText("+");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
@@ -250,15 +254,304 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton15ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, -1, -1));
+        jPanel2.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
 
-        jButton17.setText("+");
+        jLabel43.setText("ACTIVOS");
+        jPanel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
+
+        jLabel44.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel44.setText("0");
+        jPanel2.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 30, -1));
+
+        jLabel46.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel46.setText("0");
+        jPanel2.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 30, -1));
+
+        jLabel45.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel45.setText("0");
+        jPanel2.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 30, -1));
+
+        jLabel47.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel47.setText("0");
+        jPanel2.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 30, -1));
+
+        jLabel49.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel49.setText("0");
+        jPanel2.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 30, -1));
+
+        jLabel14.setText("ENSAMBLADORES");
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+
+        jButton6.setText("-");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, -1));
+
+        jButton16.setText("+");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
+
+        jLabel48.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel48.setText("0");
+        jPanel2.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 30, -1));
+
+        jLabel2.setText("CAPACIDAD DE DRIVE");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
+
+        jLabel4.setText("ACTUAL");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, -1, -1));
+
+        jLabel6.setText("MAXIMA");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
+
+        velmaInventarioIntroMaximo.setEditable(false);
+        velmaInventarioIntroMaximo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioIntroMaximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioIntroMaximoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioIntroMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 40, -1));
+
+        velmaInventarioCreditosMaximo.setEditable(false);
+        velmaInventarioCreditosMaximo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCreditosMaximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioCreditosMaximoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioCreditosMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 40, -1));
+
+        velmaInventarioInicioMaximo.setEditable(false);
+        velmaInventarioInicioMaximo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioInicioMaximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioInicioMaximoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioInicioMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 40, -1));
+
+        velmaInventarioCierreMaximo.setEditable(false);
+        velmaInventarioCierreMaximo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCierreMaximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioCierreMaximoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioCierreMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 40, -1));
+
+        velmaInventarioPlottwistMaximo.setEditable(false);
+        velmaInventarioPlottwistMaximo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioPlottwistMaximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioPlottwistMaximoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioPlottwistMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 250, 40, -1));
+
+        velmaInventarioIntroMaximo1.setEditable(false);
+        velmaInventarioIntroMaximo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioIntroMaximo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioIntroMaximo1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioIntroMaximo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 40, -1));
+
+        velmaInventarioCreditosMaximo1.setEditable(false);
+        velmaInventarioCreditosMaximo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCreditosMaximo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioCreditosMaximo1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioCreditosMaximo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 40, -1));
+
+        velmaInventarioInicioMaximo1.setEditable(false);
+        velmaInventarioInicioMaximo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioInicioMaximo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioInicioMaximo1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioInicioMaximo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 40, -1));
+
+        velmaInventarioCierreMaximo1.setEditable(false);
+        velmaInventarioCierreMaximo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCierreMaximo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioCierreMaximo1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioCierreMaximo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 40, -1));
+
+        velmaInventarioPlottwistMaximo1.setEditable(false);
+        velmaInventarioPlottwistMaximo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioPlottwistMaximo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioPlottwistMaximo1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioPlottwistMaximo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, 40, -1));
+
+        jLabel32.setText("PROJECT MANAGER");
+        jPanel2.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
+
+        velmaPMFaltas.setEditable(false);
+        velmaPMFaltas.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaPMFaltas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaPMFaltasActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaPMFaltas, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, 140, -1));
+
+        jLabel34.setText("ACTIVIDAD");
+        jPanel2.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
+
+        jLabel35.setText("SALARIO");
+        jPanel2.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, -1, -1));
+
+        pmActividad.setEditable(false);
+        pmActividad.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividadActionPerformed(evt);
+            }
+        });
+        jPanel2.add(pmActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 140, -1));
+
+        jLabel36.setText("FALTAS");
+        jPanel2.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, -1, -1));
+
+        pmSalario.setEditable(false);
+        pmSalario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmSalario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmSalarioActionPerformed(evt);
+            }
+        });
+        jPanel2.add(pmSalario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 140, -1));
+
+        jLabel8.setText("DIRECTOR");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
+
+        pmActividad1.setEditable(false);
+        pmActividad1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(pmActividad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 140, -1));
+
+        jLabel37.setText("ACTIVIDAD");
+        jPanel2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
+
+        jLabel10.setText("CANTIDAD DE CAPITULOS LISTOS");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
+
+        pmActividad2.setEditable(false);
+        pmActividad2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(pmActividad2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 60, -1));
+
+        jLabel12.setText("DIAS PARA LA ENTREGA");
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
+
+        pmActividad3.setEditable(false);
+        pmActividad3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(pmActividad3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 140, -1));
+
+        jLabel15.setText("DEADLINE");
+        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
+
+        pmActividad4.setEditable(false);
+        pmActividad4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad4ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(pmActividad4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, 60, -1));
+
+        jTabbedPane1.addTab("Cartoon Network", jPanel2);
+
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel16.setText("TRABAJADORES");
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
+
+        jLabel17.setText("GUIONISTAS ");
+        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+
+        jLabel18.setText("DISEÑADORES DE ESCENARIOS");
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+
+        jLabel19.setText("ANIMADORES DE PERSONAJES");
+        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+
+        jLabel20.setText("ACTORES DE DOBLAJE");
+        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+
+        jLabel21.setText("GUIONISTAS DE PLOT TWIST");
+        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
+
+        jButton7.setText("-");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+
+        jButton8.setText("-");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
+
+        jButton9.setText("-");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
+
+        jButton10.setText("-");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
+
+        jButton17.setText("-");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton17ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 190, -1, -1));
+        jPanel3.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
 
         jButton18.setText("+");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
@@ -266,7 +559,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton18ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 230, -1, -1));
+        jPanel3.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
 
         jButton19.setText("+");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
@@ -274,7 +567,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton19ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 270, -1, -1));
+        jPanel3.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
 
         jButton20.setText("+");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
@@ -282,10 +575,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton20ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 310, -1, -1));
-
-        jLabel14.setText("2.DISEÑADORES DE ESCENARIOS");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 230, -1, -1));
+        jPanel3.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
 
         jButton21.setText("+");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
@@ -293,30 +583,41 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton21ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 350, -1, -1));
+        jPanel3.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
 
-        jLabel15.setText("3.ANIMADORES DE PERSONAJES");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 280, -1, -1));
-
-        jLabel16.setText("4.ACTORES DE DOBLAJE");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 320, -1, -1));
-
-        jButton22.setText("-");
+        jButton22.setText("+");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton22ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 200, -1, -1));
+        jPanel3.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
 
-        jLabel17.setText("5.GUIONISTAS DE PLOT TWIST");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 360, -1, -1));
+        jLabel50.setText("ACTIVOS");
+        jPanel3.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
 
-        jLabel18.setText("CANTIDAD DE TRABAJADORES ACTIVOS");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 160, -1, -1));
+        jLabel51.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel51.setText("0");
+        jPanel3.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 30, -1));
 
-        jLabel19.setText("1.GUIONISTAS ");
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 200, -1, -1));
+        jLabel52.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel52.setText("0");
+        jPanel3.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 30, -1));
+
+        jLabel53.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel53.setText("0");
+        jPanel3.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 30, -1));
+
+        jLabel54.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel54.setText("0");
+        jPanel3.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 30, -1));
+
+        jLabel55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel55.setText("0");
+        jPanel3.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 30, -1));
+
+        jLabel22.setText("ENSAMBLADORES");
+        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
 
         jButton23.setText("-");
         jButton23.addActionListener(new java.awt.event.ActionListener() {
@@ -324,419 +625,230 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton23ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 230, -1, -1));
+        jPanel3.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, -1));
 
-        jButton24.setText("-");
+        jButton24.setText("+");
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton24ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 270, -1, -1));
+        jPanel3.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
 
-        jButton25.setText("-");
-        jButton25.addActionListener(new java.awt.event.ActionListener() {
+        jLabel56.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel56.setText("0");
+        jPanel3.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 30, -1));
+
+        jLabel23.setText("CAPACIDAD DE DRIVE");
+        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
+
+        jLabel24.setText("ACTUAL");
+        jPanel3.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, -1, -1));
+
+        jLabel25.setText("MAXIMA");
+        jPanel3.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
+
+        velmaInventarioIntroMaximo2.setEditable(false);
+        velmaInventarioIntroMaximo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioIntroMaximo2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton25ActionPerformed(evt);
+                velmaInventarioIntroMaximo2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 310, -1, -1));
+        jPanel3.add(velmaInventarioIntroMaximo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 40, -1));
 
-        jButton26.setText("-");
-        jButton26.addActionListener(new java.awt.event.ActionListener() {
+        velmaInventarioCreditosMaximo2.setEditable(false);
+        velmaInventarioCreditosMaximo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCreditosMaximo2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton26ActionPerformed(evt);
+                velmaInventarioCreditosMaximo2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 350, -1, -1));
+        jPanel3.add(velmaInventarioCreditosMaximo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 40, -1));
 
-        jButton27.setText("+");
-        jButton27.addActionListener(new java.awt.event.ActionListener() {
+        velmaInventarioInicioMaximo2.setEditable(false);
+        velmaInventarioInicioMaximo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioInicioMaximo2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton27ActionPerformed(evt);
+                velmaInventarioInicioMaximo2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, -1, -1));
+        jPanel3.add(velmaInventarioInicioMaximo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 40, -1));
 
-        jLabel32.setText("CANTIDAD DE ENSAMBLADORES");
-        getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, -1, -1));
-
-        jButton28.setText("-");
-        jButton28.addActionListener(new java.awt.event.ActionListener() {
+        velmaInventarioCierreMaximo2.setEditable(false);
+        velmaInventarioCierreMaximo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCierreMaximo2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton28ActionPerformed(evt);
+                velmaInventarioCierreMaximo2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, -1, -1));
+        jPanel3.add(velmaInventarioCierreMaximo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 40, -1));
 
-        jButton29.setText("+");
-        jButton29.addActionListener(new java.awt.event.ActionListener() {
+        velmaInventarioPlottwistMaximo2.setEditable(false);
+        velmaInventarioPlottwistMaximo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioPlottwistMaximo2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton29ActionPerformed(evt);
+                velmaInventarioPlottwistMaximo2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 390, -1, -1));
+        jPanel3.add(velmaInventarioPlottwistMaximo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 250, 40, -1));
 
-        jLabel33.setText("CANTIDAD DE ENSAMBLADORES");
-        getContentPane().add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 390, -1, -1));
-
-        jButton30.setText("-");
-        jButton30.addActionListener(new java.awt.event.ActionListener() {
+        velmaInventarioIntroMaximo3.setEditable(false);
+        velmaInventarioIntroMaximo3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioIntroMaximo3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton30ActionPerformed(evt);
+                velmaInventarioIntroMaximo3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 390, -1, -1));
+        jPanel3.add(velmaInventarioIntroMaximo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 40, -1));
 
-        jButton6.setText("INICIAR LA SIMULACION");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        velmaInventarioCreditosMaximo3.setEditable(false);
+        velmaInventarioCreditosMaximo3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCreditosMaximo3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                velmaInventarioCreditosMaximo3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, -1, -1));
+        jPanel3.add(velmaInventarioCreditosMaximo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 40, -1));
 
-        jLabel2.setText("DIAS PARA LA ENTREGA");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 640, -1, -1));
-
-        jLabel6.setText("PROJECT MANAGER");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 680, -1, -1));
-
-        jLabel8.setText("ACTIVIDAD");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 700, -1, -1));
-
-        jLabel10.setText("FALTAS");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 720, -1, -1));
-
-        jLabel12.setText("DESCUENTO ");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 760, -1, -1));
-
-        jTextField38.addActionListener(new java.awt.event.ActionListener() {
+        velmaInventarioInicioMaximo3.setEditable(false);
+        velmaInventarioInicioMaximo3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioInicioMaximo3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField38ActionPerformed(evt);
+                velmaInventarioInicioMaximo3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField38, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 700, -1, -1));
-        getContentPane().add(jTextField39, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 730, -1, -1));
-        getContentPane().add(jTextField40, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 760, -1, -1));
+        jPanel3.add(velmaInventarioInicioMaximo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 40, -1));
 
-        jLabel36.setText("CARTOON NETWORK");
-        getContentPane().add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
-
-        jLabel37.setText("DISNEY CHANNEL");
-        getContentPane().add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 110, -1, -1));
-
-        jLabel39.setText("DIRECTOR");
-        getContentPane().add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 680, -1, -1));
-
-        jLabel40.setText("ACTIVIDAD");
-        getContentPane().add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 710, -1, -1));
-
-        jTextField41.addActionListener(new java.awt.event.ActionListener() {
+        velmaInventarioCierreMaximo3.setEditable(false);
+        velmaInventarioCierreMaximo3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCierreMaximo3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField41ActionPerformed(evt);
+                velmaInventarioCierreMaximo3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField41, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 710, 47, -1));
+        jPanel3.add(velmaInventarioCierreMaximo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 40, -1));
 
-        jButton7.setText("CAMBIAR VALORES");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        velmaInventarioPlottwistMaximo3.setEditable(false);
+        velmaInventarioPlottwistMaximo3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioPlottwistMaximo3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                velmaInventarioPlottwistMaximo3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, -1, -1));
+        jPanel3.add(velmaInventarioPlottwistMaximo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, 40, -1));
 
-        jLabel38.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel38.setText("0");
-        getContentPane().add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 190, 30, -1));
+        jLabel33.setText("PROJECT MANAGER");
+        jPanel3.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
 
-        jLabel41.setText("MAXIMO");
-        getContentPane().add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 160, -1, -1));
-
-        jLabel42.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel42.setText("0");
-        getContentPane().add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 390, 30, -1));
-
-        jLabel43.setText("MAXIMO");
-        getContentPane().add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 150, -1, -1));
-
-        jLabel44.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel44.setText("0");
-        getContentPane().add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 30, -1));
-
-        textoDLC.setBackground(new java.awt.Color(204, 204, 204));
-        textoDLC.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        textoDLC.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        textoDLC.setText("0");
-        getContentPane().add(textoDLC, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, 50, 50));
-
-        textoGuiones.setBackground(new java.awt.Color(204, 204, 204));
-        textoGuiones.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        textoGuiones.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        textoGuiones.setText("0");
-        textoGuiones.setToolTipText("");
-        getContentPane().add(textoGuiones, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 40, 50));
-
-        textoNiveles.setBackground(new java.awt.Color(204, 204, 204));
-        textoNiveles.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        textoNiveles.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        textoNiveles.setText("0");
-        getContentPane().add(textoNiveles, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 60, 50));
-
-        textoSprites.setBackground(new java.awt.Color(204, 204, 204));
-        textoSprites.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        textoSprites.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        textoSprites.setText("0");
-        getContentPane().add(textoSprites, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 430, 60, 50));
-
-        textoSistemas.setBackground(new java.awt.Color(204, 204, 204));
-        textoSistemas.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        textoSistemas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        textoSistemas.setText("0");
-        getContentPane().add(textoSistemas, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 520, 50, 50));
-
-        guionProgressBar.setBackground(new java.awt.Color(255, 255, 255));
-        guionProgressBar.setForeground(new java.awt.Color(51, 51, 255));
-        getContentPane().add(guionProgressBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 125, 40));
-
-        levelsProgressBar.setBackground(new java.awt.Color(255, 255, 255));
-        levelsProgressBar.setForeground(new java.awt.Color(51, 51, 255));
-        getContentPane().add(levelsProgressBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, 125, 40));
-
-        spritesProgressBar.setBackground(new java.awt.Color(255, 255, 255));
-        spritesProgressBar.setForeground(new java.awt.Color(51, 51, 255));
-        spritesProgressBar.setToolTipText("");
-        getContentPane().add(spritesProgressBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 470, 125, 40));
-
-        siistemasProgressBar.setBackground(new java.awt.Color(255, 255, 255));
-        siistemasProgressBar.setForeground(new java.awt.Color(51, 51, 255));
-        getContentPane().add(siistemasProgressBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 560, 125, 40));
-
-        DLCProgressBar.setBackground(new java.awt.Color(255, 255, 255));
-        DLCProgressBar.setForeground(new java.awt.Color(51, 51, 255));
-        getContentPane().add(DLCProgressBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 125, 40));
-
-        dlcsLabel.setBackground(new java.awt.Color(204, 204, 204));
-        dlcsLabel.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        dlcsLabel.setText("PlotTwists");
-        getContentPane().add(dlcsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 520, 100, 50));
-
-        guionesLabel.setBackground(new java.awt.Color(204, 204, 204));
-        guionesLabel.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        guionesLabel.setText("Guiones");
-        getContentPane().add(guionesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 100, 50));
-
-        spritesLabel.setBackground(new java.awt.Color(204, 204, 204));
-        spritesLabel.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        spritesLabel.setText("Animaciones");
-        getContentPane().add(spritesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 430, 100, 50));
-
-        sistemasLabel.setBackground(new java.awt.Color(204, 204, 204));
-        sistemasLabel.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        sistemasLabel.setText("Doblajes");
-        getContentPane().add(sistemasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 520, 100, 50));
-
-        guionesCostosLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        guionesCostosLabel.setText("MAX 0");
-        getContentPane().add(guionesCostosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 510, 90, -1));
-
-        jLabel45.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel45.setText("0");
-        getContentPane().add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 190, 30, -1));
-
-        jLabel46.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel46.setText("0");
-        getContentPane().add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 30, -1));
-
-        jLabel47.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel47.setText("0");
-        getContentPane().add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 640, 30, -1));
-
-        textoDLC1.setBackground(new java.awt.Color(204, 204, 204));
-        textoDLC1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        textoDLC1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        textoDLC1.setText("0");
-        getContentPane().add(textoDLC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 520, 50, 50));
-
-        DLCProgressBar1.setBackground(new java.awt.Color(255, 255, 255));
-        DLCProgressBar1.setForeground(new java.awt.Color(51, 51, 255));
-        getContentPane().add(DLCProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 560, 125, 40));
-
-        dlcsLabel1.setBackground(new java.awt.Color(204, 204, 204));
-        dlcsLabel1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        dlcsLabel1.setText("Capitulos");
-        getContentPane().add(dlcsLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 520, 100, 50));
-
-        jLabel48.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel48.setText("0");
-        getContentPane().add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, 30, -1));
-
-        jLabel20.setText("DIAS PARA LA ENTREGA");
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 630, -1, -1));
-
-        jLabel49.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel49.setText("0");
-        getContentPane().add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 630, 30, -1));
-
-        guionesCostosLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        guionesCostosLabel1.setText("MAX 0");
-        getContentPane().add(guionesCostosLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 510, 90, -1));
-
-        guionesCostosLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        guionesCostosLabel3.setText("MAX 0");
-        getContentPane().add(guionesCostosLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 600, 90, -1));
-
-        guionesCostosLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        guionesCostosLabel6.setText("MAX 0");
-        getContentPane().add(guionesCostosLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 90, -1));
-
-        textoDLC2.setBackground(new java.awt.Color(204, 204, 204));
-        textoDLC2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        textoDLC2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        textoDLC2.setText("0");
-        getContentPane().add(textoDLC2, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 520, 50, 50));
-
-        textoGuiones1.setBackground(new java.awt.Color(204, 204, 204));
-        textoGuiones1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        textoGuiones1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        textoGuiones1.setText("0");
-        textoGuiones1.setToolTipText("");
-        getContentPane().add(textoGuiones1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 430, 40, 50));
-
-        textoNiveles1.setBackground(new java.awt.Color(204, 204, 204));
-        textoNiveles1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        textoNiveles1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        textoNiveles1.setText("0");
-        getContentPane().add(textoNiveles1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 430, 60, 50));
-
-        textoSprites1.setBackground(new java.awt.Color(204, 204, 204));
-        textoSprites1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        textoSprites1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        textoSprites1.setText("0");
-        getContentPane().add(textoSprites1, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 430, 60, 50));
-
-        textoSistemas1.setBackground(new java.awt.Color(204, 204, 204));
-        textoSistemas1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        textoSistemas1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        textoSistemas1.setText("0");
-        getContentPane().add(textoSistemas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 520, 50, 50));
-
-        guionProgressBar1.setBackground(new java.awt.Color(255, 255, 255));
-        guionProgressBar1.setForeground(new java.awt.Color(51, 51, 255));
-        getContentPane().add(guionProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 470, 125, 40));
-
-        levelsProgressBar1.setBackground(new java.awt.Color(255, 255, 255));
-        levelsProgressBar1.setForeground(new java.awt.Color(51, 51, 255));
-        getContentPane().add(levelsProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 470, 125, 40));
-
-        spritesProgressBar1.setBackground(new java.awt.Color(255, 255, 255));
-        spritesProgressBar1.setForeground(new java.awt.Color(51, 51, 255));
-        spritesProgressBar1.setToolTipText("");
-        getContentPane().add(spritesProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 470, 125, 40));
-
-        siistemasProgressBar1.setBackground(new java.awt.Color(255, 255, 255));
-        siistemasProgressBar1.setForeground(new java.awt.Color(51, 51, 255));
-        getContentPane().add(siistemasProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 560, 125, 40));
-
-        DLCProgressBar2.setBackground(new java.awt.Color(255, 255, 255));
-        DLCProgressBar2.setForeground(new java.awt.Color(51, 51, 255));
-        getContentPane().add(DLCProgressBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 560, 125, 40));
-
-        dlcsLabel2.setBackground(new java.awt.Color(204, 204, 204));
-        dlcsLabel2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        dlcsLabel2.setText("PlotTwists");
-        getContentPane().add(dlcsLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 520, 100, 50));
-
-        guionesLabel1.setBackground(new java.awt.Color(204, 204, 204));
-        guionesLabel1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        guionesLabel1.setText("Guiones");
-        getContentPane().add(guionesLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 430, 100, 50));
-
-        nivelesLabel1.setBackground(new java.awt.Color(204, 204, 204));
-        nivelesLabel1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        nivelesLabel1.setText("Escenarios");
-        getContentPane().add(nivelesLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 430, 100, 50));
-
-        spritesLabel1.setBackground(new java.awt.Color(204, 204, 204));
-        spritesLabel1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        spritesLabel1.setText("Animaciones");
-        getContentPane().add(spritesLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 430, 100, 50));
-
-        sistemasLabel1.setBackground(new java.awt.Color(204, 204, 204));
-        sistemasLabel1.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        sistemasLabel1.setText("Doblajes");
-        getContentPane().add(sistemasLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 520, 100, 50));
-
-        guionesCostosLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        guionesCostosLabel4.setText("MAX 0");
-        getContentPane().add(guionesCostosLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 510, 90, -1));
-
-        textoDLC3.setBackground(new java.awt.Color(204, 204, 204));
-        textoDLC3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        textoDLC3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        textoDLC3.setText("0");
-        getContentPane().add(textoDLC3, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 520, 50, 50));
-
-        DLCProgressBar3.setBackground(new java.awt.Color(255, 255, 255));
-        DLCProgressBar3.setForeground(new java.awt.Color(51, 51, 255));
-        getContentPane().add(DLCProgressBar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 560, 125, 40));
-
-        dlcsLabel3.setBackground(new java.awt.Color(204, 204, 204));
-        dlcsLabel3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        dlcsLabel3.setText("Capitulos");
-        getContentPane().add(dlcsLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 520, 100, 50));
-
-        guionesCostosLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        guionesCostosLabel5.setText("MAX 0");
-        getContentPane().add(guionesCostosLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 510, 90, -1));
-
-        guionesCostosLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        guionesCostosLabel7.setText("MAX 0");
-        getContentPane().add(guionesCostosLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 600, 90, -1));
-
-        guionesCostosLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        guionesCostosLabel8.setText("MAX 0");
-        getContentPane().add(guionesCostosLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 510, 90, -1));
-
-        jLabel21.setText("PROJECT MANAGER");
-        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 670, -1, -1));
-
-        jLabel22.setText("ACTIVIDAD");
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 690, -1, -1));
-
-        jLabel23.setText("DESCUENTO ");
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 750, -1, -1));
-
-        jTextField42.addActionListener(new java.awt.event.ActionListener() {
+        velmaPMFaltas1.setEditable(false);
+        velmaPMFaltas1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaPMFaltas1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField42ActionPerformed(evt);
+                velmaPMFaltas1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField42, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 690, -1, -1));
-        getContentPane().add(jTextField43, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 720, -1, -1));
-        getContentPane().add(jTextField44, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 750, -1, -1));
+        jPanel3.add(velmaPMFaltas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, 140, -1));
 
-        jLabel50.setText("DIRECTOR");
-        getContentPane().add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 670, -1, -1));
+        jLabel38.setText("ACTIVIDAD");
+        jPanel3.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
 
-        jLabel51.setText("ACTIVIDAD");
-        getContentPane().add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 700, -1, -1));
+        jLabel39.setText("SALARIO");
+        jPanel3.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, -1, -1));
 
-        jTextField45.addActionListener(new java.awt.event.ActionListener() {
+        pmActividad5.setEditable(false);
+        pmActividad5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField45ActionPerformed(evt);
+                pmActividad5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField45, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 700, 47, -1));
+        jPanel3.add(pmActividad5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 140, -1));
 
-        jLabel24.setText("FALTAS");
-        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 730, -1, -1));
+        jLabel40.setText("FALTAS");
+        jPanel3.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, -1, -1));
 
-        nivelesLabel2.setBackground(new java.awt.Color(204, 204, 204));
-        nivelesLabel2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        nivelesLabel2.setText("Escenarios");
-        getContentPane().add(nivelesLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, 100, 50));
+        pmSalario1.setEditable(false);
+        pmSalario1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmSalario1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmSalario1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(pmSalario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 140, -1));
+
+        jLabel26.setText("DIRECTOR");
+        jPanel3.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
+
+        pmActividad6.setEditable(false);
+        pmActividad6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad6ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(pmActividad6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 140, -1));
+
+        jLabel41.setText("ACTIVIDAD");
+        jPanel3.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
+
+        jLabel27.setText("CANTIDAD DE CAPITULOS LISTOS");
+        jPanel3.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
+
+        pmActividad7.setEditable(false);
+        pmActividad7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad7ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(pmActividad7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 60, -1));
+
+        jLabel28.setText("DIAS PARA LA ENTREGA");
+        jPanel3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
+
+        pmActividad8.setEditable(false);
+        pmActividad8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad8ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(pmActividad8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 140, -1));
+
+        jLabel29.setText("DEADLINE");
+        jPanel3.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
+
+        diasEntregaDisney.setText("0");
+        jPanel3.add(diasEntregaDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 50, 20));
+
+        jTabbedPane1.addTab("Disney Channel ", jPanel3);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 912, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 546, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Configuracion", jPanel4);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane1)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -781,6 +893,98 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton15ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void velmaInventarioIntroMaximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioIntroMaximoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioIntroMaximoActionPerformed
+
+    private void velmaInventarioCreditosMaximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCreditosMaximoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioCreditosMaximoActionPerformed
+
+    private void velmaInventarioInicioMaximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioInicioMaximoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioInicioMaximoActionPerformed
+
+    private void velmaInventarioCierreMaximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCierreMaximoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioCierreMaximoActionPerformed
+
+    private void velmaInventarioPlottwistMaximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioPlottwistMaximoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioPlottwistMaximoActionPerformed
+
+    private void velmaInventarioIntroMaximo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioIntroMaximo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioIntroMaximo1ActionPerformed
+
+    private void velmaInventarioCreditosMaximo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCreditosMaximo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioCreditosMaximo1ActionPerformed
+
+    private void velmaInventarioInicioMaximo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioInicioMaximo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioInicioMaximo1ActionPerformed
+
+    private void velmaInventarioCierreMaximo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCierreMaximo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioCierreMaximo1ActionPerformed
+
+    private void velmaInventarioPlottwistMaximo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioPlottwistMaximo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioPlottwistMaximo1ActionPerformed
+
+    private void velmaPMFaltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaPMFaltasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaPMFaltasActionPerformed
+
+    private void pmActividadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividadActionPerformed
+
+    private void pmSalarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmSalarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmSalarioActionPerformed
+
+    private void pmActividad1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad1ActionPerformed
+
+    private void pmActividad2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad2ActionPerformed
+
+    private void pmActividad3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad3ActionPerformed
+
+    private void pmActividad4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad4ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton17ActionPerformed
@@ -813,53 +1017,69 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton24ActionPerformed
 
-    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+    private void velmaInventarioIntroMaximo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioIntroMaximo2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton25ActionPerformed
+    }//GEN-LAST:event_velmaInventarioIntroMaximo2ActionPerformed
 
-    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+    private void velmaInventarioCreditosMaximo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCreditosMaximo2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton26ActionPerformed
+    }//GEN-LAST:event_velmaInventarioCreditosMaximo2ActionPerformed
 
-    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+    private void velmaInventarioInicioMaximo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioInicioMaximo2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton27ActionPerformed
+    }//GEN-LAST:event_velmaInventarioInicioMaximo2ActionPerformed
 
-    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+    private void velmaInventarioCierreMaximo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCierreMaximo2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton28ActionPerformed
+    }//GEN-LAST:event_velmaInventarioCierreMaximo2ActionPerformed
 
-    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+    private void velmaInventarioPlottwistMaximo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioPlottwistMaximo2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton29ActionPerformed
+    }//GEN-LAST:event_velmaInventarioPlottwistMaximo2ActionPerformed
 
-    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+    private void velmaInventarioIntroMaximo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioIntroMaximo3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton30ActionPerformed
+    }//GEN-LAST:event_velmaInventarioIntroMaximo3ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void velmaInventarioCreditosMaximo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCreditosMaximo3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_velmaInventarioCreditosMaximo3ActionPerformed
 
-    private void jTextField38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField38ActionPerformed
+    private void velmaInventarioInicioMaximo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioInicioMaximo3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField38ActionPerformed
+    }//GEN-LAST:event_velmaInventarioInicioMaximo3ActionPerformed
 
-    private void jTextField41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField41ActionPerformed
+    private void velmaInventarioCierreMaximo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCierreMaximo3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField41ActionPerformed
+    }//GEN-LAST:event_velmaInventarioCierreMaximo3ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void velmaInventarioPlottwistMaximo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioPlottwistMaximo3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_velmaInventarioPlottwistMaximo3ActionPerformed
 
-    private void jTextField42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField42ActionPerformed
+    private void velmaPMFaltas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaPMFaltas1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField42ActionPerformed
+    }//GEN-LAST:event_velmaPMFaltas1ActionPerformed
 
-    private void jTextField45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField45ActionPerformed
+    private void pmActividad5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField45ActionPerformed
+    }//GEN-LAST:event_pmActividad5ActionPerformed
+
+    private void pmSalario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmSalario1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmSalario1ActionPerformed
+
+    private void pmActividad6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad6ActionPerformed
+
+    private void pmActividad7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad7ActionPerformed
+
+    private void pmActividad8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -887,6 +1107,13 @@ public class Interfaz extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -897,32 +1124,15 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JProgressBar DLCProgressBar;
-    private javax.swing.JProgressBar DLCProgressBar1;
-    private javax.swing.JProgressBar DLCProgressBar2;
-    private javax.swing.JProgressBar DLCProgressBar3;
-    private javax.swing.JLabel dlcsLabel;
-    private javax.swing.JLabel dlcsLabel1;
-    private javax.swing.JLabel dlcsLabel2;
-    private javax.swing.JLabel dlcsLabel3;
-    private javax.swing.JProgressBar guionProgressBar;
-    private javax.swing.JProgressBar guionProgressBar1;
-    private javax.swing.JLabel guionesCostosLabel;
-    private javax.swing.JLabel guionesCostosLabel1;
-    private javax.swing.JLabel guionesCostosLabel3;
-    private javax.swing.JLabel guionesCostosLabel4;
-    private javax.swing.JLabel guionesCostosLabel5;
-    private javax.swing.JLabel guionesCostosLabel6;
-    private javax.swing.JLabel guionesCostosLabel7;
-    private javax.swing.JLabel guionesCostosLabel8;
-    private javax.swing.JLabel guionesLabel;
-    private javax.swing.JLabel guionesLabel1;
+    private javax.swing.JLabel diasEntregaDisney;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
@@ -932,18 +1142,13 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -960,16 +1165,23 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
@@ -980,41 +1192,67 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField38;
-    private javax.swing.JTextField jTextField39;
-    private javax.swing.JTextField jTextField40;
-    private javax.swing.JTextField jTextField41;
-    private javax.swing.JTextField jTextField42;
-    private javax.swing.JTextField jTextField43;
-    private javax.swing.JTextField jTextField44;
-    private javax.swing.JTextField jTextField45;
-    private javax.swing.JProgressBar levelsProgressBar;
-    private javax.swing.JProgressBar levelsProgressBar1;
-    private javax.swing.JLabel nivelesLabel1;
-    private javax.swing.JLabel nivelesLabel2;
-    private javax.swing.JProgressBar siistemasProgressBar;
-    private javax.swing.JProgressBar siistemasProgressBar1;
-    private javax.swing.JLabel sistemasLabel;
-    private javax.swing.JLabel sistemasLabel1;
-    private javax.swing.JLabel spritesLabel;
-    private javax.swing.JLabel spritesLabel1;
-    private javax.swing.JProgressBar spritesProgressBar;
-    private javax.swing.JProgressBar spritesProgressBar1;
-    private javax.swing.JLabel textoDLC;
-    private javax.swing.JLabel textoDLC1;
-    private javax.swing.JLabel textoDLC2;
-    private javax.swing.JLabel textoDLC3;
-    private javax.swing.JLabel textoGuiones;
-    private javax.swing.JLabel textoGuiones1;
-    private javax.swing.JLabel textoNiveles;
-    private javax.swing.JLabel textoNiveles1;
-    private javax.swing.JLabel textoSistemas;
-    private javax.swing.JLabel textoSistemas1;
-    private javax.swing.JLabel textoSprites;
-    private javax.swing.JLabel textoSprites1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField pmActividad;
+    private javax.swing.JTextField pmActividad1;
+    private javax.swing.JTextField pmActividad2;
+    private javax.swing.JTextField pmActividad3;
+    private javax.swing.JTextField pmActividad4;
+    private javax.swing.JTextField pmActividad5;
+    private javax.swing.JTextField pmActividad6;
+    private javax.swing.JTextField pmActividad7;
+    private javax.swing.JTextField pmActividad8;
+    private javax.swing.JTextField pmSalario;
+    private javax.swing.JTextField pmSalario1;
+    private javax.swing.JTextField velmaInventarioCierreMaximo;
+    private javax.swing.JTextField velmaInventarioCierreMaximo1;
+    private javax.swing.JTextField velmaInventarioCierreMaximo2;
+    private javax.swing.JTextField velmaInventarioCierreMaximo3;
+    private javax.swing.JTextField velmaInventarioCreditosMaximo;
+    private javax.swing.JTextField velmaInventarioCreditosMaximo1;
+    private javax.swing.JTextField velmaInventarioCreditosMaximo2;
+    private javax.swing.JTextField velmaInventarioCreditosMaximo3;
+    private javax.swing.JTextField velmaInventarioInicioMaximo;
+    private javax.swing.JTextField velmaInventarioInicioMaximo1;
+    private javax.swing.JTextField velmaInventarioInicioMaximo2;
+    private javax.swing.JTextField velmaInventarioInicioMaximo3;
+    private javax.swing.JTextField velmaInventarioIntroMaximo;
+    private javax.swing.JTextField velmaInventarioIntroMaximo1;
+    private javax.swing.JTextField velmaInventarioIntroMaximo2;
+    private javax.swing.JTextField velmaInventarioIntroMaximo3;
+    private javax.swing.JTextField velmaInventarioPlottwistMaximo;
+    private javax.swing.JTextField velmaInventarioPlottwistMaximo1;
+    private javax.swing.JTextField velmaInventarioPlottwistMaximo2;
+    private javax.swing.JTextField velmaInventarioPlottwistMaximo3;
+    private javax.swing.JTextField velmaPMFaltas;
+    private javax.swing.JTextField velmaPMFaltas1;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * @return the diasEntregaDisney
+     */
+    public javax.swing.JLabel getDiasEntregaDisney() {
+        return diasEntregaDisney;
+    }
+
+    /**
+     * @param diasEntregaDisney the diasEntregaDisney to set
+     */
+    public void setDiasEntregaDisney(javax.swing.JLabel diasEntregaDisney) {
+        this.diasEntregaDisney = diasEntregaDisney;
+    }
+
 }
