@@ -40,6 +40,9 @@ public class Drive {
     private float pmAcc = 0;
     private float directorAcc =0;
     
+    //
+    private int contadorPasoDeLosDias = 0;
+    
     
     //Maximo de partes en el drive
     private float animacionesMax = 55;
@@ -57,9 +60,7 @@ public class Drive {
     private int salarioDescontado = 0;
     
     
-    public Drive(int deadline){
-        this.deadline = deadline;
-        this.estadoDeadline = deadline;
+    public Drive(){
     }
     
     //ESTE METODO AGREGA EL SALARIO, AL ACUMULADO DE CADA TIPO DE TRABAJADOR
@@ -539,6 +540,20 @@ public class Drive {
         }
                 
         
+    }
+
+    /**
+     * @return the contadorPasoDeLosDias
+     */
+    public int getContadorPasoDeLosDias() {
+        return contadorPasoDeLosDias;
+    }
+
+    /**
+     * @param contadorPasoDeLosDias the contadorPasoDeLosDias to set
+     */
+    public void setContadorPasoDeLosDias(int contadorPasoDeLosDias) {
+        this.contadorPasoDeLosDias = contadorPasoDeLosDias;
     }
 
 }

@@ -26,6 +26,9 @@ public class Company {
     private ListaDoble guionistas; //guionistas
     private ListaDoble actoresDoblaje; //Actores de doblaje
     private ListaDoble guionistasPlotTwist; //guionistas de plotTwist
+
+    public Company() {
+    }
     
     public Company(Drive drive,int companyType,int duracionDia) {
         this.tipoCompania = companyType;
@@ -40,6 +43,17 @@ public class Company {
         this.actoresDoblaje = new ListaDoble();
         this.guionistasPlotTwist = new ListaDoble();
         this.duracionDia = duracionDia;
+    }
+    
+    public int cantidadTrabajadores(){
+        int respuesta = ensambladores.getSize()+
+                        animadores.getSize()+
+                        disenadoresEscenarios.getSize()+
+                        guionistas.getSize()+
+                        actoresDoblaje.getSize()+
+                        guionistasPlotTwist.getSize()
+                        + 2;//estos ultimos 2 son por el pm y el director
+        return respuesta;
     }
 
     /**

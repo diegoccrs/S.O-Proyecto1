@@ -4,14 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Kevin/Desktop/Sistemas%20Operativos/Proyecto%201/S.O-Proyecto1/src/Companies/Company.java</file>
-            <file>file:/C:/Users/Kevin/Desktop/Sistemas%20Operativos/Proyecto%201/S.O-Proyecto1/src/Worker/ProjectManager.java</file>
             <file>file:/C:/Users/Kevin/Desktop/Sistemas%20Operativos/Proyecto%201/S.O-Proyecto1/src/Ventanas/Interfaz.java</file>
             <file>file:/C:/Users/Kevin/Desktop/Sistemas%20Operativos/Proyecto%201/S.O-Proyecto1/src/Worker/Developer.java</file>
-            <file>file:/C:/Users/Kevin/Desktop/Sistemas%20Operativos/Proyecto%201/S.O-Proyecto1/src/Worker/Worker.java</file>
+            <file>file:/C:/Users/Kevin/Desktop/Sistemas%20Operativos/Proyecto%201/S.O-Proyecto1/src/Worker/Director.java</file>
+            <file>file:/C:/Users/Kevin/Desktop/Sistemas%20Operativos/Proyecto%201/S.O-Proyecto1/src/Main/ManejadorInterfaz.java</file>
+            <file>file:/C:/Users/Kevin/Desktop/Sistemas%20Operativos/Proyecto%201/S.O-Proyecto1/test/Worker/WorkerTest.java</file>
             <file>file:/C:/Users/Kevin/Desktop/Sistemas%20Operativos/Proyecto%201/S.O-Proyecto1/src/Drive/Drive.java</file>
             <file>file:/C:/Users/Kevin/Desktop/Sistemas%20Operativos/Proyecto%201/S.O-Proyecto1/src/Worker/Assembler.java</file>
             <file>file:/C:/Users/Kevin/Desktop/Sistemas%20Operativos/Proyecto%201/S.O-Proyecto1/src/Main/NewMain.java</file>
-            <file>file:/C:/Users/Kevin/Desktop/Sistemas%20Operativos/Proyecto%201/S.O-Proyecto1/src/Main/Global.java</file>
+            <file>file:/C:/Users/Kevin/Desktop/Sistemas%20Operativos/Proyecto%201/S.O-Proyecto1/src/Ventanas/Global.java</file>
         </group>
     </open-files>
 </project-private>

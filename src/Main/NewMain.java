@@ -15,6 +15,7 @@ import java.util.concurrent.Semaphore;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import Ventanas.Global;
 /**
  *
  * @author User
@@ -31,9 +32,11 @@ public class NewMain {
         //inicio.show();
         ManejadorInterfaz.getInterfaz().show();
         Semaphore mutex = new Semaphore(1);
-        Drive drive = new Drive(7);
-        Company compania = new Company(drive,0,1000);
-     
+        Global.getDriveDisney().setDeadline(7);
+        Global.getDriveDisney().setEstadoDeadline(7);
+        Company compania = new Company(Global.getDriveDisney(),0,1000);
+        Global.setDisney(compania);
+        Global.setMutexDisney(mutex);
         Developer trabajador1 = new Developer(0,240, "perez", mutex,compania);
         Developer trabajador2 = new Developer(1,100, "Juan", mutex,compania);
         Developer trabajador3 = new Developer(2,300, "Julián", mutex,compania);
