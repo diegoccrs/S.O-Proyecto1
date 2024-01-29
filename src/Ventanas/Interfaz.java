@@ -20,8 +20,6 @@ public class Interfaz extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
-        //Drive drive = new Drive(7);
-        //Company CartoonNetwork = new Company(drive,0);
     }
     
     public void cambiarDiasLanzamientoDisney(int t){
@@ -40,117 +38,117 @@ public class Interfaz extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel98 = new javax.swing.JLabel();
-        jLabel99 = new javax.swing.JLabel();
-        jLabel100 = new javax.swing.JLabel();
-        jButton37 = new javax.swing.JButton();
-        jButton38 = new javax.swing.JButton();
-        jButton39 = new javax.swing.JButton();
-        jButton40 = new javax.swing.JButton();
-        jButton41 = new javax.swing.JButton();
-        jButton42 = new javax.swing.JButton();
-        jButton43 = new javax.swing.JButton();
-        jButton44 = new javax.swing.JButton();
-        jButton45 = new javax.swing.JButton();
-        jButton46 = new javax.swing.JButton();
-        jLabel101 = new javax.swing.JLabel();
-        jLabel102 = new javax.swing.JLabel();
-        jLabel103 = new javax.swing.JLabel();
-        jLabel104 = new javax.swing.JLabel();
-        jLabel105 = new javax.swing.JLabel();
-        jLabel106 = new javax.swing.JLabel();
-        jButton47 = new javax.swing.JButton();
-        jButton48 = new javax.swing.JButton();
-        jLabel107 = new javax.swing.JLabel();
-        jLabel108 = new javax.swing.JLabel();
-        jLabel109 = new javax.swing.JLabel();
-        jLabel110 = new javax.swing.JLabel();
-        jLabel111 = new javax.swing.JLabel();
-        jLabel112 = new javax.swing.JLabel();
-        jLabel113 = new javax.swing.JLabel();
-        jLabel114 = new javax.swing.JLabel();
-        jLabel115 = new javax.swing.JLabel();
-        jLabel116 = new javax.swing.JLabel();
-        jLabel117 = new javax.swing.JLabel();
-        jLabel118 = new javax.swing.JLabel();
-        jLabel119 = new javax.swing.JLabel();
-        jLabel120 = new javax.swing.JLabel();
-        jLabel121 = new javax.swing.JLabel();
-        jLabel122 = new javax.swing.JLabel();
-        jLabel123 = new javax.swing.JLabel();
-        jLabel124 = new javax.swing.JLabel();
-        jLabel125 = new javax.swing.JLabel();
-        jLabel126 = new javax.swing.JLabel();
-        jLabel127 = new javax.swing.JLabel();
-        jLabel128 = new javax.swing.JLabel();
-        jLabel129 = new javax.swing.JLabel();
-        jLabel130 = new javax.swing.JLabel();
-        jLabel131 = new javax.swing.JLabel();
-        jLabel132 = new javax.swing.JLabel();
-        jLabel133 = new javax.swing.JLabel();
-        jLabel134 = new javax.swing.JLabel();
-        jLabel135 = new javax.swing.JLabel();
-        jLabel136 = new javax.swing.JLabel();
-        jLabel137 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        velmaInventarioIntroMaximo = new javax.swing.JTextField();
+        velmaInventarioCreditosMaximo = new javax.swing.JTextField();
+        velmaInventarioInicioMaximo = new javax.swing.JTextField();
+        velmaInventarioCierreMaximo = new javax.swing.JTextField();
+        velmaInventarioPlottwistMaximo = new javax.swing.JTextField();
+        velmaInventarioIntroMaximo1 = new javax.swing.JTextField();
+        velmaInventarioCreditosMaximo1 = new javax.swing.JTextField();
+        velmaInventarioInicioMaximo1 = new javax.swing.JTextField();
+        velmaInventarioCierreMaximo1 = new javax.swing.JTextField();
+        velmaInventarioPlottwistMaximo1 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        velmaPMFaltas = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        pmActividad = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        pmSalario = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        pmActividad1 = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        pmActividad2 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        pmActividad3 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        pmActividad4 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jLabel50 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
-        jLabel138 = new javax.swing.JLabel();
-        jLabel139 = new javax.swing.JLabel();
-        jLabel140 = new javax.swing.JLabel();
-        jButton49 = new javax.swing.JButton();
-        jButton50 = new javax.swing.JButton();
-        jButton51 = new javax.swing.JButton();
-        jButton52 = new javax.swing.JButton();
-        jButton53 = new javax.swing.JButton();
-        jButton54 = new javax.swing.JButton();
-        jButton55 = new javax.swing.JButton();
-        jButton56 = new javax.swing.JButton();
-        jButton57 = new javax.swing.JButton();
-        jButton58 = new javax.swing.JButton();
-        jLabel141 = new javax.swing.JLabel();
-        jLabel142 = new javax.swing.JLabel();
-        jLabel143 = new javax.swing.JLabel();
-        jLabel144 = new javax.swing.JLabel();
-        jLabel145 = new javax.swing.JLabel();
-        jLabel146 = new javax.swing.JLabel();
-        jButton59 = new javax.swing.JButton();
-        jButton60 = new javax.swing.JButton();
-        jLabel147 = new javax.swing.JLabel();
-        jLabel148 = new javax.swing.JLabel();
-        jLabel149 = new javax.swing.JLabel();
-        jLabel150 = new javax.swing.JLabel();
-        jLabel151 = new javax.swing.JLabel();
-        jLabel152 = new javax.swing.JLabel();
-        jLabel153 = new javax.swing.JLabel();
-        jLabel154 = new javax.swing.JLabel();
-        jLabel155 = new javax.swing.JLabel();
-        jLabel156 = new javax.swing.JLabel();
-        jLabel157 = new javax.swing.JLabel();
-        jLabel158 = new javax.swing.JLabel();
-        jLabel159 = new javax.swing.JLabel();
-        jLabel160 = new javax.swing.JLabel();
-        jLabel161 = new javax.swing.JLabel();
-        jLabel162 = new javax.swing.JLabel();
-        jLabel163 = new javax.swing.JLabel();
-        jLabel164 = new javax.swing.JLabel();
-        jLabel165 = new javax.swing.JLabel();
-        jLabel166 = new javax.swing.JLabel();
-        jLabel167 = new javax.swing.JLabel();
-        jLabel168 = new javax.swing.JLabel();
-        jLabel169 = new javax.swing.JLabel();
-        jLabel170 = new javax.swing.JLabel();
-        jLabel171 = new javax.swing.JLabel();
-        jLabel172 = new javax.swing.JLabel();
-        jLabel173 = new javax.swing.JLabel();
-        jLabel174 = new javax.swing.JLabel();
-        jLabel175 = new javax.swing.JLabel();
-        jLabel176 = new javax.swing.JLabel();
-        jLabel177 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        velmaInventarioIntroMaximo2 = new javax.swing.JTextField();
+        velmaInventarioCreditosMaximo2 = new javax.swing.JTextField();
+        velmaInventarioInicioMaximo2 = new javax.swing.JTextField();
+        velmaInventarioCierreMaximo2 = new javax.swing.JTextField();
+        velmaInventarioPlottwistMaximo2 = new javax.swing.JTextField();
+        velmaInventarioIntroMaximo3 = new javax.swing.JTextField();
+        velmaInventarioCreditosMaximo3 = new javax.swing.JTextField();
+        velmaInventarioInicioMaximo3 = new javax.swing.JTextField();
+        velmaInventarioCierreMaximo3 = new javax.swing.JTextField();
+        velmaInventarioPlottwistMaximo3 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        velmaPMFaltas1 = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        pmActividad5 = new javax.swing.JTextField();
+        jLabel40 = new javax.swing.JLabel();
+        pmSalario1 = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        pmActividad6 = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        pmActividad7 = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        pmActividad8 = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        diasEntregaDisney = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -160,505 +158,669 @@ public class Interfaz extends javax.swing.JFrame {
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel42.setText("TRABAJADORES");
-        jPanel2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
+        jLabel3.setText("TRABAJADORES");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
-        jLabel57.setText("GUIONISTAS ");
-        jPanel2.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        jLabel5.setText("GUIONISTAS ");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
-        jLabel58.setText("DISEÑADORES DE ESCENARIOS");
-        jPanel2.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+        jLabel7.setText("DISEÑADORES DE ESCENARIOS");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
-        jLabel98.setText("ANIMADORES DE PERSONAJES");
-        jPanel2.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+        jLabel9.setText("ANIMADORES DE PERSONAJES");
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
-        jLabel99.setText("ACTORES DE DOBLAJE");
-        jPanel2.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+        jLabel11.setText("ACTORES DE DOBLAJE");
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
-        jLabel100.setText("GUIONISTAS DE PLOT TWIST");
-        jPanel2.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
+        jLabel13.setText("GUIONISTAS DE PLOT TWIST");
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
-        jButton37.setText("-");
-        jButton37.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("-");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton37ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
 
-        jButton38.setText("-");
-        jButton38.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setText("-");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton38ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
 
-        jButton39.setText("-");
-        jButton39.addActionListener(new java.awt.event.ActionListener() {
+        jButton3.setText("-");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton39ActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
 
-        jButton40.setText("-");
-        jButton40.addActionListener(new java.awt.event.ActionListener() {
+        jButton4.setText("-");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton40ActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
 
-        jButton41.setText("-");
-        jButton41.addActionListener(new java.awt.event.ActionListener() {
+        jButton5.setText("-");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton41ActionPerformed(evt);
+                jButton5ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
+        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
 
-        jButton42.setText("+");
-        jButton42.addActionListener(new java.awt.event.ActionListener() {
+        jButton11.setText("+");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton42ActionPerformed(evt);
+                jButton11ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton42, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
+        jPanel2.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
 
-        jButton43.setText("+");
-        jButton43.addActionListener(new java.awt.event.ActionListener() {
+        jButton12.setText("+");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton43ActionPerformed(evt);
+                jButton12ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton43, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
+        jPanel2.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
 
-        jButton44.setText("+");
-        jButton44.addActionListener(new java.awt.event.ActionListener() {
+        jButton13.setText("+");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton44ActionPerformed(evt);
+                jButton13ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton44, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
+        jPanel2.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
 
-        jButton45.setText("+");
-        jButton45.addActionListener(new java.awt.event.ActionListener() {
+        jButton14.setText("+");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton45ActionPerformed(evt);
+                jButton14ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton45, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
+        jPanel2.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
 
-        jButton46.setText("+");
-        jButton46.addActionListener(new java.awt.event.ActionListener() {
+        jButton15.setText("+");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton46ActionPerformed(evt);
+                jButton15ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton46, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
+        jPanel2.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
 
-        jLabel101.setText("ACTIVOS");
-        jPanel2.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
+        jLabel43.setText("ACTIVOS");
+        jPanel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
 
-        jLabel102.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel102.setText("0");
-        jPanel2.add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 30, -1));
+        jLabel44.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel44.setText("0");
+        jPanel2.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 30, -1));
 
-        jLabel103.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel103.setText("0");
-        jPanel2.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 30, -1));
+        jLabel46.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel46.setText("0");
+        jPanel2.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 30, -1));
 
-        jLabel104.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel104.setText("0");
-        jPanel2.add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 30, -1));
+        jLabel45.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel45.setText("0");
+        jPanel2.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 30, -1));
 
-        jLabel105.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel105.setText("0");
-        jPanel2.add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 30, -1));
+        jLabel47.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel47.setText("0");
+        jPanel2.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 30, -1));
 
-        jLabel106.setText("ENSAMBLADORES");
-        jPanel2.add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+        jLabel49.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel49.setText("0");
+        jPanel2.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 30, -1));
 
-        jButton47.setText("-");
-        jButton47.addActionListener(new java.awt.event.ActionListener() {
+        jLabel14.setText("ENSAMBLADORES");
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+
+        jButton6.setText("-");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton47ActionPerformed(evt);
+                jButton6ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton47, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, -1));
+        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, -1));
 
-        jButton48.setText("+");
-        jButton48.addActionListener(new java.awt.event.ActionListener() {
+        jButton16.setText("+");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton48ActionPerformed(evt);
+                jButton16ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton48, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
+        jPanel2.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
 
-        jLabel107.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel107.setText("0");
-        jPanel2.add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 30, -1));
+        jLabel48.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel48.setText("0");
+        jPanel2.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 30, -1));
 
-        jLabel108.setText("CAPACIDAD DE DRIVE");
-        jPanel2.add(jLabel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
+        jLabel2.setText("CAPACIDAD DE DRIVE");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
 
-        jLabel109.setText("ACTUAL");
-        jPanel2.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, -1, -1));
+        jLabel4.setText("ACTUAL");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, -1, -1));
 
-        jLabel110.setText("MAXIMA");
-        jPanel2.add(jLabel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
+        jLabel6.setText("MAXIMA");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
 
-        jLabel111.setText("PROJECT MANAGER");
-        jPanel2.add(jLabel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
+        velmaInventarioIntroMaximo.setEditable(false);
+        velmaInventarioIntroMaximo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioIntroMaximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioIntroMaximoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioIntroMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 40, -1));
 
-        jLabel112.setText("ACTIVIDAD");
-        jPanel2.add(jLabel112, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
+        velmaInventarioCreditosMaximo.setEditable(false);
+        velmaInventarioCreditosMaximo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCreditosMaximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioCreditosMaximoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioCreditosMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 40, -1));
 
-        jLabel113.setText("SALARIO");
-        jPanel2.add(jLabel113, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, -1, -1));
+        velmaInventarioInicioMaximo.setEditable(false);
+        velmaInventarioInicioMaximo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioInicioMaximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioInicioMaximoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioInicioMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 40, -1));
 
-        jLabel114.setText("FALTAS");
-        jPanel2.add(jLabel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, -1, -1));
+        velmaInventarioCierreMaximo.setEditable(false);
+        velmaInventarioCierreMaximo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCierreMaximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioCierreMaximoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioCierreMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 40, -1));
 
-        jLabel115.setText("DIRECTOR");
-        jPanel2.add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
+        velmaInventarioPlottwistMaximo.setEditable(false);
+        velmaInventarioPlottwistMaximo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioPlottwistMaximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioPlottwistMaximoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioPlottwistMaximo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 250, 40, -1));
 
-        jLabel116.setText("ACTIVIDAD");
-        jPanel2.add(jLabel116, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, -1, -1));
+        velmaInventarioIntroMaximo1.setEditable(false);
+        velmaInventarioIntroMaximo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioIntroMaximo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioIntroMaximo1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioIntroMaximo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 40, -1));
 
-        jLabel117.setText("CANTIDAD DE CAPITULOS LISTOS");
-        jPanel2.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
+        velmaInventarioCreditosMaximo1.setEditable(false);
+        velmaInventarioCreditosMaximo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCreditosMaximo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioCreditosMaximo1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioCreditosMaximo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 40, -1));
 
-        jLabel118.setText("DIAS PARA LA ENTREGA");
-        jPanel2.add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
+        velmaInventarioInicioMaximo1.setEditable(false);
+        velmaInventarioInicioMaximo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioInicioMaximo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioInicioMaximo1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioInicioMaximo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 40, -1));
 
-        jLabel119.setText("DEADLINE (DIAS ENTRE ENTREGAS)");
-        jPanel2.add(jLabel119, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, -1, -1));
+        velmaInventarioCierreMaximo1.setEditable(false);
+        velmaInventarioCierreMaximo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCierreMaximo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioCierreMaximo1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioCierreMaximo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 40, -1));
 
-        jLabel120.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel120.setText("0");
-        jPanel2.add(jLabel120, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 30, -1));
+        velmaInventarioPlottwistMaximo1.setEditable(false);
+        velmaInventarioPlottwistMaximo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioPlottwistMaximo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioPlottwistMaximo1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaInventarioPlottwistMaximo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, 40, -1));
 
-        jLabel121.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel121.setText("0");
-        jPanel2.add(jLabel121, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 30, -1));
+        jLabel32.setText("PROJECT MANAGER");
+        jPanel2.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
 
-        jLabel122.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel122.setText("0");
-        jPanel2.add(jLabel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, 30, -1));
+        velmaPMFaltas.setEditable(false);
+        velmaPMFaltas.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaPMFaltas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaPMFaltasActionPerformed(evt);
+            }
+        });
+        jPanel2.add(velmaPMFaltas, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, 140, -1));
 
-        jLabel123.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel123.setText("0");
-        jPanel2.add(jLabel123, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, 30, -1));
+        jLabel34.setText("ACTIVIDAD");
+        jPanel2.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
 
-        jLabel124.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel124.setText("0");
-        jPanel2.add(jLabel124, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, 30, -1));
+        jLabel35.setText("SALARIO");
+        jPanel2.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, -1, -1));
 
-        jLabel125.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel125.setText("0");
-        jPanel2.add(jLabel125, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, 30, -1));
+        pmActividad.setEditable(false);
+        pmActividad.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividadActionPerformed(evt);
+            }
+        });
+        jPanel2.add(pmActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 140, -1));
 
-        jLabel126.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel126.setText("0");
-        jPanel2.add(jLabel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 30, -1));
+        jLabel36.setText("FALTAS");
+        jPanel2.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, -1, -1));
 
-        jLabel127.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel127.setText("0");
-        jPanel2.add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 440, 30, -1));
+        pmSalario.setEditable(false);
+        pmSalario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmSalario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmSalarioActionPerformed(evt);
+            }
+        });
+        jPanel2.add(pmSalario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 140, -1));
 
-        jLabel128.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel128.setText("0");
-        jPanel2.add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 490, 30, -1));
+        jLabel8.setText("DIRECTOR");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
 
-        jLabel129.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel129.setText("0");
-        jPanel2.add(jLabel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 30, -1));
+        pmActividad1.setEditable(false);
+        pmActividad1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(pmActividad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 140, -1));
 
-        jLabel130.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel130.setText("0");
-        jPanel2.add(jLabel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 30, -1));
+        jLabel37.setText("ACTIVIDAD");
+        jPanel2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
 
-        jLabel131.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel131.setText("0");
-        jPanel2.add(jLabel131, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 30, -1));
+        jLabel10.setText("CANTIDAD DE CAPITULOS LISTOS");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
 
-        jLabel132.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel132.setText("0");
-        jPanel2.add(jLabel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 30, -1));
+        pmActividad2.setEditable(false);
+        pmActividad2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(pmActividad2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 60, -1));
 
-        jLabel133.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel133.setText("0");
-        jPanel2.add(jLabel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 30, -1));
+        jLabel12.setText("DIAS PARA LA ENTREGA");
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
 
-        jLabel134.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel134.setText("0");
-        jPanel2.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, 30, -1));
+        pmActividad3.setEditable(false);
+        pmActividad3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(pmActividad3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 140, -1));
 
-        jLabel135.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel135.setText("0");
-        jPanel2.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 30, -1));
+        jLabel15.setText("DEADLINE");
+        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
 
-        jLabel136.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel136.setText("0");
-        jPanel2.add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, 30, -1));
-
-        jLabel137.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel137.setText("0");
-        jPanel2.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 30, -1));
+        pmActividad4.setEditable(false);
+        pmActividad4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad4ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(pmActividad4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, 60, -1));
 
         jTabbedPane1.addTab("Cartoon Network", jPanel2);
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel33.setText("TRABAJADORES");
-        jPanel3.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
+        jLabel16.setText("TRABAJADORES");
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
-        jLabel38.setText("GUIONISTAS ");
-        jPanel3.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        jLabel17.setText("GUIONISTAS ");
+        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
-        jLabel51.setText("DISEÑADORES DE ESCENARIOS");
-        jPanel3.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+        jLabel18.setText("DISEÑADORES DE ESCENARIOS");
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
-        jLabel138.setText("ANIMADORES DE PERSONAJES");
-        jPanel3.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+        jLabel19.setText("ANIMADORES DE PERSONAJES");
+        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
-        jLabel139.setText("ACTORES DE DOBLAJE");
-        jPanel3.add(jLabel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+        jLabel20.setText("ACTORES DE DOBLAJE");
+        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
-        jLabel140.setText("GUIONISTAS DE PLOT TWIST");
-        jPanel3.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
+        jLabel21.setText("GUIONISTAS DE PLOT TWIST");
+        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
 
-        jButton49.setText("-");
-        jButton49.addActionListener(new java.awt.event.ActionListener() {
+        jButton7.setText("-");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton49ActionPerformed(evt);
+                jButton7ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton49, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
 
-        jButton50.setText("-");
-        jButton50.addActionListener(new java.awt.event.ActionListener() {
+        jButton8.setText("-");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton50ActionPerformed(evt);
+                jButton8ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton50, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
+        jPanel3.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
 
-        jButton51.setText("-");
-        jButton51.addActionListener(new java.awt.event.ActionListener() {
+        jButton9.setText("-");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton51ActionPerformed(evt);
+                jButton9ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton51, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
+        jPanel3.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
 
-        jButton52.setText("-");
-        jButton52.addActionListener(new java.awt.event.ActionListener() {
+        jButton10.setText("-");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton52ActionPerformed(evt);
+                jButton10ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton52, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
+        jPanel3.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
 
-        jButton53.setText("-");
-        jButton53.addActionListener(new java.awt.event.ActionListener() {
+        jButton17.setText("-");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton53ActionPerformed(evt);
+                jButton17ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton53, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
+        jPanel3.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
 
-        jButton54.setText("+");
-        jButton54.addActionListener(new java.awt.event.ActionListener() {
+        jButton18.setText("+");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton54ActionPerformed(evt);
+                jButton18ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton54, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
+        jPanel3.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
 
-        jButton55.setText("+");
-        jButton55.addActionListener(new java.awt.event.ActionListener() {
+        jButton19.setText("+");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton55ActionPerformed(evt);
+                jButton19ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton55, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
+        jPanel3.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
 
-        jButton56.setText("+");
-        jButton56.addActionListener(new java.awt.event.ActionListener() {
+        jButton20.setText("+");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton56ActionPerformed(evt);
+                jButton20ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton56, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
+        jPanel3.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
 
-        jButton57.setText("+");
-        jButton57.addActionListener(new java.awt.event.ActionListener() {
+        jButton21.setText("+");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton57ActionPerformed(evt);
+                jButton21ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton57, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
+        jPanel3.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
 
-        jButton58.setText("+");
-        jButton58.addActionListener(new java.awt.event.ActionListener() {
+        jButton22.setText("+");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton58ActionPerformed(evt);
+                jButton22ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton58, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
+        jPanel3.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
 
-        jLabel141.setText("ACTIVOS");
-        jPanel3.add(jLabel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
+        jLabel50.setText("ACTIVOS");
+        jPanel3.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
 
-        jLabel142.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel142.setText("0");
-        jPanel3.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 30, -1));
+        jLabel51.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel51.setText("0");
+        jPanel3.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 30, -1));
 
-        jLabel143.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel143.setText("0");
-        jPanel3.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 30, -1));
+        jLabel52.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel52.setText("0");
+        jPanel3.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 30, -1));
 
-        jLabel144.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel144.setText("0");
-        jPanel3.add(jLabel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 30, -1));
+        jLabel53.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel53.setText("0");
+        jPanel3.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 30, -1));
 
-        jLabel145.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel145.setText("0");
-        jPanel3.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 30, -1));
+        jLabel54.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel54.setText("0");
+        jPanel3.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 30, -1));
 
-        jLabel146.setText("ENSAMBLADORES");
-        jPanel3.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+        jLabel55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel55.setText("0");
+        jPanel3.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 30, -1));
 
-        jButton59.setText("-");
-        jButton59.addActionListener(new java.awt.event.ActionListener() {
+        jLabel22.setText("ENSAMBLADORES");
+        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+
+        jButton23.setText("-");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton59ActionPerformed(evt);
+                jButton23ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton59, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, -1));
+        jPanel3.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, -1));
 
-        jButton60.setText("+");
-        jButton60.addActionListener(new java.awt.event.ActionListener() {
+        jButton24.setText("+");
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton60ActionPerformed(evt);
+                jButton24ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton60, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
+        jPanel3.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
 
-        jLabel147.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel147.setText("0");
-        jPanel3.add(jLabel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 30, -1));
+        jLabel56.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel56.setText("0");
+        jPanel3.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 30, -1));
 
-        jLabel148.setText("CAPACIDAD DE DRIVE");
-        jPanel3.add(jLabel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
+        jLabel23.setText("CAPACIDAD DE DRIVE");
+        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
 
-        jLabel149.setText("ACTUAL");
-        jPanel3.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, -1, -1));
+        jLabel24.setText("ACTUAL");
+        jPanel3.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, -1, -1));
 
-        jLabel150.setText("MAXIMA");
-        jPanel3.add(jLabel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
+        jLabel25.setText("MAXIMA");
+        jPanel3.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
 
-        jLabel151.setText("PROJECT MANAGER");
-        jPanel3.add(jLabel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
+        velmaInventarioIntroMaximo2.setEditable(false);
+        velmaInventarioIntroMaximo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioIntroMaximo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioIntroMaximo2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(velmaInventarioIntroMaximo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 40, -1));
 
-        jLabel152.setText("ACTIVIDAD");
-        jPanel3.add(jLabel152, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
+        velmaInventarioCreditosMaximo2.setEditable(false);
+        velmaInventarioCreditosMaximo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCreditosMaximo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioCreditosMaximo2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(velmaInventarioCreditosMaximo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 40, -1));
 
-        jLabel153.setText("SALARIO");
-        jPanel3.add(jLabel153, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, -1, -1));
+        velmaInventarioInicioMaximo2.setEditable(false);
+        velmaInventarioInicioMaximo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioInicioMaximo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioInicioMaximo2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(velmaInventarioInicioMaximo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 40, -1));
 
-        jLabel154.setText("FALTAS");
-        jPanel3.add(jLabel154, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, -1, -1));
+        velmaInventarioCierreMaximo2.setEditable(false);
+        velmaInventarioCierreMaximo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCierreMaximo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioCierreMaximo2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(velmaInventarioCierreMaximo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 40, -1));
 
-        jLabel155.setText("DIRECTOR");
-        jPanel3.add(jLabel155, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
+        velmaInventarioPlottwistMaximo2.setEditable(false);
+        velmaInventarioPlottwistMaximo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioPlottwistMaximo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioPlottwistMaximo2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(velmaInventarioPlottwistMaximo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 250, 40, -1));
 
-        jLabel156.setText("ACTIVIDAD");
-        jPanel3.add(jLabel156, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, -1, -1));
+        velmaInventarioIntroMaximo3.setEditable(false);
+        velmaInventarioIntroMaximo3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioIntroMaximo3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioIntroMaximo3ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(velmaInventarioIntroMaximo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 40, -1));
 
-        jLabel157.setText("CANTIDAD DE CAPITULOS LISTOS");
-        jPanel3.add(jLabel157, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
+        velmaInventarioCreditosMaximo3.setEditable(false);
+        velmaInventarioCreditosMaximo3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCreditosMaximo3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioCreditosMaximo3ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(velmaInventarioCreditosMaximo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 40, -1));
 
-        jLabel158.setText("DIAS PARA LA ENTREGA");
-        jPanel3.add(jLabel158, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
+        velmaInventarioInicioMaximo3.setEditable(false);
+        velmaInventarioInicioMaximo3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioInicioMaximo3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioInicioMaximo3ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(velmaInventarioInicioMaximo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 40, -1));
 
-        jLabel159.setText("DEADLINE (DIAS ENTRE ENTREGAS)");
-        jPanel3.add(jLabel159, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 300, -1, -1));
+        velmaInventarioCierreMaximo3.setEditable(false);
+        velmaInventarioCierreMaximo3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioCierreMaximo3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioCierreMaximo3ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(velmaInventarioCierreMaximo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 40, -1));
 
-        jLabel160.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel160.setText("0");
-        jPanel3.add(jLabel160, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 30, -1));
+        velmaInventarioPlottwistMaximo3.setEditable(false);
+        velmaInventarioPlottwistMaximo3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaInventarioPlottwistMaximo3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaInventarioPlottwistMaximo3ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(velmaInventarioPlottwistMaximo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, 40, -1));
 
-        jLabel161.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel161.setText("0");
-        jPanel3.add(jLabel161, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 30, -1));
+        jLabel33.setText("PROJECT MANAGER");
+        jPanel3.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
 
-        jLabel162.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel162.setText("0");
-        jPanel3.add(jLabel162, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, 30, -1));
+        velmaPMFaltas1.setEditable(false);
+        velmaPMFaltas1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        velmaPMFaltas1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velmaPMFaltas1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(velmaPMFaltas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, 140, -1));
 
-        jLabel163.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel163.setText("0");
-        jPanel3.add(jLabel163, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, 30, -1));
+        jLabel38.setText("ACTIVIDAD");
+        jPanel3.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
 
-        jLabel164.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel164.setText("0");
-        jPanel3.add(jLabel164, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, 30, -1));
+        jLabel39.setText("SALARIO");
+        jPanel3.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, -1, -1));
 
-        jLabel165.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel165.setText("0");
-        jPanel3.add(jLabel165, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, 30, -1));
+        pmActividad5.setEditable(false);
+        pmActividad5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad5ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(pmActividad5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 140, -1));
 
-        jLabel166.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel166.setText("0");
-        jPanel3.add(jLabel166, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 30, -1));
+        jLabel40.setText("FALTAS");
+        jPanel3.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, -1, -1));
 
-        jLabel167.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel167.setText("0");
-        jPanel3.add(jLabel167, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 440, 30, -1));
+        pmSalario1.setEditable(false);
+        pmSalario1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmSalario1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmSalario1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(pmSalario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 140, -1));
 
-        jLabel168.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel168.setText("0");
-        jPanel3.add(jLabel168, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 490, 30, -1));
+        jLabel26.setText("DIRECTOR");
+        jPanel3.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
 
-        jLabel169.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel169.setText("0");
-        jPanel3.add(jLabel169, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 30, -1));
+        pmActividad6.setEditable(false);
+        pmActividad6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad6ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(pmActividad6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 140, -1));
 
-        jLabel170.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel170.setText("0");
-        jPanel3.add(jLabel170, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 30, -1));
+        jLabel41.setText("ACTIVIDAD");
+        jPanel3.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
 
-        jLabel171.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel171.setText("0");
-        jPanel3.add(jLabel171, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 30, -1));
+        jLabel27.setText("CANTIDAD DE CAPITULOS LISTOS");
+        jPanel3.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
 
-        jLabel172.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel172.setText("0");
-        jPanel3.add(jLabel172, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 30, -1));
+        pmActividad7.setEditable(false);
+        pmActividad7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad7ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(pmActividad7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 60, -1));
 
-        jLabel173.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel173.setText("0");
-        jPanel3.add(jLabel173, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 30, -1));
+        jLabel28.setText("DIAS PARA LA ENTREGA");
+        jPanel3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
 
-        jLabel174.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel174.setText("0");
-        jPanel3.add(jLabel174, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, 30, -1));
+        pmActividad8.setEditable(false);
+        pmActividad8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pmActividad8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pmActividad8ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(pmActividad8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 140, -1));
 
-        jLabel175.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel175.setText("0");
-        jPanel3.add(jLabel175, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 30, -1));
+        jLabel29.setText("DEADLINE");
+        jPanel3.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
 
-        jLabel176.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel176.setText("0");
-        jPanel3.add(jLabel176, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, 30, -1));
-
-        jLabel177.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel177.setText("0");
-        jPanel3.add(jLabel177, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 30, -1));
+        diasEntregaDisney.setText("0");
+        jPanel3.add(diasEntregaDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 50, 20));
 
         jTabbedPane1.addTab("Disney Channel ", jPanel3);
 
@@ -691,101 +853,233 @@ public class Interfaz extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton37ActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton38ActionPerformed
+    }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton39ActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton40ActionPerformed
+    }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton41ActionPerformed
+    }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton42ActionPerformed
+    }//GEN-LAST:event_jButton11ActionPerformed
 
-    private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton43ActionPerformed
+    }//GEN-LAST:event_jButton12ActionPerformed
 
-    private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton44ActionPerformed
+    }//GEN-LAST:event_jButton13ActionPerformed
 
-    private void jButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45ActionPerformed
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton45ActionPerformed
+    }//GEN-LAST:event_jButton14ActionPerformed
 
-    private void jButton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton46ActionPerformed
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton46ActionPerformed
+    }//GEN-LAST:event_jButton15ActionPerformed
 
-    private void jButton47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton47ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton47ActionPerformed
+    }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48ActionPerformed
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton48ActionPerformed
+    }//GEN-LAST:event_jButton16ActionPerformed
 
-    private void jButton49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton49ActionPerformed
+    private void velmaInventarioIntroMaximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioIntroMaximoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton49ActionPerformed
+    }//GEN-LAST:event_velmaInventarioIntroMaximoActionPerformed
 
-    private void jButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton50ActionPerformed
+    private void velmaInventarioCreditosMaximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCreditosMaximoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton50ActionPerformed
+    }//GEN-LAST:event_velmaInventarioCreditosMaximoActionPerformed
 
-    private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
+    private void velmaInventarioInicioMaximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioInicioMaximoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton51ActionPerformed
+    }//GEN-LAST:event_velmaInventarioInicioMaximoActionPerformed
 
-    private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
+    private void velmaInventarioCierreMaximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCierreMaximoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton52ActionPerformed
+    }//GEN-LAST:event_velmaInventarioCierreMaximoActionPerformed
 
-    private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
+    private void velmaInventarioPlottwistMaximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioPlottwistMaximoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton53ActionPerformed
+    }//GEN-LAST:event_velmaInventarioPlottwistMaximoActionPerformed
 
-    private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
+    private void velmaInventarioIntroMaximo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioIntroMaximo1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton54ActionPerformed
+    }//GEN-LAST:event_velmaInventarioIntroMaximo1ActionPerformed
 
-    private void jButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton55ActionPerformed
+    private void velmaInventarioCreditosMaximo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCreditosMaximo1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton55ActionPerformed
+    }//GEN-LAST:event_velmaInventarioCreditosMaximo1ActionPerformed
 
-    private void jButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton56ActionPerformed
+    private void velmaInventarioInicioMaximo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioInicioMaximo1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton56ActionPerformed
+    }//GEN-LAST:event_velmaInventarioInicioMaximo1ActionPerformed
 
-    private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
+    private void velmaInventarioCierreMaximo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCierreMaximo1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton57ActionPerformed
+    }//GEN-LAST:event_velmaInventarioCierreMaximo1ActionPerformed
 
-    private void jButton58ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton58ActionPerformed
+    private void velmaInventarioPlottwistMaximo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioPlottwistMaximo1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton58ActionPerformed
+    }//GEN-LAST:event_velmaInventarioPlottwistMaximo1ActionPerformed
 
-    private void jButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton59ActionPerformed
+    private void velmaPMFaltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaPMFaltasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton59ActionPerformed
+    }//GEN-LAST:event_velmaPMFaltasActionPerformed
 
-    private void jButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton60ActionPerformed
+    private void pmActividadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividadActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton60ActionPerformed
+    }//GEN-LAST:event_pmActividadActionPerformed
+
+    private void pmSalarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmSalarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmSalarioActionPerformed
+
+    private void pmActividad1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad1ActionPerformed
+
+    private void pmActividad2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad2ActionPerformed
+
+    private void pmActividad3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad3ActionPerformed
+
+    private void pmActividad4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad4ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void velmaInventarioIntroMaximo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioIntroMaximo2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioIntroMaximo2ActionPerformed
+
+    private void velmaInventarioCreditosMaximo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCreditosMaximo2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioCreditosMaximo2ActionPerformed
+
+    private void velmaInventarioInicioMaximo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioInicioMaximo2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioInicioMaximo2ActionPerformed
+
+    private void velmaInventarioCierreMaximo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCierreMaximo2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioCierreMaximo2ActionPerformed
+
+    private void velmaInventarioPlottwistMaximo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioPlottwistMaximo2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioPlottwistMaximo2ActionPerformed
+
+    private void velmaInventarioIntroMaximo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioIntroMaximo3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioIntroMaximo3ActionPerformed
+
+    private void velmaInventarioCreditosMaximo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCreditosMaximo3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioCreditosMaximo3ActionPerformed
+
+    private void velmaInventarioInicioMaximo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioInicioMaximo3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioInicioMaximo3ActionPerformed
+
+    private void velmaInventarioCierreMaximo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioCierreMaximo3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioCierreMaximo3ActionPerformed
+
+    private void velmaInventarioPlottwistMaximo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaInventarioPlottwistMaximo3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaInventarioPlottwistMaximo3ActionPerformed
+
+    private void velmaPMFaltas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaPMFaltas1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_velmaPMFaltas1ActionPerformed
+
+    private void pmActividad5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad5ActionPerformed
+
+    private void pmSalario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmSalario1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmSalario1ActionPerformed
+
+    private void pmActividad6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad6ActionPerformed
+
+    private void pmActividad7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad7ActionPerformed
+
+    private void pmActividad8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pmActividad8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -830,121 +1124,121 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton37;
-    private javax.swing.JButton jButton38;
-    private javax.swing.JButton jButton39;
-    private javax.swing.JButton jButton40;
-    private javax.swing.JButton jButton41;
-    private javax.swing.JButton jButton42;
-    private javax.swing.JButton jButton43;
-    private javax.swing.JButton jButton44;
-    private javax.swing.JButton jButton45;
-    private javax.swing.JButton jButton46;
-    private javax.swing.JButton jButton47;
-    private javax.swing.JButton jButton48;
-    private javax.swing.JButton jButton49;
-    private javax.swing.JButton jButton50;
-    private javax.swing.JButton jButton51;
-    private javax.swing.JButton jButton52;
-    private javax.swing.JButton jButton53;
-    private javax.swing.JButton jButton54;
-    private javax.swing.JButton jButton55;
-    private javax.swing.JButton jButton56;
-    private javax.swing.JButton jButton57;
-    private javax.swing.JButton jButton58;
-    private javax.swing.JButton jButton59;
-    private javax.swing.JButton jButton60;
-    private javax.swing.JLabel jLabel100;
-    private javax.swing.JLabel jLabel101;
-    private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
-    private javax.swing.JLabel jLabel104;
-    private javax.swing.JLabel jLabel105;
-    private javax.swing.JLabel jLabel106;
-    private javax.swing.JLabel jLabel107;
-    private javax.swing.JLabel jLabel108;
-    private javax.swing.JLabel jLabel109;
-    private javax.swing.JLabel jLabel110;
-    private javax.swing.JLabel jLabel111;
-    private javax.swing.JLabel jLabel112;
-    private javax.swing.JLabel jLabel113;
-    private javax.swing.JLabel jLabel114;
-    private javax.swing.JLabel jLabel115;
-    private javax.swing.JLabel jLabel116;
-    private javax.swing.JLabel jLabel117;
-    private javax.swing.JLabel jLabel118;
-    private javax.swing.JLabel jLabel119;
-    private javax.swing.JLabel jLabel120;
-    private javax.swing.JLabel jLabel121;
-    private javax.swing.JLabel jLabel122;
-    private javax.swing.JLabel jLabel123;
-    private javax.swing.JLabel jLabel124;
-    private javax.swing.JLabel jLabel125;
-    private javax.swing.JLabel jLabel126;
-    private javax.swing.JLabel jLabel127;
-    private javax.swing.JLabel jLabel128;
-    private javax.swing.JLabel jLabel129;
-    private javax.swing.JLabel jLabel130;
-    private javax.swing.JLabel jLabel131;
-    private javax.swing.JLabel jLabel132;
-    private javax.swing.JLabel jLabel133;
-    private javax.swing.JLabel jLabel134;
-    private javax.swing.JLabel jLabel135;
-    private javax.swing.JLabel jLabel136;
-    private javax.swing.JLabel jLabel137;
-    private javax.swing.JLabel jLabel138;
-    private javax.swing.JLabel jLabel139;
-    private javax.swing.JLabel jLabel140;
-    private javax.swing.JLabel jLabel141;
-    private javax.swing.JLabel jLabel142;
-    private javax.swing.JLabel jLabel143;
-    private javax.swing.JLabel jLabel144;
-    private javax.swing.JLabel jLabel145;
-    private javax.swing.JLabel jLabel146;
-    private javax.swing.JLabel jLabel147;
-    private javax.swing.JLabel jLabel148;
-    private javax.swing.JLabel jLabel149;
-    private javax.swing.JLabel jLabel150;
-    private javax.swing.JLabel jLabel151;
-    private javax.swing.JLabel jLabel152;
-    private javax.swing.JLabel jLabel153;
-    private javax.swing.JLabel jLabel154;
-    private javax.swing.JLabel jLabel155;
-    private javax.swing.JLabel jLabel156;
-    private javax.swing.JLabel jLabel157;
-    private javax.swing.JLabel jLabel158;
-    private javax.swing.JLabel jLabel159;
-    private javax.swing.JLabel jLabel160;
-    private javax.swing.JLabel jLabel161;
-    private javax.swing.JLabel jLabel162;
-    private javax.swing.JLabel jLabel163;
-    private javax.swing.JLabel jLabel164;
-    private javax.swing.JLabel jLabel165;
-    private javax.swing.JLabel jLabel166;
-    private javax.swing.JLabel jLabel167;
-    private javax.swing.JLabel jLabel168;
-    private javax.swing.JLabel jLabel169;
-    private javax.swing.JLabel jLabel170;
-    private javax.swing.JLabel jLabel171;
-    private javax.swing.JLabel jLabel172;
-    private javax.swing.JLabel jLabel173;
-    private javax.swing.JLabel jLabel174;
-    private javax.swing.JLabel jLabel175;
-    private javax.swing.JLabel jLabel176;
-    private javax.swing.JLabel jLabel177;
+    private javax.swing.JLabel diasEntregaDisney;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel98;
-    private javax.swing.JLabel jLabel99;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField pmActividad;
+    private javax.swing.JTextField pmActividad1;
+    private javax.swing.JTextField pmActividad2;
+    private javax.swing.JTextField pmActividad3;
+    private javax.swing.JTextField pmActividad4;
+    private javax.swing.JTextField pmActividad5;
+    private javax.swing.JTextField pmActividad6;
+    private javax.swing.JTextField pmActividad7;
+    private javax.swing.JTextField pmActividad8;
+    private javax.swing.JTextField pmSalario;
+    private javax.swing.JTextField pmSalario1;
+    private javax.swing.JTextField velmaInventarioCierreMaximo;
+    private javax.swing.JTextField velmaInventarioCierreMaximo1;
+    private javax.swing.JTextField velmaInventarioCierreMaximo2;
+    private javax.swing.JTextField velmaInventarioCierreMaximo3;
+    private javax.swing.JTextField velmaInventarioCreditosMaximo;
+    private javax.swing.JTextField velmaInventarioCreditosMaximo1;
+    private javax.swing.JTextField velmaInventarioCreditosMaximo2;
+    private javax.swing.JTextField velmaInventarioCreditosMaximo3;
+    private javax.swing.JTextField velmaInventarioInicioMaximo;
+    private javax.swing.JTextField velmaInventarioInicioMaximo1;
+    private javax.swing.JTextField velmaInventarioInicioMaximo2;
+    private javax.swing.JTextField velmaInventarioInicioMaximo3;
+    private javax.swing.JTextField velmaInventarioIntroMaximo;
+    private javax.swing.JTextField velmaInventarioIntroMaximo1;
+    private javax.swing.JTextField velmaInventarioIntroMaximo2;
+    private javax.swing.JTextField velmaInventarioIntroMaximo3;
+    private javax.swing.JTextField velmaInventarioPlottwistMaximo;
+    private javax.swing.JTextField velmaInventarioPlottwistMaximo1;
+    private javax.swing.JTextField velmaInventarioPlottwistMaximo2;
+    private javax.swing.JTextField velmaInventarioPlottwistMaximo3;
+    private javax.swing.JTextField velmaPMFaltas;
+    private javax.swing.JTextField velmaPMFaltas1;
     // End of variables declaration//GEN-END:variables
 
     /**
