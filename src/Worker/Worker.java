@@ -22,7 +22,7 @@ public abstract class Worker extends Thread{
     private String nombre;
     private Semaphore mutex;
     private int tipo;
-    private float CantidadDeTrabajoPorDia;
+    private float CantidadDeTrabajoPorDia; //esta es la cantidad que se ira acumulando a la variable ACC 
     
     public Worker(int tipo,float salario, String nombre, Semaphore mutex,Company compania) {
            this.salarioAcumulado = 0;

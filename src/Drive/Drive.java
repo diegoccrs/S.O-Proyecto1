@@ -24,11 +24,11 @@ public class Drive {
     private int capitulosEstandar = 0; //Capitulos Estandar
     
     //Semaforos
-    private Semaphore salarioAccMutex = new Semaphore(1);
-    private Semaphore diasMutex = new Semaphore(1);
+    private Semaphore salarioAccMutex = new Semaphore(1); //Este es para entrar al drive a gestionar los salarios
+    private Semaphore diasMutex = new Semaphore(1); //Este es para entrar al drive a gestionar los dias
     
-    private int deadline;
-    private int estadoDeadline;
+    private int deadline;//cantidad de dias que se tienen para entregar capitulos
+    private int estadoDeadline;//ira disminuyendo de 1 en 1 hasta llegar a 0, luego se reiniciara.
     
     //Salario acumulado
     private float animadoresAcc = 0;
@@ -62,6 +62,7 @@ public class Drive {
         this.estadoDeadline = deadline;
     }
     
+    //ESTE METODO AGREGA EL SALARIO, AL ACUMULADO DE CADA TIPO DE TRABAJADOR
     public void addSalary(int type,float salary){
         if (type == 0){
             this.setAnimadoresAcc(this.getAnimadoresAcc() + salary*24);
@@ -73,9 +74,16 @@ public class Drive {
             this.setDoblajesAcc(this.getDoblajesAcc() + salary*24);
         }else if(type == 4){
             this.setDisenadoresGuionesPlotTwistAcc(this.getDisenadoresGuionesPlotTwistAcc() + salary*24);
+        }else if(type == 5){
+            this.setEnsambladorAcc(this.getEnsambladorAcc() + salary*24);
+        }else if(type == 6){
+            this.setPmAcc(this.getPmAcc() + salary*24);
+        }else if(type == 7){
+            this.setDirectorAcc(this.getDirectorAcc() + salary*24);
         }
     }
     
+    //ESTE METODO AGREGA LAS PARTES QUE HA HECHO CADA TRABAJADOR. ESTE METODO APLICA IGUAL PARA TODAS LAS COMPANIAS
     public void addPart(int type){
         if (type == 0 && this.getAnimaciones() < this.getAnimacionesMax()){
             if(this.getAnimaciones() < 54){
@@ -100,6 +108,8 @@ public class Drive {
         }
     }
     
+    //ESTE METODO AGREGA LOS CAPITULOS AL DRIVE Y ELIMINA LAS PARTES QUE SE USARON
+    //ES USADO POR LOS ENSAMBLADORES Y ES DIFERENTE PARA CADA COMPANIA
     public void addChapter(int tipoCompania){
         if(tipoCompania == 0){ //0 cartoon network
             this.setGuiones(this.getGuiones() - 1);
