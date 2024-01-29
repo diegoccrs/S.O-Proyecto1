@@ -30,7 +30,7 @@ public class Interfaz extends javax.swing.JFrame {
     
     
     
-    //ESTE METODO DEVUELVE TRUE SI SE PUEDE AUMENTAR Y DEVUELVE FALSE SI NO SE PUEDE
+    //ESTE METODO DEVUELVE TRUE SI SE PUEDE AUMENTAR Y DEVUELVE FALSE SI NO SE PUEDE. Solo funciona para disney
     public boolean permisoDeAumentoDeTrabajadorDisney(){
         boolean respuesta = false;
         int totalTrabajadores = Global.getDisney().cantidadTrabajadores(); 
@@ -1359,7 +1359,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        if(Global.getDisney().getGuionistas().getSize() > 1 && Global.getDisney().cantidadTrabajadores() > 16 ){
+        if(Global.getDisney().getGuionistas().getSize() > 1 && Global.getDisney().cantidadTrabajadores() > 8 ){ //La segunda condicionquiere decir que Para que haya al menos un trabajador de cada tipo deben haber 8 trabajadores en total, como minimo
             Developer trabajadorDespedido = (Developer) Global.getDisney().getGuionistas().getTail().getElement();//agarramos al ultimo guionista
             Global.getDisney().getGuionistas().deleteFinal();//eliminamos al ultimo guionista
             trabajadorDespedido.stop();//detenemos el hilo del ultimo guionista
@@ -1390,10 +1390,10 @@ public class Interfaz extends javax.swing.JFrame {
         if(this.permisoDeAumentoDeTrabajadorDisney() == true){
             Developer guionistaNuevo = new Developer(0,240, "perez", Global.getMutexDisney(),Global.getDisney()); //creas al nuevo guionista
             Global.getDisney().getGuionistas().insertFinal(guionistaNuevo);//lo agregas a la lista de guionistas de disney
-            GuionistasDisneyActivos.setText(Integer.toString(parseInt(GuionistasDisneyActivos.getText())+ 1));//modificas el label de la interfaz
+            GuionistasDisneyActivos.setText(Integer.toString(Global.getDisney().getGuionistas().getSize()+ 1));//actualizamos el label de la interfaz
             guionistaNuevo.start();//lo pones a trabajar
         }else{
-            JOptionPane.showMessageDialog(null, "El total de trabajadores es 16(el maximo)");
+            JOptionPane.showMessageDialog(null, "No puedes agregar otro guionista. El total de trabajadores es 16(el maximo)");
         }
     }//GEN-LAST:event_jButton18ActionPerformed
 
