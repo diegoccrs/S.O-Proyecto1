@@ -13,7 +13,7 @@ import java.util.concurrent.Semaphore;
  * @author Kevin
  */
 public class Global {
-
+   //Estas son instancias de clases estaticas. Te permiten acceder a los objetos desde cualquier clase sin inicializarlos
     private static Drive driveDisney = new Drive();
     private static Drive driveCartoonNetwork = new Drive();
     private static Company Disney = new Company();

@@ -44,7 +44,7 @@ public class NewMain {
         Developer trabajador5 = new Developer(4,300, "pepe", mutex,compania);
         Assembler ensamblador1 = new Assembler(5,40,"albeto",mutex,compania);
         ProjectManager pm = new ProjectManager(6,240,"pedro",mutex,compania);
-        
+        System.out.println(Global.getDisney().cantidadTrabajadores());
         //compania..insertBegin(trabajador1);
         //compania.getDevelopers().insertBegin(ensamblador1);
         //System.out.println(compania.getDevelopers().getHead().getNext().getElement().getType());
