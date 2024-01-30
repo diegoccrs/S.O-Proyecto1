@@ -1358,7 +1358,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        if(Global.getDisney().getGuionistas().getSize() > 1 && Global.getDisney().cantidadTrabajadores() > 8 ){ //La segunda condicion quiere decir que Para que haya al menos un trabajador de cada tipo deben haber 8 trabajadores en total, como minimo
+        if(Global.getDisney().getGuionistas().getSize() > 1 ){ //La segunda condicion quiere decir que Para que haya al menos un trabajador de cada tipo deben haber 8 trabajadores en total, como minimo
             Developer trabajadorDespedido = (Developer) Global.getDisney().getGuionistas().getTail().getElement();//agarramos al ultimo guionista
             Global.getDisney().getGuionistas().deleteFinal();//eliminamos al ultimo guionista
             trabajadorDespedido.stop();//detenemos el hilo del ultimo guionista

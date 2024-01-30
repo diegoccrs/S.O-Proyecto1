@@ -51,8 +51,7 @@ public class Company {
                         disenadoresEscenarios.getSize()+
                         guionistas.getSize()+
                         actoresDoblaje.getSize()+
-                        guionistasPlotTwist.getSize()
-                        + 2;//estos ultimos 2 son por el pm y el director
+                        guionistasPlotTwist.getSize();
         return respuesta;
     }
 
