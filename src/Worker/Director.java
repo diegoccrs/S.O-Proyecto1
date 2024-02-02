@@ -19,8 +19,8 @@ public class Director extends Worker{
     
     private Drive drive;
     
-    public Director(int tipo,float salario,String nombre,Semaphore mutex,Company compañia){
-    super(tipo,salario,nombre,mutex,compañia);
+    public Director(int tipo,float salario,Semaphore mutex,Company compañia){
+    super(tipo,salario,mutex,compañia);
     this.drive = drive;
     }
     

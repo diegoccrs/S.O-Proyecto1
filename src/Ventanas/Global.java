@@ -6,6 +6,7 @@ package Ventanas;
 
 import Companies.Company;
 import Drive.Drive;
+import FunctionsTXT.Funciones;
 import java.util.concurrent.Semaphore;
 
 /**
@@ -20,6 +21,7 @@ public class Global {
     private static Company CartoonNetwork = new Company();
     private static Semaphore mutexDisney = new Semaphore(1);
     private static Semaphore mutexCartoonNetwork = new Semaphore(1);
+    private static Funciones  funciones = new Funciones();
 
     
     public static Drive getDriveDisney(){
@@ -80,6 +82,20 @@ public class Global {
      */
     public static void setMutexCartoonNetwork(Semaphore aMutexCartoonNetwork) {
         mutexCartoonNetwork = aMutexCartoonNetwork;
+    }
+
+    /**
+     * @return the funciones
+     */
+    public static Funciones getFunciones() {
+        return funciones;
+    }
+
+    /**
+     * @param aFunciones the funciones to set
+     */
+    public static void setFunciones(Funciones aFunciones) {
+        funciones = aFunciones;
     }
     
     

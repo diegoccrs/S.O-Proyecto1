@@ -18,8 +18,8 @@ import java.util.logging.Logger;
 public class Developer extends Worker{
     float salarioAcc;
     float acc;
-    public Developer(int tipo,float salario, String nombre, Semaphore mutex, Company compania) {
-        super(tipo,salario, nombre, mutex,compania);
+    public Developer(int tipo,float salario, Semaphore mutex, Company compania) {
+        super(tipo,salario, mutex,compania);
         this.salarioAcc = 0;
         this.acc = 0;
     }
@@ -48,7 +48,7 @@ public class Developer extends Worker{
             try {
                 if (this.acc >= 1){
                     this.getMutex().acquire(); //wait
-                    this.getCompania().getDrive().addPart(this.getTipo());//critica
+                    this.getCompania().getDrive().addPart(this.getTipo(),this.getCompania().getTipoCompania());//critica
                     this.getMutex().release();// signal
                     this.acc = 0;
                 }

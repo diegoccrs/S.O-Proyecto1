@@ -84,59 +84,50 @@ public class Drive {
         }
     }
     
-    //ESTE METODO AGREGA LAS PARTES QUE HA HECHO CADA TRABAJADOR. ESTE METODO APLICA IGUAL PARA TODAS LAS COMPANIAS
-    public void addPart(int type){
-        if (type == 0 && this.getAnimaciones() < this.getAnimacionesMax()){
-            if(this.getAnimaciones() < 54){
-                this.setAnimaciones(this.getAnimaciones() + 2);
-                System.out.println("animaciones disponibles:" + this.getAnimaciones());
-            }else{
-                this.setAnimaciones(this.getAnimaciones() + 1);
-                System.out.println("animaciones disponibles:" + this.getAnimaciones());
+    //ESTE METODO AGREGA LAS PARTES QUE HA HECHO CADA TRABAJADOR DEPENDIENDO DE LA COMPANIA
+    public void addPart(int tipoTrabajador,int tipoCompania){
+        if(tipoCompania == 0){//Disney: ultimo numero del carnet de Kevin= 4
+            if (tipoTrabajador == 0 && this.getAnimaciones() < this.getAnimacionesMax()){
+                if(this.getAnimaciones() < 54){
+                    this.setAnimaciones(this.getAnimaciones() + 2,tipoCompania);
+                    //System.out.println("animaciones disponibles:" + this.getAnimaciones());
+                }else{
+                    this.setAnimaciones(this.getAnimaciones() + 1,tipoCompania);
+                    //System.out.println("animaciones disponibles:" + this.getAnimaciones());
+                }
+            }else if(tipoTrabajador == 1 && this.getGuiones() < this.getGuionesMax()){
+                this.setGuiones(this.getGuiones() + 1,tipoCompania);
+                System.out.println("guiones disponibles:" + this.getGuiones());
+            }else if(tipoTrabajador == 2 && this.getEscenarios() < this.getEscenariosMax()){
+                this.setEscenarios(this.getEscenarios() + 1,tipoCompania);
+                //System.out.println("escenarios disponibles:" + this.getEscenarios());
+            }else if(tipoTrabajador == 3 && this.getDoblajes() < this.getDoblajesMax()){
+                if(this.getDoblajes() < 33){
+                    this.setDoblajes(this.getDoblajes() + 3,tipoCompania);
+                }else{
+                    this.setDoblajes(this.getDoblajes() + 2,tipoCompania);
+                }
+                //System.out.println("doblajes disponibles:" + this.getDoblajes());
+            }else if(tipoTrabajador == 4 && this.getGuionesPlotTwist() < this.getGuionesPlotTwistMax()){
+                this.setGuionesPlotTwist(this.getGuionesPlotTwist() + 1,tipoCompania);
+                //System.out.println("Guiones de PlotTwist disponibles:" + this.getGuionesPlotTwist());
             }
-        }else if(type == 1 && this.getGuiones() < this.getGuionesMax()){
-            this.setGuiones(this.getGuiones() + 1);
-            System.out.println("guiones disponibles:" + this.getGuiones());
-        }else if(type == 2 && this.getEscenarios() < this.getEscenariosMax()){
-            this.setEscenarios(this.getEscenarios() + 1);
-            System.out.println("escenarios disponibles:" + this.getEscenarios());
-        }else if(type == 3 && this.getDoblajes() < this.getDoblajesMax()){
-            this.setDoblajes(this.getDoblajes() + 3);
-            System.out.println("doblajes disponibles:" + this.getDoblajes());
-        }else if(type == 4 && this.getGuionesPlotTwist() < this.getGuionesPlotTwistMax()){
-            this.setGuionesPlotTwist(this.getGuionesPlotTwist() + 1);
-            System.out.println("Guiones de PlotTwist disponibles:" + this.getGuionesPlotTwist());
-        }
-    }
-    
-    //ESTE METODO AGREGA LOS CAPITULOS AL DRIVE Y ELIMINA LAS PARTES QUE SE USARON
-    //ES USADO POR LOS ENSAMBLADORES Y ES DIFERENTE PARA CADA COMPANIA
-    public void addChapter(int tipoCompania){
-        if(tipoCompania == 0){ //0 cartoon network
-            this.setGuiones(this.getGuiones() - 1);
-            this.setEscenarios(this.getEscenarios() - 2);
-            this.setAnimaciones(this.getAnimaciones() - 6);
-            this.setDoblajes(this.getDoblajes() - 5);
-            if(((this.getCapitulosEstandar()+this.getCapitulosPlotTwist()+1)% 4 == 0) && (this.getGuionesPlotTwist() >= 1)){
-                this.setGuionesPlotTwist(this.getGuionesPlotTwist() - 1);
-                this.setCapitulosPlotTwist(this.getCapitulosPlotTwist() + 1);
-                System.out.println("Capitulos PlotTwist disponibles:" + this.getCapitulosPlotTwist());
-            }else{
-                this.setCapitulosEstandar(this.getCapitulosEstandar() + 1);
-                System.out.println("Capitulos Estandar disponibles:" + this.getCapitulosEstandar());
-            }
-        }else if(tipoCompania == 1){ // 1 = disney channel
-            this.setGuiones(this.getGuiones() - 1);
-            this.setEscenarios(this.getEscenarios() - 1);
-            this.setAnimaciones(this.getAnimaciones() - 2);
-            this.setDoblajes(this.getDoblajes() - 4);
-            if(((this.getCapitulosEstandar()+this.getCapitulosPlotTwist()+1)% 3 == 0) && (this.getGuionesPlotTwist() >= 3)){
-                this.setGuionesPlotTwist(this.getGuionesPlotTwist() - 3);
-                this.setCapitulosPlotTwist(this.getCapitulosPlotTwist() + 1);
-                System.out.println("Capitulos PlotTwist disponibles:" + this.getCapitulosPlotTwist());
-            }else{
-                this.setCapitulosEstandar(this.getCapitulosEstandar() + 1);
-                System.out.println("Capitulos Estandar disponibles:" + this.getCapitulosEstandar());
+        }else if(tipoCompania == 1){//Cartoon Network: ultimo numero del carnet de Diego= 6
+            if (tipoTrabajador == 0 && this.getAnimaciones() < this.getAnimacionesMax()){
+                this.setAnimaciones(this.getAnimaciones() + 1,tipoCompania);
+                //System.out.println("animaciones disponibles:" + this.getAnimaciones());
+            }else if(tipoTrabajador == 1 && this.getGuiones() < this.getGuionesMax()){
+                this.setGuiones(this.getGuiones() + 1,tipoCompania);
+                //System.out.println("guiones disponibles:" + this.getGuiones());
+            }else if(tipoTrabajador == 2 && this.getEscenarios() < this.getEscenariosMax()){
+                this.setEscenarios(this.getEscenarios() + 2,tipoCompania);
+                //System.out.println("escenarios disponibles:" + this.getEscenarios());
+            }else if(tipoTrabajador == 3 && this.getDoblajes() < this.getDoblajesMax()){
+                this.setDoblajes(this.getDoblajes() + 5,tipoCompania);
+                //System.out.println("doblajes disponibles:" + this.getDoblajes());
+            }else if(tipoTrabajador == 4 && this.getGuionesPlotTwist() < this.getGuionesPlotTwistMax()){
+                this.setGuionesPlotTwist(this.getGuionesPlotTwist() + 1,tipoCompania);
+                //System.out.println("Guiones de PlotTwist disponibles:" + this.getGuionesPlotTwist());
             }
         }
     }
@@ -151,8 +142,13 @@ public class Drive {
     /**
      * @param animaciones the animaciones to set
      */
-    public void setAnimaciones(int animaciones) {
+    public void setAnimaciones(int animaciones,int tipoCompania) {
         this.animaciones = animaciones;
+        if(tipoCompania == 0){
+            ManejadorInterfaz.getInterfaz().cambiarAnimacionesDisney(animaciones);
+        }else if(tipoCompania == 1){
+            ManejadorInterfaz.getInterfaz().cambiarAnimacionesCartoonNetwork(animaciones);
+        }
     }
 
     /**
@@ -165,8 +161,13 @@ public class Drive {
     /**
      * @param guiones the guiones to set
      */
-    public void setGuiones(int guiones) {
+    public void setGuiones(int guiones,int tipoCompania) {
         this.guiones = guiones;
+        if(tipoCompania == 0){
+            ManejadorInterfaz.getInterfaz().cambiarGuionesDisney(guiones);
+        }else if(tipoCompania == 1){
+            ManejadorInterfaz.getInterfaz().cambiarGuionesCartoonNetwork(guiones);
+        }
     }
 
     /**
@@ -179,8 +180,13 @@ public class Drive {
     /**
      * @param escenarios the escenarios to set
      */
-    public void setEscenarios(int escenarios) {
+    public void setEscenarios(int escenarios,int tipoCompania) {
         this.escenarios = escenarios;
+        if(tipoCompania == 0){
+            ManejadorInterfaz.getInterfaz().cambiarEscenariosDisney(escenarios);
+        }else if(tipoCompania == 1){
+            ManejadorInterfaz.getInterfaz().cambiarEscenariosCartoonNetwork(escenarios);
+        }
     }
 
     /**
@@ -193,8 +199,13 @@ public class Drive {
     /**
      * @param doblajes the doblajes to set
      */
-    public void setDoblajes(int doblajes) {
+    public void setDoblajes(int doblajes,int tipoCompania) {
         this.doblajes = doblajes;
+        if(tipoCompania == 0){
+            ManejadorInterfaz.getInterfaz().cambiarDoblajesDisney(doblajes);
+        }else if(tipoCompania == 1){
+            ManejadorInterfaz.getInterfaz().cambiarDoblajesCartoonNetwork(doblajes);
+        }
     }
 
     /**
@@ -207,8 +218,13 @@ public class Drive {
     /**
      * @param guionesPlotTwist the guionesPlotTwist to set
      */
-    public void setGuionesPlotTwist(int guionesPlotTwist) {
+    public void setGuionesPlotTwist(int guionesPlotTwist,int tipoCompania) {
         this.guionesPlotTwist = guionesPlotTwist;
+        if(tipoCompania == 0){
+            ManejadorInterfaz.getInterfaz().cambiarGuionesPlowtTistDisney(guionesPlotTwist);
+        }else if(tipoCompania == 1){
+            ManejadorInterfaz.getInterfaz().cambiarGuionesPlowtTistCartoonNetwork(guionesPlotTwist);
+        }
     }
 
     /**
@@ -530,13 +546,13 @@ public class Drive {
     /**
      * @param estadoDeadline the estadoDeadline to set
      */
-    public void setEstadoDeadline(int estadoDeadlineNuevo) {
+    public void setEstadoDeadline(int estadoDeadlineNuevo,int tipoCompania) {
         if(estadoDeadlineNuevo == -1){ //SI ES IGUAL A -1, REINICIA EL CONTADOR
             this.estadoDeadline = deadline;
-            ManejadorInterfaz.getInterfaz().cambiarDiasLanzamientoDisney(estadoDeadline);
+            ManejadorInterfaz.getInterfaz().cambiarDiasLanzamiento(estadoDeadline,tipoCompania);
         }else{ // SINO ES IGUAL A 0, SIGUE DISMINUYENDO DE 1 EN 1
             this.estadoDeadline = estadoDeadlineNuevo;
-            ManejadorInterfaz.getInterfaz().cambiarDiasLanzamientoDisney(estadoDeadline);
+            ManejadorInterfaz.getInterfaz().cambiarDiasLanzamiento(estadoDeadline,tipoCompania);
         }
                 
         

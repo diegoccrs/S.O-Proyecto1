@@ -30,7 +30,7 @@ public class Company {
     public Company() {
     }
     
-    public Company(Drive drive,int companyType,int duracionDia) {
+    public Company(Drive drive,int companyType) {
         this.tipoCompania = companyType;
         this.drive = drive;
         this.ganancias = 0;
@@ -42,7 +42,6 @@ public class Company {
         this.guionistas = new ListaDoble();
         this.actoresDoblaje = new ListaDoble();
         this.guionistasPlotTwist = new ListaDoble();
-        this.duracionDia = duracionDia;
     }
     
     public int cantidadTrabajadores(){

@@ -15,8 +15,8 @@ import Ventanas.Interfaz;
  */
 public class ProjectManager extends Worker{
     
-    public ProjectManager(int tipo, float salario, String nombre, Semaphore mutex, Company compania) {
-        super(tipo, salario, nombre, mutex, compania);
+    public ProjectManager(int tipo, float salario, Semaphore mutex, Company compania) {
+        super(tipo, salario, mutex, compania);
     }
 
     @Override
@@ -57,7 +57,7 @@ public class ProjectManager extends Worker{
                 sleep(Math.round(halfHour * 16));
                 
                 this.getCompania().getDrive().getDiasMutex().acquire();
-                this.getCompania().getDrive().setEstadoDeadline(this.getCompania().getDrive().getEstadoDeadline() - 1); //LE RESTA 1 AL DEADLINE
+                this.getCompania().getDrive().setEstadoDeadline(this.getCompania().getDrive().getEstadoDeadline() - 1,this.getCompania().getTipoCompania()); //LE RESTA 1 AL DEADLINE
                 //System.out.println("HOLA SOY EL PM");
                 this.getCompania().getDrive().getDiasMutex().release();
 
