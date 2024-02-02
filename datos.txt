@@ -124,6 +124,7 @@ Cantidad inicial  de trabajadores:
 Cantidad inicial de ensambladores: Duración en segundos del dia: 
 Deadline de entrega: 
 Cantidad inicial  de trabajadores: 
+<<<<<<< HEAD
 Cantidad inicial de ensambladores: Duración en segundos del dia: 
 Deadline de entrega: 
 Cantidad inicial  de trabajadores: 
@@ -259,4 +260,6 @@ Cantidad inicial  de trabajadores:
 Cantidad inicial de ensambladores: Duración en segundos del dia: 
 Deadline de entrega: 
 Cantidad inicial  de trabajadores: 
+=======
+>>>>>>> 02231ba6594d4d134e5357e98777e59dafa9b07a
 Cantidad inicial de ensambladores: 
