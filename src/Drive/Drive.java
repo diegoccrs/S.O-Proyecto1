@@ -19,9 +19,13 @@ public class Drive {
     private int doblajes = 0; //Doblajes
     private int guionesPlotTwist = 0; // Guiones de PlotTwist
     
-    //Capitulos
+    //Capitulos que no se han enviado a las empresas
     private int capitulosPlotTwist = 0; // Capitulos PlotTwist
     private int capitulosEstandar = 0; //Capitulos Estandar
+    
+    //capitulos acumulados,es decir, contador de todos los capitulos creados
+    private int capitulosPlotTwistAcumulados = 0; // Capitulos PlotTwist
+    private int capitulosEstandarAcumulados = 0; //Capitulos Estandar
     
     //Semaforos
     private Semaphore salarioAccMutex = new Semaphore(1); //Este es para entrar al drive a gestionar los salarios
@@ -40,7 +44,12 @@ public class Drive {
     private float pmAcc = 0;
     private float directorAcc =0;
     
-    //
+    //DATOS IMPORTANTES DE CADA EMPRESA
+    private float ganancias = 0; 
+    private float costosOperativos = 0;
+    private float utilidades = 0;
+    
+    
     private int contadorPasoDeLosDias = 0;
     
     
@@ -64,7 +73,7 @@ public class Drive {
     }
     
     //ESTE METODO AGREGA EL SALARIO, AL ACUMULADO DE CADA TIPO DE TRABAJADOR
-    public void addSalary(int type,float salary){
+    public void addSalary(int type,float salary,int tipoCompania){
         if (type == 0){
             this.setAnimadoresAcc(this.getAnimadoresAcc() + salary*24);
         }else if(type == 1){
@@ -82,6 +91,8 @@ public class Drive {
         }else if(type == 7){
             this.setDirectorAcc(this.getDirectorAcc() + salary*24);
         }
+        this.setCostosOperativos(this.getCostosOperativos() + salary,tipoCompania);
+        this.setUtilidades(this.getUtilidades() - salary,tipoCompania);
     }
     
     //ESTE METODO AGREGA LAS PARTES QUE HA HECHO CADA TRABAJADOR DEPENDIENDO DE LA COMPANIA
@@ -97,7 +108,7 @@ public class Drive {
                 }
             }else if(tipoTrabajador == 1 && this.getGuiones() < this.getGuionesMax()){
                 this.setGuiones(this.getGuiones() + 1,tipoCompania);
-                System.out.println("guiones disponibles:" + this.getGuiones());
+                //System.out.println("guiones disponibles:" + this.getGuiones());
             }else if(tipoTrabajador == 2 && this.getEscenarios() < this.getEscenariosMax()){
                 this.setEscenarios(this.getEscenarios() + 1,tipoCompania);
                 //System.out.println("escenarios disponibles:" + this.getEscenarios());
@@ -237,8 +248,9 @@ public class Drive {
     /**
      * @param capitulosPlotTwist the capitulosPlotTwist to set
      */
-    public void setCapitulosPlotTwist(int capitulosPlotTwist) {
+    public void setCapitulosPlotTwist(int capitulosPlotTwist,int tipoCompania) {
         this.capitulosPlotTwist = capitulosPlotTwist;
+        ManejadorInterfaz.getInterfaz().cambiarCapitulosPlotTwistListos(capitulosPlotTwist, tipoCompania);
     }
 
     /**
@@ -251,8 +263,9 @@ public class Drive {
     /**
      * @param capitulosEstandar the capitulosEstandar to set
      */
-    public void setCapitulosEstandar(int capitulosEstandar) {
+    public void setCapitulosEstandar(int capitulosEstandar,int tipoCompania) {
         this.capitulosEstandar = capitulosEstandar;
+        ManejadorInterfaz.getInterfaz().cambiarCapitulosListos(capitulosEstandar, tipoCompania);
     }
 
     /**
@@ -420,8 +433,13 @@ public class Drive {
     /**
      * @param estadorDirector the estadorDirector to set
      */
-    public void setEstadorDirector(int estadorDirector) {
+    public void setEstadorDirector(int estadorDirector,int tipoCompania) {
         this.estadorDirector = estadorDirector;
+        if(estadorDirector == 0){
+            ManejadorInterfaz.getInterfaz().cambiarActividadDirector("VIGILANDO", tipoCompania);
+        }else{
+            ManejadorInterfaz.getInterfaz().cambiarActividadDirector("TRABAJANDO", tipoCompania);
+        }
     }
 
     /**
@@ -434,8 +452,13 @@ public class Drive {
     /**
      * @param pmEstado the pmEstado to set
      */
-    public void setPmEstado(int pmEstado) {
+    public void setPmEstado(int pmEstado,int tipoCompania) {
         this.pmEstado = pmEstado;
+        if(pmEstado == 0){
+            ManejadorInterfaz.getInterfaz().cambiarPMActividad("TRABAJANDO", tipoCompania);
+        }else{
+            ManejadorInterfaz.getInterfaz().cambiarPMActividad("VIENDO ANIME", tipoCompania);
+        }
     }
 
     /**
@@ -448,8 +471,9 @@ public class Drive {
     /**
      * @param faltas the faltas to set
      */
-    public void setFaltas(int faltas) {
+    public void setFaltas(int faltas,int tipoCompania) {
         this.faltas = faltas;
+        ManejadorInterfaz.getInterfaz().cambiarFaltasPM(faltas, tipoCompania );
     }
 
     /**
@@ -462,8 +486,9 @@ public class Drive {
     /**
      * @param salarioDescontado the salarioDescontado to set
      */
-    public void setSalarioDescontado(int salarioDescontado) {
+    public void setSalarioDescontado(int salarioDescontado, int tipoCompania) {
         this.salarioDescontado = salarioDescontado;
+        ManejadorInterfaz.getInterfaz().cambiarSalarioDescontadoPM(salarioDescontado, tipoCompania);
     }
 
     /**
@@ -547,15 +572,9 @@ public class Drive {
      * @param estadoDeadline the estadoDeadline to set
      */
     public void setEstadoDeadline(int estadoDeadlineNuevo,int tipoCompania) {
-        if(estadoDeadlineNuevo == -1){ //SI ES IGUAL A -1, REINICIA EL CONTADOR
-            this.estadoDeadline = deadline;
-            ManejadorInterfaz.getInterfaz().cambiarDiasLanzamiento(estadoDeadline,tipoCompania);
-        }else{ // SINO ES IGUAL A 0, SIGUE DISMINUYENDO DE 1 EN 1
-            this.estadoDeadline = estadoDeadlineNuevo;
-            ManejadorInterfaz.getInterfaz().cambiarDiasLanzamiento(estadoDeadline,tipoCompania);
-        }
-                
-        
+        System.out.println(estadoDeadlineNuevo);
+        this.estadoDeadline = estadoDeadlineNuevo;
+        ManejadorInterfaz.getInterfaz().cambiarDiasLanzamiento(estadoDeadline,tipoCompania);
     }
 
     /**
@@ -570,6 +589,80 @@ public class Drive {
      */
     public void setContadorPasoDeLosDias(int contadorPasoDeLosDias) {
         this.contadorPasoDeLosDias = contadorPasoDeLosDias;
+        ManejadorInterfaz.getInterfaz().cambiarPasoDeDias(contadorPasoDeLosDias);
+    }
+
+    /**
+     * @return the ganancias
+     */
+    public float getGanancias() {
+        return ganancias;
+    }
+
+    /**
+     * @param ganancias the ganancias to set
+     */
+    public void setGanancias(float ganancias,int tipoCompania) {
+        this.ganancias = ganancias;
+        ManejadorInterfaz.getInterfaz().cambiarGanancias(ganancias, tipoCompania);
+    }
+
+    /**
+     * @return the costosOperativos
+     */
+    public float getCostosOperativos() {
+        return costosOperativos;
+    }
+
+    /**
+     * @param costosOperativos the costosOperativos to set
+     */
+    public void setCostosOperativos(float costosOperativos,int tipoCompania) {
+        this.costosOperativos = costosOperativos;
+        ManejadorInterfaz.getInterfaz().cambiarCostosOperativos(costosOperativos, tipoCompania);
+    }
+
+    /**
+     * @return the utilidades
+     */
+    public float getUtilidades() {
+        return utilidades;
+    }
+
+    /**
+     * @param utilidades the utilidades to set
+     */
+    public void setUtilidades(float utilidades,int tipoCompania) {
+        this.utilidades = utilidades;
+        ManejadorInterfaz.getInterfaz().cambiarUtilidades(utilidades, tipoCompania);
+    }
+
+    /**
+     * @return the capitulosPlotTwistAcumulados
+     */
+    public int getCapitulosPlotTwistAcumulados() {
+        return capitulosPlotTwistAcumulados;
+    }
+
+    /**
+     * @param capitulosPlotTwistAcumulados the capitulosPlotTwistAcumulados to set
+     */
+    public void setCapitulosPlotTwistAcumulados(int capitulosPlotTwistAcumulados) {
+        this.capitulosPlotTwistAcumulados = capitulosPlotTwistAcumulados;
+    }
+
+    /**
+     * @return the capitulosEstandarAcumulados
+     */
+    public int getCapitulosEstandarAcumulados() {
+        return capitulosEstandarAcumulados;
+    }
+
+    /**
+     * @param capitulosEstandarAcumulados the capitulosEstandarAcumulados to set
+     */
+    public void setCapitulosEstandarAcumulados(int capitulosEstandarAcumulados) {
+        this.capitulosEstandarAcumulados = capitulosEstandarAcumulados;
     }
 
 }

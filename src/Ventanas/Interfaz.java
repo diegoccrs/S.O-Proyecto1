@@ -10,6 +10,7 @@ import Worker.Assembler;
 import Worker.Developer;
 import Worker.ProjectManager;
 import static java.lang.Integer.parseInt;
+import java.text.DecimalFormat;
 import java.util.concurrent.Semaphore;
 import javax.swing.JOptionPane;
 
@@ -78,11 +79,98 @@ public class Interfaz extends javax.swing.JFrame {
         return respuesta;
     }
     
+    public void cambiarPasoDeDias(int t){
+        diasInicio.setText(Integer.toString(t));
+        diasDisney.setText(Integer.toString(t));
+        diasCN.setText(Integer.toString(t));
+    }
+    
     public void cambiarDiasLanzamiento(int t,int tipoCompania){
         if(tipoCompania == 0){
             diasEntregaDisney.setText(Integer.toString(t));
         }else{
             diasEntregaCartoonNetwork.setText(Integer.toString(t));
+        }
+    }
+    
+    public void cambiarPMActividad(String t,int tipoCompania){
+        if(tipoCompania == 0){
+            pmActividadDisney.setText(t);
+        }else{
+            pmCNActividadd.setText(t);
+        }
+    }
+    
+    public void cambiarFaltasPM(int t,int tipoCompania){
+        if(tipoCompania == 0){
+            faltasPMDisney.setText(Integer.toString(t));
+        }else{
+            faltasPMCN.setText(Integer.toString(t));
+        }
+    }
+    
+    public void cambiarSalarioDescontadoPM(int t,int tipoCompania){
+        if(tipoCompania == 0){
+            salarioDescontadoDisney.setText(Integer.toString(t));
+        }else{
+            salarioDescontadocn23.setText(Integer.toString(t));
+        }
+    }
+    
+    public void cambiarActividadDirector(String t,int tipoCompania){
+        if(tipoCompania == 0){
+            actividadDirectorDisney.setText(t);
+        }else{
+            actividadDirectorCN.setText(t);
+        }
+    }
+    
+    public void cambiarCapitulosListos(int t,int tipoCompania){
+        if(tipoCompania == 0){
+            capitulosListosDisney.setText(Integer.toString(t));
+        }else{
+            capitulosListosCN.setText(Integer.toString(t));
+        }
+    }
+    
+    public void cambiarCapitulosPlotTwistListos(int t,int tipoCompania){
+        if(tipoCompania == 0){
+            //System.out.println(t+"hjjjjjjj");
+            capitulosPlotTwistListosDisney.setText(Integer.toString(t));
+        }else{
+            //System.out.println(t+"hj");
+            capitulosPlotTwistListosCN.setText(Integer.toString(t));
+        }
+    }
+    
+    public void cambiarCostosOperativos(float t,int tipoCompania){
+        DecimalFormat formato = new DecimalFormat("#,###.##");
+        String numeroFormateado = formato.format((int)t);
+        
+        if(tipoCompania == 0){
+            costosOperativosDisney.setText(numeroFormateado);
+        }else{
+            costosOperativosCN.setText(numeroFormateado);
+        }
+    }
+    
+    public void cambiarGanancias(float t,int tipoCompania){
+        DecimalFormat formato = new DecimalFormat("#,###.##");
+        String numeroFormateado = formato.format((int)t);
+        if(tipoCompania == 0){
+            gananciasDisney.setText(numeroFormateado);
+        }else{
+            gananciasCN.setText(numeroFormateado);
+        }
+    }
+    
+    public void cambiarUtilidades(float t,int tipoCompania){
+        DecimalFormat formato = new DecimalFormat("#,###.##");
+        String numeroFormateado = formato.format((int)t);
+        if(tipoCompania == 0){
+            utilidadesDisney.setText(numeroFormateado);
+        }else{
+            utilidadesCN.setText(numeroFormateado);
         }
     }
     
@@ -237,119 +325,6 @@ public class Interfaz extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jLabel43 = new javax.swing.JLabel();
-        PlotTwistCartoonNetworkActivos = new javax.swing.JLabel();
-        AnimadoresCartoonNetworkActivos = new javax.swing.JLabel();
-        EscenariosCartoonNetworkActivos = new javax.swing.JLabel();
-        DoblajesCartoonNetworkActivos = new javax.swing.JLabel();
-        GuionistasCartoonNetworkActivos = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        EnsambladoresCartoonNetworkActivos = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        velmaPMFaltas = new javax.swing.JTextField();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        pmActividad = new javax.swing.JTextField();
-        jLabel36 = new javax.swing.JLabel();
-        pmSalario = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        pmActividad1 = new javax.swing.JTextField();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        pmActividad2 = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        pmActividad3 = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        diasEntregaCartoonNetwork = new javax.swing.JLabel();
-        jLabel98 = new javax.swing.JLabel();
-        jLabel99 = new javax.swing.JLabel();
-        jLabel100 = new javax.swing.JLabel();
-        jLabel101 = new javax.swing.JLabel();
-        jLabel102 = new javax.swing.JLabel();
-        GuionesCN = new javax.swing.JLabel();
-        EscenariosCN = new javax.swing.JLabel();
-        PlotTwistCN = new javax.swing.JLabel();
-        DoblajesCN = new javax.swing.JLabel();
-        AnimacionesCN = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jLabel50 = new javax.swing.JLabel();
-        PlotTwistDisneyActivos = new javax.swing.JLabel();
-        AnimadoresDisneyActivos = new javax.swing.JLabel();
-        EscenariosDisneyActivos = new javax.swing.JLabel();
-        DoblajesDisneyActivos = new javax.swing.JLabel();
-        GuionistasDisneyActivos = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        EnsambladoresDisneyActivos = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        velmaPMFaltas1 = new javax.swing.JTextField();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        pmActividad5 = new javax.swing.JTextField();
-        jLabel40 = new javax.swing.JLabel();
-        pmSalario1 = new javax.swing.JTextField();
-        jLabel26 = new javax.swing.JLabel();
-        pmActividad6 = new javax.swing.JTextField();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        pmActividad7 = new javax.swing.JTextField();
-        jLabel28 = new javax.swing.JLabel();
-        pmActividad8 = new javax.swing.JTextField();
-        jLabel29 = new javax.swing.JLabel();
-        diasEntregaDisney = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
-        GuionesDisney = new javax.swing.JLabel();
-        EscenariosDisney = new javax.swing.JLabel();
-        PlotTwistDisney = new javax.swing.JLabel();
-        DoblajesDisney = new javax.swing.JLabel();
-        AnimacionesDisney = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
@@ -416,553 +391,140 @@ public class Interfaz extends javax.swing.JFrame {
         diasEntrega = new javax.swing.JLabel();
         duracionDias = new javax.swing.JLabel();
         jButton53 = new javax.swing.JButton();
+        pmDisneyActividad2 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jLabel50 = new javax.swing.JLabel();
+        PlotTwistDisneyActivos = new javax.swing.JLabel();
+        AnimadoresDisneyActivos = new javax.swing.JLabel();
+        EscenariosDisneyActivos = new javax.swing.JLabel();
+        DoblajesDisneyActivos = new javax.swing.JLabel();
+        GuionistasDisneyActivos = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
+        EnsambladoresDisneyActivos = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        diasEntregaDisney = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        GuionesDisney = new javax.swing.JLabel();
+        EscenariosDisney = new javax.swing.JLabel();
+        PlotTwistDisney = new javax.swing.JLabel();
+        DoblajesDisney = new javax.swing.JLabel();
+        AnimacionesDisney = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        costosOperativosDisney = new javax.swing.JLabel();
+        gananciasDisney = new javax.swing.JLabel();
+        utilidadesDisney = new javax.swing.JLabel();
+        pmActividadDisney = new javax.swing.JLabel();
+        faltasPMDisney = new javax.swing.JLabel();
+        salarioDescontadoDisney = new javax.swing.JLabel();
+        actividadDirectorDisney = new javax.swing.JLabel();
+        capitulosListosDisney = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        capitulosPlotTwistListosDisney = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        diasDisney = new javax.swing.JLabel();
+        salarioDescontadoCN2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jLabel43 = new javax.swing.JLabel();
+        PlotTwistCartoonNetworkActivos = new javax.swing.JLabel();
+        AnimadoresCartoonNetworkActivos = new javax.swing.JLabel();
+        EscenariosCartoonNetworkActivos = new javax.swing.JLabel();
+        DoblajesCartoonNetworkActivos = new javax.swing.JLabel();
+        GuionistasCartoonNetworkActivos = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        EnsambladoresCartoonNetworkActivos = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        diasEntregaCartoonNetwork = new javax.swing.JLabel();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel99 = new javax.swing.JLabel();
+        jLabel100 = new javax.swing.JLabel();
+        jLabel101 = new javax.swing.JLabel();
+        jLabel102 = new javax.swing.JLabel();
+        GuionesCN = new javax.swing.JLabel();
+        EscenariosCN = new javax.swing.JLabel();
+        PlotTwistCN = new javax.swing.JLabel();
+        DoblajesCN = new javax.swing.JLabel();
+        AnimacionesCN = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        costosOperativosCN = new javax.swing.JLabel();
+        utilidadesCN = new javax.swing.JLabel();
+        gananciasCN = new javax.swing.JLabel();
+        pmCNActividad = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        actividadDirectorCN = new javax.swing.JLabel();
+        capitulosListosCN = new javax.swing.JLabel();
+        faltasPMCN = new javax.swing.JLabel();
+        pmCNActividadd = new javax.swing.JLabel();
+        salarioDescontadocn23 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        capitulosPlotTwistListosCN = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        diasCN = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        diasInicio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jTabbedPane1.addTab("Inicio", jPanel1);
-
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setText("TRABAJADORES");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
-
-        jLabel5.setText("GUIONISTAS ");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
-
-        jLabel7.setText("DISEÑADORES DE ESCENARIOS");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
-
-        jLabel9.setText("ANIMADORES DE PERSONAJES");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
-
-        jLabel11.setText("ACTORES DE DOBLAJE");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
-
-        jLabel13.setText("GUIONISTAS DE PLOT TWIST");
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
-
-        jButton1.setText("-");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
-
-        jButton2.setText("-");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
-
-        jButton3.setText("-");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
-
-        jButton4.setText("-");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
-
-        jButton5.setText("-");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
-
-        jButton11.setText("+");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
-
-        jButton12.setText("+");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
-
-        jButton13.setText("+");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
-
-        jButton14.setText("+");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
-
-        jButton15.setText("+");
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
-
-        jLabel43.setText("ACTIVOS");
-        jPanel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
-
-        PlotTwistCartoonNetworkActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        PlotTwistCartoonNetworkActivos.setText("0");
-        jPanel2.add(PlotTwistCartoonNetworkActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 30, -1));
-
-        AnimadoresCartoonNetworkActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        AnimadoresCartoonNetworkActivos.setText("0");
-        jPanel2.add(AnimadoresCartoonNetworkActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 30, -1));
-
-        EscenariosCartoonNetworkActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        EscenariosCartoonNetworkActivos.setText("0");
-        jPanel2.add(EscenariosCartoonNetworkActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 30, -1));
-
-        DoblajesCartoonNetworkActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        DoblajesCartoonNetworkActivos.setText("0");
-        jPanel2.add(DoblajesCartoonNetworkActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 30, -1));
-
-        GuionistasCartoonNetworkActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        GuionistasCartoonNetworkActivos.setText("0");
-        jPanel2.add(GuionistasCartoonNetworkActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 30, -1));
-
-        jLabel14.setText("ENSAMBLADORES");
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
-
-        jButton6.setText("-");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, -1));
-
-        jButton16.setText("+");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
-
-        EnsambladoresCartoonNetworkActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        EnsambladoresCartoonNetworkActivos.setText("0");
-        jPanel2.add(EnsambladoresCartoonNetworkActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 30, -1));
-
-        jLabel2.setText("CAPACIDAD DE DRIVE");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
-
-        jLabel4.setText("ACTUAL");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, -1, -1));
-
-        jLabel6.setText("MAXIMA");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
-
-        jLabel32.setText("PROJECT MANAGER");
-        jPanel2.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
-
-        velmaPMFaltas.setEditable(false);
-        velmaPMFaltas.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        velmaPMFaltas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                velmaPMFaltasActionPerformed(evt);
-            }
-        });
-        jPanel2.add(velmaPMFaltas, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, 140, -1));
-
-        jLabel34.setText("ACTIVIDAD");
-        jPanel2.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
-
-        jLabel35.setText("SALARIO");
-        jPanel2.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, -1, -1));
-
-        pmActividad.setEditable(false);
-        pmActividad.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pmActividad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pmActividadActionPerformed(evt);
-            }
-        });
-        jPanel2.add(pmActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 140, -1));
-
-        jLabel36.setText("FALTAS");
-        jPanel2.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, -1, -1));
-
-        pmSalario.setEditable(false);
-        pmSalario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pmSalario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pmSalarioActionPerformed(evt);
-            }
-        });
-        jPanel2.add(pmSalario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 140, -1));
-
-        jLabel8.setText("DIRECTOR");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
-
-        pmActividad1.setEditable(false);
-        pmActividad1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pmActividad1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pmActividad1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(pmActividad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 140, -1));
-
-        jLabel37.setText("ACTIVIDAD");
-        jPanel2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
-
-        jLabel10.setText("CANTIDAD DE CAPITULOS LISTOS");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
-
-        pmActividad2.setEditable(false);
-        pmActividad2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pmActividad2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pmActividad2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(pmActividad2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 60, -1));
-
-        jLabel12.setText("DIAS PARA LA ENTREGA");
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
-
-        pmActividad3.setEditable(false);
-        pmActividad3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pmActividad3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pmActividad3ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(pmActividad3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 140, -1));
-
-        jLabel15.setText("DEADLINE");
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
-
-        diasEntregaCartoonNetwork.setText("0");
-        jPanel2.add(diasEntregaCartoonNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 50, 20));
-
-        jLabel98.setText("25");
-        jPanel2.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 20, 20));
-
-        jLabel99.setText("20");
-        jPanel2.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 20, 20));
-
-        jLabel100.setText("10");
-        jPanel2.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, 20, 20));
-
-        jLabel101.setText("35");
-        jPanel2.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 20, 20));
-
-        jLabel102.setText("55");
-        jPanel2.add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 20, 20));
-
-        GuionesCN.setText("0");
-        jPanel2.add(GuionesCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 20, 20));
-
-        EscenariosCN.setText("0");
-        jPanel2.add(EscenariosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 20, 20));
-
-        PlotTwistCN.setText("0");
-        jPanel2.add(PlotTwistCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, 20, 20));
-
-        DoblajesCN.setText("0");
-        jPanel2.add(DoblajesCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 20, 20));
-
-        AnimacionesCN.setText("0");
-        jPanel2.add(AnimacionesCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 20, 20));
-
-        jTabbedPane1.addTab("Cartoon Network", jPanel2);
-
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel16.setText("TRABAJADORES");
-        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
-
-        jLabel17.setText("GUIONISTAS ");
-        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
-
-        jLabel18.setText("DISEÑADORES DE ESCENARIOS");
-        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
-
-        jLabel19.setText("ANIMADORES DE PERSONAJES");
-        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
-
-        jLabel20.setText("ACTORES DE DOBLAJE");
-        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
-
-        jLabel21.setText("GUIONISTAS DE PLOT TWIST");
-        jPanel3.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
-
-        jButton7.setText("-");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
-
-        jButton8.setText("-");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
-
-        jButton9.setText("-");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
-
-        jButton10.setText("-");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
-
-        jButton17.setText("-");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
-
-        jButton18.setText("+");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
-
-        jButton19.setText("+");
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
-
-        jButton20.setText("+");
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
-
-        jButton21.setText("+");
-        jButton21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton21ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
-
-        jButton22.setText("+");
-        jButton22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton22ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
-
-        jLabel50.setText("ACTIVOS");
-        jPanel3.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
-
-        PlotTwistDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        PlotTwistDisneyActivos.setText("0");
-        jPanel3.add(PlotTwistDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 20, -1));
-
-        AnimadoresDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        AnimadoresDisneyActivos.setText("0");
-        jPanel3.add(AnimadoresDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 20, -1));
-
-        EscenariosDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        EscenariosDisneyActivos.setText("0");
-        jPanel3.add(EscenariosDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 20, -1));
-
-        DoblajesDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        DoblajesDisneyActivos.setText("0");
-        jPanel3.add(DoblajesDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 20, -1));
-
-        GuionistasDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        GuionistasDisneyActivos.setText("0");
-        jPanel3.add(GuionistasDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 20, -1));
-
-        jLabel22.setText("ENSAMBLADORES");
-        jPanel3.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
-
-        jButton23.setText("-");
-        jButton23.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton23ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, -1));
-
-        jButton24.setText("+");
-        jButton24.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton24ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
-
-        EnsambladoresDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        EnsambladoresDisneyActivos.setText("0");
-        jPanel3.add(EnsambladoresDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 20, -1));
-
-        jLabel23.setText("CAPACIDAD DE DRIVE");
-        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
-
-        jLabel24.setText("ACTUAL");
-        jPanel3.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, -1, -1));
-
-        jLabel25.setText("MAXIMA");
-        jPanel3.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
-
-        jLabel33.setText("PROJECT MANAGER");
-        jPanel3.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
-
-        velmaPMFaltas1.setEditable(false);
-        velmaPMFaltas1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        velmaPMFaltas1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                velmaPMFaltas1ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(velmaPMFaltas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, 140, 20));
-
-        jLabel38.setText("ACTIVIDAD");
-        jPanel3.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
-
-        jLabel39.setText("SALARIO");
-        jPanel3.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, -1, -1));
-
-        pmActividad5.setEditable(false);
-        pmActividad5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pmActividad5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pmActividad5ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(pmActividad5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, 140, -1));
-
-        jLabel40.setText("FALTAS");
-        jPanel3.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, -1, -1));
-
-        pmSalario1.setEditable(false);
-        pmSalario1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pmSalario1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pmSalario1ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(pmSalario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 140, -1));
-
-        jLabel26.setText("DIRECTOR");
-        jPanel3.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
-
-        pmActividad6.setEditable(false);
-        pmActividad6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pmActividad6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pmActividad6ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(pmActividad6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 140, -1));
-
-        jLabel41.setText("ACTIVIDAD");
-        jPanel3.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
-
-        jLabel27.setText("CANTIDAD DE CAPITULOS LISTOS");
-        jPanel3.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
-
-        pmActividad7.setEditable(false);
-        pmActividad7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pmActividad7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pmActividad7ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(pmActividad7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 60, -1));
-
-        jLabel28.setText("DIAS PARA LA ENTREGA");
-        jPanel3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
-
-        pmActividad8.setEditable(false);
-        pmActividad8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pmActividad8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pmActividad8ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(pmActividad8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 140, -1));
-
-        jLabel29.setText("DEADLINE");
-        jPanel3.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, -1, -1));
-
-        diasEntregaDisney.setText("0");
-        jPanel3.add(diasEntregaDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 50, 20));
-
-        jLabel47.setText("25");
-        jPanel3.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 20, 20));
-
-        jLabel49.setText("20");
-        jPanel3.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 20, 20));
-
-        jLabel51.setText("10");
-        jPanel3.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, 20, 20));
-
-        jLabel52.setText("35");
-        jPanel3.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 20, 20));
-
-        jLabel53.setText("55");
-        jPanel3.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 20, 20));
-
-        GuionesDisney.setText("0");
-        jPanel3.add(GuionesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 20, 20));
-
-        EscenariosDisney.setText("0");
-        jPanel3.add(EscenariosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 20, 20));
-
-        PlotTwistDisney.setText("0");
-        jPanel3.add(PlotTwistDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, 20, 20));
-
-        DoblajesDisney.setText("0");
-        jPanel3.add(DoblajesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 20, 20));
-
-        AnimacionesDisney.setText("0");
-        jPanel3.add(AnimacionesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 20, 20));
-
-        jTabbedPane1.addTab("Disney Channel ", jPanel3);
 
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1335,6 +897,535 @@ public class Interfaz extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Configuracion", jPanel4);
 
+        pmDisneyActividad2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel16.setText("TRABAJADORES");
+        pmDisneyActividad2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
+
+        jLabel17.setText("GUIONISTAS ");
+        pmDisneyActividad2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+
+        jLabel18.setText("DISEÑADORES DE ESCENARIOS");
+        pmDisneyActividad2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+
+        jLabel19.setText("ANIMADORES DE PERSONAJES");
+        pmDisneyActividad2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+
+        jLabel20.setText("ACTORES DE DOBLAJE");
+        pmDisneyActividad2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+
+        jLabel21.setText("GUIONISTAS DE PLOT TWIST");
+        pmDisneyActividad2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
+
+        jButton7.setText("-");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        pmDisneyActividad2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+
+        jButton8.setText("-");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        pmDisneyActividad2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
+
+        jButton9.setText("-");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        pmDisneyActividad2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
+
+        jButton10.setText("-");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        pmDisneyActividad2.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
+
+        jButton17.setText("-");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+        pmDisneyActividad2.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
+
+        jButton18.setText("+");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+        pmDisneyActividad2.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
+
+        jButton19.setText("+");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+        pmDisneyActividad2.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
+
+        jButton20.setText("+");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+        pmDisneyActividad2.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
+
+        jButton21.setText("+");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+        pmDisneyActividad2.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
+
+        jButton22.setText("+");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+        pmDisneyActividad2.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
+
+        jLabel50.setText("ACTIVOS");
+        pmDisneyActividad2.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
+
+        PlotTwistDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        PlotTwistDisneyActivos.setText("0");
+        pmDisneyActividad2.add(PlotTwistDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 20, -1));
+
+        AnimadoresDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        AnimadoresDisneyActivos.setText("0");
+        pmDisneyActividad2.add(AnimadoresDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 20, -1));
+
+        EscenariosDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        EscenariosDisneyActivos.setText("0");
+        pmDisneyActividad2.add(EscenariosDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 20, -1));
+
+        DoblajesDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        DoblajesDisneyActivos.setText("0");
+        pmDisneyActividad2.add(DoblajesDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 20, -1));
+
+        GuionistasDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        GuionistasDisneyActivos.setText("0");
+        pmDisneyActividad2.add(GuionistasDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 20, -1));
+
+        jLabel22.setText("ENSAMBLADORES");
+        pmDisneyActividad2.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+
+        jButton23.setText("-");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
+        pmDisneyActividad2.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, -1));
+
+        jButton24.setText("+");
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
+        pmDisneyActividad2.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
+
+        EnsambladoresDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        EnsambladoresDisneyActivos.setText("0");
+        pmDisneyActividad2.add(EnsambladoresDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 20, -1));
+
+        jLabel23.setText("COSTOS OPERATIVOS");
+        pmDisneyActividad2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 100, -1, -1));
+
+        jLabel24.setText("ACTUAL");
+        pmDisneyActividad2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, -1, -1));
+
+        jLabel25.setText("MAXIMA");
+        pmDisneyActividad2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
+
+        jLabel33.setText("PROJECT MANAGER");
+        pmDisneyActividad2.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
+
+        jLabel38.setText("ACTIVIDAD");
+        pmDisneyActividad2.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
+
+        jLabel39.setText("SALARIO");
+        pmDisneyActividad2.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, -1, -1));
+
+        jLabel40.setText("FALTAS");
+        pmDisneyActividad2.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, -1, -1));
+
+        jLabel26.setText("DIRECTOR");
+        pmDisneyActividad2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
+
+        jLabel41.setText("ACTIVIDAD");
+        pmDisneyActividad2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
+
+        jLabel27.setText("CAPITULOS ESTANDAR  LISTOS");
+        pmDisneyActividad2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 420, -1, -1));
+
+        jLabel28.setText("DIAS PARA LA ENTREGA");
+        pmDisneyActividad2.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
+
+        diasEntregaDisney.setText("0");
+        pmDisneyActividad2.add(diasEntregaDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 50, 20));
+
+        jLabel47.setText("25");
+        pmDisneyActividad2.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 20, 20));
+
+        jLabel49.setText("20");
+        pmDisneyActividad2.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 20, 20));
+
+        jLabel51.setText("10");
+        pmDisneyActividad2.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, 20, 20));
+
+        jLabel52.setText("35");
+        pmDisneyActividad2.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 20, 20));
+
+        jLabel53.setText("55");
+        pmDisneyActividad2.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 20, 20));
+
+        GuionesDisney.setText("0");
+        pmDisneyActividad2.add(GuionesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 20, 20));
+
+        EscenariosDisney.setText("0");
+        pmDisneyActividad2.add(EscenariosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 20, 20));
+
+        PlotTwistDisney.setText("0");
+        pmDisneyActividad2.add(PlotTwistDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, 20, 20));
+
+        DoblajesDisney.setText("0");
+        pmDisneyActividad2.add(DoblajesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 20, 20));
+
+        AnimacionesDisney.setText("0");
+        pmDisneyActividad2.add(AnimacionesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 20, 20));
+
+        jLabel44.setText("GANANCIAS EN BRUTO");
+        pmDisneyActividad2.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 100, -1, -1));
+
+        jLabel45.setText("UTILIDADES");
+        pmDisneyActividad2.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 220, -1, -1));
+
+        jLabel46.setText("CAPACIDAD DE DRIVE");
+        pmDisneyActividad2.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
+
+        costosOperativosDisney.setText("0");
+        pmDisneyActividad2.add(costosOperativosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 120, -1, -1));
+
+        gananciasDisney.setText("0");
+        pmDisneyActividad2.add(gananciasDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 120, -1, -1));
+
+        utilidadesDisney.setText("0");
+        pmDisneyActividad2.add(utilidadesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 240, -1, -1));
+
+        pmActividadDisney.setText("0");
+        pmDisneyActividad2.add(pmActividadDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, -1));
+
+        faltasPMDisney.setText("0");
+        pmDisneyActividad2.add(faltasPMDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, -1, -1));
+
+        salarioDescontadoDisney.setText("0");
+        pmDisneyActividad2.add(salarioDescontadoDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, -1, -1));
+
+        actividadDirectorDisney.setText("0");
+        pmDisneyActividad2.add(actividadDirectorDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, -1, -1));
+
+        capitulosListosDisney.setText("0");
+        pmDisneyActividad2.add(capitulosListosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 440, -1, -1));
+
+        jLabel29.setText("CAPITULOS PLOTTWIST  LISTOS");
+        pmDisneyActividad2.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, -1, -1));
+
+        capitulosPlotTwistListosDisney.setText("0");
+        pmDisneyActividad2.add(capitulosPlotTwistListosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, -1, -1));
+
+        jLabel10.setText("DIAS:");
+        pmDisneyActividad2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 20, -1, -1));
+
+        diasDisney.setText("0");
+        pmDisneyActividad2.add(diasDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, -1, -1));
+
+        jTabbedPane1.addTab("Disney Channel ", pmDisneyActividad2);
+
+        salarioDescontadoCN2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setText("TRABAJADORES");
+        salarioDescontadoCN2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
+
+        jLabel5.setText("GUIONISTAS ");
+        salarioDescontadoCN2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+
+        jLabel7.setText("DISEÑADORES DE ESCENARIOS");
+        salarioDescontadoCN2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+
+        jLabel9.setText("ANIMADORES DE PERSONAJES");
+        salarioDescontadoCN2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+
+        jLabel11.setText("ACTORES DE DOBLAJE");
+        salarioDescontadoCN2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+
+        jLabel13.setText("GUIONISTAS DE PLOT TWIST");
+        salarioDescontadoCN2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
+
+        jButton1.setText("-");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        salarioDescontadoCN2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
+
+        jButton2.setText("-");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        salarioDescontadoCN2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
+
+        jButton3.setText("-");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        salarioDescontadoCN2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
+
+        jButton4.setText("-");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        salarioDescontadoCN2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
+
+        jButton5.setText("-");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        salarioDescontadoCN2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, -1, -1));
+
+        jButton11.setText("+");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        salarioDescontadoCN2.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, -1));
+
+        jButton12.setText("+");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        salarioDescontadoCN2.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
+
+        jButton13.setText("+");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        salarioDescontadoCN2.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
+
+        jButton14.setText("+");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+        salarioDescontadoCN2.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
+
+        jButton15.setText("+");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+        salarioDescontadoCN2.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
+
+        jLabel43.setText("ACTIVOS");
+        salarioDescontadoCN2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
+
+        PlotTwistCartoonNetworkActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        PlotTwistCartoonNetworkActivos.setText("0");
+        salarioDescontadoCN2.add(PlotTwistCartoonNetworkActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 30, -1));
+
+        AnimadoresCartoonNetworkActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        AnimadoresCartoonNetworkActivos.setText("0");
+        salarioDescontadoCN2.add(AnimadoresCartoonNetworkActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 30, -1));
+
+        EscenariosCartoonNetworkActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        EscenariosCartoonNetworkActivos.setText("0");
+        salarioDescontadoCN2.add(EscenariosCartoonNetworkActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 30, -1));
+
+        DoblajesCartoonNetworkActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        DoblajesCartoonNetworkActivos.setText("0");
+        salarioDescontadoCN2.add(DoblajesCartoonNetworkActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 30, -1));
+
+        GuionistasCartoonNetworkActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        GuionistasCartoonNetworkActivos.setText("0");
+        salarioDescontadoCN2.add(GuionistasCartoonNetworkActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 30, -1));
+
+        jLabel14.setText("ENSAMBLADORES");
+        salarioDescontadoCN2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+
+        jButton6.setText("-");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        salarioDescontadoCN2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, -1));
+
+        jButton16.setText("+");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+        salarioDescontadoCN2.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
+
+        EnsambladoresCartoonNetworkActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        EnsambladoresCartoonNetworkActivos.setText("0");
+        salarioDescontadoCN2.add(EnsambladoresCartoonNetworkActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 30, -1));
+
+        jLabel2.setText("CAPACIDAD DE DRIVE");
+        salarioDescontadoCN2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
+
+        jLabel4.setText("ACTUAL");
+        salarioDescontadoCN2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 50, -1, -1));
+
+        jLabel6.setText("MAXIMA");
+        salarioDescontadoCN2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, -1, -1));
+
+        jLabel32.setText("PROJECT MANAGER");
+        salarioDescontadoCN2.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
+
+        jLabel35.setText("SALARIO DESCONTADO");
+        salarioDescontadoCN2.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 360, -1, -1));
+
+        jLabel36.setText("FALTAS");
+        salarioDescontadoCN2.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, -1, -1));
+
+        jLabel37.setText("ACTIVIDAD");
+        salarioDescontadoCN2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, -1, -1));
+
+        jLabel12.setText("DIAS PARA LA ENTREGA");
+        salarioDescontadoCN2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
+
+        diasEntregaCartoonNetwork.setText("0");
+        salarioDescontadoCN2.add(diasEntregaCartoonNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 50, 20));
+
+        jLabel98.setText("25");
+        salarioDescontadoCN2.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 20, 20));
+
+        jLabel99.setText("20");
+        salarioDescontadoCN2.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 20, 20));
+
+        jLabel100.setText("10");
+        salarioDescontadoCN2.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, 20, 20));
+
+        jLabel101.setText("35");
+        salarioDescontadoCN2.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 20, 20));
+
+        jLabel102.setText("55");
+        salarioDescontadoCN2.add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 20, 20));
+
+        GuionesCN.setText("0");
+        salarioDescontadoCN2.add(GuionesCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 20, 20));
+
+        EscenariosCN.setText("0");
+        salarioDescontadoCN2.add(EscenariosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 20, 20));
+
+        PlotTwistCN.setText("0");
+        salarioDescontadoCN2.add(PlotTwistCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 250, 20, 20));
+
+        DoblajesCN.setText("0");
+        salarioDescontadoCN2.add(DoblajesCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 20, 20));
+
+        AnimacionesCN.setText("0");
+        salarioDescontadoCN2.add(AnimacionesCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 20, 20));
+
+        jLabel55.setText("COSTOS OPERATIVOS");
+        salarioDescontadoCN2.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 100, -1, -1));
+
+        jLabel56.setText("GANANCIAS EN BRUTO");
+        salarioDescontadoCN2.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 100, -1, -1));
+
+        jLabel61.setText("UTILIDADES");
+        salarioDescontadoCN2.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 220, -1, -1));
+
+        costosOperativosCN.setText("0");
+        salarioDescontadoCN2.add(costosOperativosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 120, -1, -1));
+
+        utilidadesCN.setText("0");
+        salarioDescontadoCN2.add(utilidadesCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 240, -1, -1));
+
+        gananciasCN.setText("0");
+        salarioDescontadoCN2.add(gananciasCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 120, -1, -1));
+        salarioDescontadoCN2.add(pmCNActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, -1));
+
+        jLabel71.setText("ACTIVIDAD");
+        salarioDescontadoCN2.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
+
+        jLabel72.setText("DIRECTOR");
+        salarioDescontadoCN2.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
+
+        jLabel73.setText("CAPITULOS ESTANDAR LISTOS");
+        salarioDescontadoCN2.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
+
+        actividadDirectorCN.setText("0");
+        salarioDescontadoCN2.add(actividadDirectorCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, -1, -1));
+
+        capitulosListosCN.setText("0");
+        salarioDescontadoCN2.add(capitulosListosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 440, -1, -1));
+
+        faltasPMCN.setText("0");
+        salarioDescontadoCN2.add(faltasPMCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, -1, -1));
+
+        pmCNActividadd.setText("0");
+        salarioDescontadoCN2.add(pmCNActividadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, -1));
+
+        salarioDescontadocn23.setText("0");
+        salarioDescontadoCN2.add(salarioDescontadocn23, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 380, -1, -1));
+
+        jLabel34.setText("CAPITULOS PLOTTWIST  LISTOS");
+        salarioDescontadoCN2.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 420, -1, -1));
+
+        capitulosPlotTwistListosCN.setText("0");
+        salarioDescontadoCN2.add(capitulosPlotTwistListosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 440, -1, -1));
+
+        jLabel1.setText("DIAS:");
+        salarioDescontadoCN2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 20, -1, -1));
+
+        diasCN.setText("0");
+        salarioDescontadoCN2.add(diasCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, -1, -1));
+
+        jTabbedPane1.addTab("Cartoon Network", salarioDescontadoCN2);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel48.setText("DIAS:");
+        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 20, -1, -1));
+
+        diasInicio.setText("0");
+        jPanel1.add(diasInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, -1, -1));
+
+        jTabbedPane1.addTab("Inicio", jPanel1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1493,30 +1584,6 @@ public class Interfaz extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton16ActionPerformed
 
-    private void velmaPMFaltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaPMFaltasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_velmaPMFaltasActionPerformed
-
-    private void pmActividadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pmActividadActionPerformed
-
-    private void pmSalarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmSalarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pmSalarioActionPerformed
-
-    private void pmActividad1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pmActividad1ActionPerformed
-
-    private void pmActividad2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pmActividad2ActionPerformed
-
-    private void pmActividad3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pmActividad3ActionPerformed
-
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         if(Global.getDisney().getGuionistas().getSize() > 1){ 
@@ -1660,30 +1727,6 @@ public class Interfaz extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "No puedes agregar otro ensamblador. El total de trabajadores es 16(el maximo)");
         }
     }//GEN-LAST:event_jButton24ActionPerformed
-
-    private void velmaPMFaltas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velmaPMFaltas1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_velmaPMFaltas1ActionPerformed
-
-    private void pmActividad5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pmActividad5ActionPerformed
-
-    private void pmSalario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmSalario1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pmSalario1ActionPerformed
-
-    private void pmActividad6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pmActividad6ActionPerformed
-
-    private void pmActividad7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pmActividad7ActionPerformed
-
-    private void pmActividad8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pmActividad8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pmActividad8ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
@@ -1999,11 +2042,22 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel PlotTwistCartoonNetworkActivos;
     private javax.swing.JLabel PlotTwistDisney;
     private javax.swing.JLabel PlotTwistDisneyActivos;
+    private javax.swing.JLabel actividadDirectorCN;
+    private javax.swing.JLabel actividadDirectorDisney;
     private javax.swing.JLabel animadoresCN;
     private javax.swing.JLabel animadoresDisney;
+    private javax.swing.JLabel capitulosListosCN;
+    private javax.swing.JLabel capitulosListosDisney;
+    private javax.swing.JLabel capitulosPlotTwistListosCN;
+    private javax.swing.JLabel capitulosPlotTwistListosDisney;
+    private javax.swing.JLabel costosOperativosCN;
+    private javax.swing.JLabel costosOperativosDisney;
+    private javax.swing.JLabel diasCN;
+    private javax.swing.JLabel diasDisney;
     private javax.swing.JLabel diasEntrega;
     private javax.swing.JLabel diasEntregaCartoonNetwork;
     private javax.swing.JLabel diasEntregaDisney;
+    private javax.swing.JLabel diasInicio;
     private javax.swing.JLabel doblajeCN;
     private javax.swing.JLabel doblajeDisney;
     private javax.swing.JLabel duracionDias;
@@ -2011,6 +2065,10 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel ensambladoresDisney;
     private javax.swing.JLabel escenariosCN;
     private javax.swing.JLabel escenariosDisney;
+    private javax.swing.JLabel faltasPMCN;
+    private javax.swing.JLabel faltasPMDisney;
+    private javax.swing.JLabel gananciasCN;
+    private javax.swing.JLabel gananciasDisney;
     private javax.swing.JLabel guionistasCN;
     private javax.swing.JLabel guionistasDisney;
     private javax.swing.JButton jButton1;
@@ -2066,6 +2124,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
@@ -2074,7 +2133,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -2106,25 +2164,34 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel78;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
@@ -2138,25 +2205,20 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel plottwistCN;
     private javax.swing.JLabel plottwistDisney;
-    private javax.swing.JTextField pmActividad;
-    private javax.swing.JTextField pmActividad1;
-    private javax.swing.JTextField pmActividad2;
-    private javax.swing.JTextField pmActividad3;
-    private javax.swing.JTextField pmActividad5;
-    private javax.swing.JTextField pmActividad6;
-    private javax.swing.JTextField pmActividad7;
-    private javax.swing.JTextField pmActividad8;
-    private javax.swing.JTextField pmSalario;
-    private javax.swing.JTextField pmSalario1;
-    private javax.swing.JTextField velmaPMFaltas;
-    private javax.swing.JTextField velmaPMFaltas1;
+    private javax.swing.JLabel pmActividadDisney;
+    private javax.swing.JLabel pmCNActividad;
+    private javax.swing.JLabel pmCNActividadd;
+    private javax.swing.JPanel pmDisneyActividad2;
+    private javax.swing.JPanel salarioDescontadoCN2;
+    private javax.swing.JLabel salarioDescontadoDisney;
+    private javax.swing.JLabel salarioDescontadocn23;
+    private javax.swing.JLabel utilidadesCN;
+    private javax.swing.JLabel utilidadesDisney;
     // End of variables declaration//GEN-END:variables
 
     /**

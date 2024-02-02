@@ -62,6 +62,8 @@ public abstract class Worker extends Thread{
                 numero_retorno = (float) 0.5;
             }else if(this.getTipo() == 6){
                 numero_retorno = (float) 1.0;
+            }else if(this.getTipo() == 7){
+                numero_retorno = (float) 1;
             }
         }else if(this.compania.getTipoCompania() == 1){//Cartoon network: se tomara el carnet de Diego, ultimo numero = 6
             if(this.getTipo() == 0){
@@ -78,6 +80,8 @@ public abstract class Worker extends Thread{
                 numero_retorno = (float) 0.5;
             }else if(this.getTipo() == 6){
                 numero_retorno = (float) 0.5;
+            }else if(this.getTipo() == 7){
+                numero_retorno = (float) 1;
             }
         }
         

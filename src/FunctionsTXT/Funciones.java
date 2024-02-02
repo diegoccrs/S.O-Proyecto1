@@ -165,7 +165,7 @@ public class Funciones {
                     Global.getDriveDisney().setDeadline(Integer.parseInt(datos_split[3]));
                     
                     //Cargamos el estadoDeadline
-                    Global.getDriveCartoonNetwork().setEstadoDeadline(Integer.parseInt(datos_split[3]),Global.getDisney().getTipoCompania());
+                    Global.getDriveDisney().setEstadoDeadline(Integer.parseInt(datos_split[3]),Global.getDisney().getTipoCompania());
                     Global.getDriveCartoonNetwork().setEstadoDeadline(Integer.parseInt(datos_split[3]), Global.getCartoonNetwork().getTipoCompania());
                     
                 }

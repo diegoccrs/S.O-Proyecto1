@@ -52,20 +52,20 @@ public class Assembler extends Worker{
         //Si es Cartoon Network y el drive tiene suficientes partes para hacer un capitulo estandar entrara en el siguiente if
         if(this.getCompania().getTipoCompania() == 1 && this.getCompania().getDrive().getGuiones() >= 1 && this.getCompania().getDrive().getEscenarios() >= 2 && this.getCompania().getDrive().getAnimaciones() >= 6 && this.getCompania().getDrive().getDoblajes() >= 5){
             //si al assembler le toca hacer un capitulo estandar entrara en el siguiente if
-            if((this.getCompania().getDrive().getCapitulosEstandar()+this.getCompania().getDrive().getCapitulosPlotTwist()+1)%4 != 0){
+            if((this.getCompania().getDrive().getCapitulosEstandarAcumulados()+this.getCompania().getDrive().getCapitulosPlotTwistAcumulados()+1)%4 != 0){
                 respuesta = true;
             //si al assembler le toca hacer un capitulo PlotTwist y el drive tiene los guiones plotTwist necesarios, entrara en el siguiente else if
-            }else if(((this.getCompania().getDrive().getCapitulosEstandar()+this.getCompania().getDrive().getCapitulosPlotTwist()+1)%4 == 0) && this.getCompania().getDrive().getGuionesPlotTwist() >= 1){
+            }else if(((this.getCompania().getDrive().getCapitulosEstandarAcumulados()+this.getCompania().getDrive().getCapitulosPlotTwistAcumulados()+1)%4 == 0) && this.getCompania().getDrive().getGuionesPlotTwist() >= 1){
                 respuesta = true;
             }
             
         //Si es Disney channel y el drive tiene suficientes partes para hacer un capitulo estandar entrara en el siguiente if
         }else if(this.getCompania().getTipoCompania() == 0 && this.getCompania().getDrive().getGuiones() >= 1 && this.getCompania().getDrive().getEscenarios() >= 1 && this.getCompania().getDrive().getAnimaciones() >= 2 && this.getCompania().getDrive().getDoblajes() >= 4){
             //si le toca hacer un capitulo estandar entrara
-            if((this.getCompania().getDrive().getCapitulosEstandar()+this.getCompania().getDrive().getCapitulosPlotTwist()+1)%3 != 0){
+            if((this.getCompania().getDrive().getCapitulosEstandarAcumulados()+this.getCompania().getDrive().getCapitulosPlotTwistAcumulados()+1)%3 != 0){
                 respuesta = true;
             //si al assembler le toca hacer un capitulo PlotTwist y el drive tiene los guiones plotTwist necesarios, entrara en el siguiente else if
-            }else if(((this.getCompania().getDrive().getCapitulosEstandar()+this.getCompania().getDrive().getCapitulosPlotTwist()+1)%3 == 0) && this.getCompania().getDrive().getGuionesPlotTwist() >= 3){
+            }else if(((this.getCompania().getDrive().getCapitulosEstandarAcumulados()+this.getCompania().getDrive().getCapitulosPlotTwistAcumulados()+1)%3 == 0) && this.getCompania().getDrive().getGuionesPlotTwist() >= 3){
                 respuesta = true;
             }
         }
@@ -107,10 +107,13 @@ public class Assembler extends Worker{
     public void agregarCapitulo(){
         if(this.capitulosEstandar == 1){
             this.capitulosEstandar = 0;
-            this.getCompania().getDrive().setCapitulosEstandar(this.getCompania().getDrive().getCapitulosEstandar() + 1);
+            this.getCompania().getDrive().setCapitulosEstandar(this.getCompania().getDrive().getCapitulosEstandar() + 1,this.getCompania().getTipoCompania());
+            this.getCompania().getDrive().setCapitulosEstandarAcumulados(this.getCompania().getDrive().getCapitulosEstandarAcumulados()+1);
         }else if(this.capitulosPlotTwist == 1){
             this.capitulosPlotTwist = 0;
-            this.getCompania().getDrive().setCapitulosPlotTwist(this.getCompania().getDrive().getCapitulosPlotTwist() + 1);
+            this.getCompania().getDrive().setCapitulosPlotTwist(this.getCompania().getDrive().getCapitulosPlotTwist() + 1,this.getCompania().getTipoCompania());
+            this.getCompania().getDrive().setCapitulosPlotTwistAcumulados(this.getCompania().getDrive().getCapitulosPlotTwistAcumulados() + 1);
+        
         }
     }
     
@@ -121,10 +124,10 @@ public class Assembler extends Worker{
             this.getCompania().getDrive().setEscenarios(this.getCompania().getDrive().getEscenarios() - 2,this.getCompania().getTipoCompania());
             this.getCompania().getDrive().setAnimaciones(this.getCompania().getDrive().getAnimaciones() - 6,this.getCompania().getTipoCompania());
             this.getCompania().getDrive().setDoblajes(this.getCompania().getDrive().getDoblajes() - 5,this.getCompania().getTipoCompania());
-            if(((this.getCompania().getDrive().getCapitulosEstandar()+this.getCompania().getDrive().getCapitulosPlotTwist()+1)% 4 == 0) && (this.getCompania().getDrive().getGuionesPlotTwist() >= 1)){
+            if(((this.getCompania().getDrive().getCapitulosEstandarAcumulados()+this.getCompania().getDrive().getCapitulosPlotTwistAcumulados()+1)% 4 == 0) && (this.getCompania().getDrive().getGuionesPlotTwist() >= 1)){
                 this.getCompania().getDrive().setGuionesPlotTwist(this.getCompania().getDrive().getGuionesPlotTwist() - 1,this.getCompania().getTipoCompania());
                 this.capitulosPlotTwist = this.capitulosPlotTwist + 1;
-                //System.out.println("Capitulos PlotTwist disponibles:" + this.getCapitulosPlotTwist());
+                System.out.println("Capitulos PlotTwist disponibles:" + this.getCompania().getDrive().getCapitulosPlotTwist());
             }else{
                 this.capitulosEstandar = this.capitulosEstandar + 1;
                 //System.out.println("Capitulos Estandar disponibles:" + this.getCapitulosEstandar());
@@ -134,10 +137,10 @@ public class Assembler extends Worker{
             this.getCompania().getDrive().setEscenarios(this.getCompania().getDrive().getEscenarios() - 1,this.getCompania().getTipoCompania());
             this.getCompania().getDrive().setAnimaciones(this.getCompania().getDrive().getAnimaciones() - 2,this.getCompania().getTipoCompania());
             this.getCompania().getDrive().setDoblajes(this.getCompania().getDrive().getDoblajes() - 4,this.getCompania().getTipoCompania());
-            if(((this.getCompania().getDrive().getCapitulosEstandar()+this.getCompania().getDrive().getCapitulosPlotTwist()+1)% 3 == 0) && (this.getCompania().getDrive().getGuionesPlotTwist() >= 3)){
+            if(((this.getCompania().getDrive().getCapitulosEstandarAcumulados()+this.getCompania().getDrive().getCapitulosPlotTwistAcumulados()+1)% 3 == 0) && (this.getCompania().getDrive().getGuionesPlotTwist() >= 3)){
                 this.getCompania().getDrive().setGuionesPlotTwist(this.getCompania().getDrive().getGuionesPlotTwist() - 3,this.getCompania().getTipoCompania());
                 this.capitulosPlotTwist = this.capitulosPlotTwist + 1;
-                //System.out.println("Capitulos PlotTwist disponibles:" + this.getCapitulosPlotTwist());
+                //System.out.println("Capitulos PlotTwist disponibles:" + this.getCompania().getDrive().getCapitulosPlotTwist());
             }else{
                 this.capitulosEstandar = this.capitulosEstandar + 1;
                 //System.out.println("Capitulos Estandar disponibles:" + this.getCapitulosEstandar());
