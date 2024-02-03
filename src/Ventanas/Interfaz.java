@@ -393,6 +393,7 @@ public class Interfaz extends javax.swing.JFrame {
         capitulosPlotTwistListosCN = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         diasCN = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         pmDisneyActividad2 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -697,19 +698,19 @@ public class Interfaz extends javax.swing.JFrame {
         salarioDescontadoCN2.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
 
         jLabel35.setText("SALARIO DESCONTADO");
-        salarioDescontadoCN2.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 360, -1, -1));
+        salarioDescontadoCN2.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, -1, -1));
 
         jLabel36.setText("FALTAS");
-        salarioDescontadoCN2.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, -1, -1));
+        salarioDescontadoCN2.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, -1, -1));
 
         jLabel37.setText("ACTIVIDAD");
-        salarioDescontadoCN2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, -1, -1));
+        salarioDescontadoCN2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
 
         jLabel12.setText("DIAS PARA LA ENTREGA");
-        salarioDescontadoCN2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
+        salarioDescontadoCN2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, -1, -1));
 
         diasEntregaCartoonNetwork.setText("0");
-        salarioDescontadoCN2.add(diasEntregaCartoonNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 50, 20));
+        salarioDescontadoCN2.add(diasEntregaCartoonNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 500, 50, 20));
 
         jLabel98.setText("25");
         salarioDescontadoCN2.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 20, 20));
@@ -742,59 +743,63 @@ public class Interfaz extends javax.swing.JFrame {
         salarioDescontadoCN2.add(AnimacionesCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 20, 20));
 
         jLabel55.setText("COSTOS OPERATIVOS");
-        salarioDescontadoCN2.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 100, -1, -1));
+        salarioDescontadoCN2.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 430, -1, -1));
 
         jLabel56.setText("GANANCIAS EN BRUTO");
-        salarioDescontadoCN2.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 100, -1, -1));
+        salarioDescontadoCN2.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 530, -1, -1));
 
         jLabel61.setText("UTILIDADES");
-        salarioDescontadoCN2.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 220, -1, -1));
+        salarioDescontadoCN2.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 480, -1, -1));
 
         costosOperativosCN.setText("0");
-        salarioDescontadoCN2.add(costosOperativosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 120, -1, -1));
+        salarioDescontadoCN2.add(costosOperativosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 450, -1, -1));
 
         utilidadesCN.setText("0");
-        salarioDescontadoCN2.add(utilidadesCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 240, -1, -1));
+        salarioDescontadoCN2.add(utilidadesCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 500, -1, -1));
 
         gananciasCN.setText("0");
-        salarioDescontadoCN2.add(gananciasCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 120, -1, -1));
+        salarioDescontadoCN2.add(gananciasCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 550, -1, -1));
         salarioDescontadoCN2.add(pmCNActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, -1));
 
         jLabel71.setText("ACTIVIDAD");
-        salarioDescontadoCN2.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, -1, -1));
+        salarioDescontadoCN2.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, -1, -1));
 
         jLabel72.setText("DIRECTOR");
-        salarioDescontadoCN2.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
+        salarioDescontadoCN2.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, -1, -1));
 
         jLabel73.setText("CAPITULOS ESTANDAR LISTOS");
-        salarioDescontadoCN2.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, -1, -1));
+        salarioDescontadoCN2.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, -1, -1));
 
         actividadDirectorCN.setText("0");
-        salarioDescontadoCN2.add(actividadDirectorCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, -1, -1));
+        salarioDescontadoCN2.add(actividadDirectorCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, -1, -1));
 
         capitulosListosCN.setText("0");
-        salarioDescontadoCN2.add(capitulosListosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 440, -1, -1));
+        salarioDescontadoCN2.add(capitulosListosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, -1, -1));
 
         faltasPMCN.setText("0");
-        salarioDescontadoCN2.add(faltasPMCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, -1, -1));
+        salarioDescontadoCN2.add(faltasPMCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, -1, -1));
 
         pmCNActividadd.setText("0");
-        salarioDescontadoCN2.add(pmCNActividadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, -1));
+        salarioDescontadoCN2.add(pmCNActividadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, -1, -1));
 
         salarioDescontadocn23.setText("0");
-        salarioDescontadoCN2.add(salarioDescontadocn23, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 380, -1, -1));
+        salarioDescontadoCN2.add(salarioDescontadocn23, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 530, -1, -1));
 
         jLabel34.setText("CAPITULOS PLOTTWIST  LISTOS");
-        salarioDescontadoCN2.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 420, -1, -1));
+        salarioDescontadoCN2.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 430, -1, -1));
 
         capitulosPlotTwistListosCN.setText("0");
-        salarioDescontadoCN2.add(capitulosPlotTwistListosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 440, -1, -1));
+        salarioDescontadoCN2.add(capitulosPlotTwistListosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, -1, -1));
 
         jLabel1.setText("DIAS:");
-        salarioDescontadoCN2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 20, -1, -1));
+        salarioDescontadoCN2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 540, -1, -1));
 
         diasCN.setText("0");
-        salarioDescontadoCN2.add(diasCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, -1, -1));
+        salarioDescontadoCN2.add(diasCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 560, -1, -1));
+
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/adventure-time-cartoon-network-characters-5wjyuuwzp2po3amt.jpg"))); // NOI18N
+        salarioDescontadoCN2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1150, 620));
 
         jTabbedPane1.addTab("Cartoon Network", salarioDescontadoCN2);
 
@@ -954,25 +959,25 @@ public class Interfaz extends javax.swing.JFrame {
         pmDisneyActividad2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 50, -1, -1));
 
         jLabel33.setText("PROJECT MANAGER");
-        pmDisneyActividad2.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, -1, -1));
+        pmDisneyActividad2.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 360, -1, -1));
 
         jLabel38.setText("ACTIVIDAD");
         pmDisneyActividad2.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 390, -1, -1));
 
         jLabel39.setText("SALARIO DESCONTADO");
-        pmDisneyActividad2.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 480, -1, -1));
+        pmDisneyActividad2.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 500, -1, -1));
 
         jLabel40.setText("FALTAS");
-        pmDisneyActividad2.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, -1, -1));
+        pmDisneyActividad2.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 440, -1, -1));
 
         jLabel26.setText("DIRECTOR");
-        pmDisneyActividad2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 370, -1, -1));
+        pmDisneyActividad2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 360, -1, -1));
 
         jLabel41.setText("ACTIVIDAD");
-        pmDisneyActividad2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 390, -1, -1));
+        pmDisneyActividad2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, -1, -1));
 
         jLabel27.setText("CAPITULOS ESTANDAR  LISTOS");
-        pmDisneyActividad2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 430, -1, -1));
+        pmDisneyActividad2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 440, -1, -1));
 
         jLabel28.setText("DIAS PARA LA ENTREGA");
         pmDisneyActividad2.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 490, -1, -1));
@@ -1029,25 +1034,25 @@ public class Interfaz extends javax.swing.JFrame {
         pmDisneyActividad2.add(utilidadesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 390, -1, -1));
 
         pmActividadDisney.setText("0");
-        pmDisneyActividad2.add(pmActividadDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 390, -1, -1));
+        pmDisneyActividad2.add(pmActividadDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, -1, -1));
 
         faltasPMDisney.setText("0");
-        pmDisneyActividad2.add(faltasPMDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 430, -1, -1));
+        pmDisneyActividad2.add(faltasPMDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 460, -1, -1));
 
         salarioDescontadoDisney.setText("0");
-        pmDisneyActividad2.add(salarioDescontadoDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 480, -1, -1));
+        pmDisneyActividad2.add(salarioDescontadoDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 530, -1, -1));
 
         actividadDirectorDisney.setText("0");
-        pmDisneyActividad2.add(actividadDirectorDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 390, -1, -1));
+        pmDisneyActividad2.add(actividadDirectorDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 410, -1, -1));
 
         capitulosListosDisney.setText("0");
-        pmDisneyActividad2.add(capitulosListosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 430, -1, -1));
+        pmDisneyActividad2.add(capitulosListosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 460, -1, -1));
 
         jLabel29.setText("CAPITULOS PLOTTWIST  LISTOS");
-        pmDisneyActividad2.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 480, -1, -1));
+        pmDisneyActividad2.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 500, -1, -1));
 
         capitulosPlotTwistListosDisney.setText("0");
-        pmDisneyActividad2.add(capitulosPlotTwistListosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 480, -1, -1));
+        pmDisneyActividad2.add(capitulosPlotTwistListosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 530, 10, -1));
 
         jLabel10.setText("DIAS:");
         pmDisneyActividad2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 550, -1, -1));
@@ -1422,7 +1427,7 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 1100, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 1160, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1687,150 +1692,6 @@ public class Interfaz extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton25ActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        // TODO add your handling code here:
-        if(this.permisoDeAumentoDeTrabajadorCartoonNetwork() == true){
-            Assembler ensambladorCNNuevo = new Assembler(5,50, Global.getMutexCartoonNetwork(),Global.getCartoonNetwork()); //creas al nuevo ensambladores
-            Global.getCartoonNetwork().getEnsambladores().insertFinal(ensambladorCNNuevo);//lo agregas a la lista de ensambladores de cartoon network
-            EnsambladoresCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getEnsambladores().getSize()));//actualizamos el label de la interfaz
-            ensambladorCNNuevo.start();//lo pones a trabajar
-        }else{
-            JOptionPane.showMessageDialog(null, "No puedes agregar otro ensamblador. El total de trabajadores es 18(el maximo)");
-        }
-    }//GEN-LAST:event_jButton16ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-        if(Global.getCartoonNetwork().getEnsambladores().getSize() > 1){
-            Assembler trabajadorDespedido = (Assembler) Global.getCartoonNetwork().getEnsambladores().getTail().getElement();//agarramos al ultimo ensamblador
-            Global.getCartoonNetwork().getEnsambladores().deleteFinal();//eliminamos al ultimo ensamblador
-            trabajadorDespedido.stop();//detenemos el hilo del ultimo ensamblador
-            EnsambladoresCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getEnsambladores().getSize()));//actualizamos el label de la interfaz
-        }else{
-            JOptionPane.showMessageDialog(null, "No puedes despedir un ensamblador.Te quedarias sin ensambladores.");
-        }
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
-        if(this.permisoDeAumentoDeTrabajadorCartoonNetwork() == true){
-            Developer guionistaPLOTTWISTCNNuevo = new Developer(4,34, Global.getMutexCartoonNetwork(),Global.getCartoonNetwork()); //creas al nuevo guionista
-            Global.getCartoonNetwork().getGuionistasPlotTwist().insertFinal(guionistaPLOTTWISTCNNuevo);//lo agregas a la lista de guionistas de cartoon network
-            PlotTwistCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getGuionistasPlotTwist().getSize()));//actualizamos el label de la interfaz
-            guionistaPLOTTWISTCNNuevo.start();//lo pones a trabajar
-        }else{
-            JOptionPane.showMessageDialog(null, "No puedes agregar otro guionista plot twist. El total de trabajadores es 18(el maximo)");
-        }
-    }//GEN-LAST:event_jButton15ActionPerformed
-
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
-        if(this.permisoDeAumentoDeTrabajadorCartoonNetwork() == true){
-            Developer actorCNNuevo = new Developer(3,16, Global.getMutexCartoonNetwork(),Global.getCartoonNetwork()); //creas al nuevo actor
-            Global.getCartoonNetwork().getActoresDoblaje().insertFinal(actorCNNuevo);//lo agregas a la lista de actores de cartoon network
-            DoblajesCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getActoresDoblaje().getSize()));//actualizamos el label de la interfaz
-            actorCNNuevo.start();//lo pones a trabajar
-        }else{
-            JOptionPane.showMessageDialog(null, "No puedes agregar otro actor. El total de trabajadores es 18(el maximo)");
-        }
-    }//GEN-LAST:event_jButton14ActionPerformed
-
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
-        if(this.permisoDeAumentoDeTrabajadorCartoonNetwork() == true){
-            Developer animadorCNNuevo = new Developer(0,40, Global.getMutexCartoonNetwork(),Global.getCartoonNetwork()); //creas al nuevo animador
-            Global.getCartoonNetwork().getAnimadores().insertFinal(animadorCNNuevo);//lo agregas a la lista de animadores de cartoon network
-            AnimadoresCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getAnimadores().getSize()));//actualizamos el label de la interfaz
-            animadorCNNuevo.start();//lo pones a trabajar
-        }else{
-            JOptionPane.showMessageDialog(null, "No puedes agregar otro animador. El total de trabajadores es 18(el maximo)");
-        }
-    }//GEN-LAST:event_jButton13ActionPerformed
-
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-        if(this.permisoDeAumentoDeTrabajadorCartoonNetwork() == true){
-            Developer diseñadorCNNuevo = new Developer(2,26, Global.getMutexCartoonNetwork(),Global.getCartoonNetwork()); //creas al nuevo diseñador
-            Global.getCartoonNetwork().getDisenadoresEscenarios().insertFinal(diseñadorCNNuevo);//lo agregas a la lista de diseñadores de cartoon network
-            EscenariosCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getDisenadoresEscenarios().getSize()));//actualizamos el label de la interfaz
-            diseñadorCNNuevo.start();//lo pones a trabajar
-        }else{
-            JOptionPane.showMessageDialog(null, "No puedes agregar otro diseñador. El total de trabajadores es 18(el maximo)");
-        }
-    }//GEN-LAST:event_jButton12ActionPerformed
-
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-        if(this.permisoDeAumentoDeTrabajadorCartoonNetwork() == true){
-            Developer guionistaCNNuevo = new Developer(1,20, Global.getMutexCartoonNetwork(),Global.getCartoonNetwork()); //creas al nuevo guionista
-            Global.getCartoonNetwork().getGuionistas().insertFinal(guionistaCNNuevo);//lo agregas a la lista de guionistas de cartoon network
-            GuionistasCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getGuionistas().getSize()));//actualizamos el label de la interfaz
-            guionistaCNNuevo.start();//lo pones a trabajar
-        }else{
-            JOptionPane.showMessageDialog(null, "No puedes agregar otro guionista. El total de trabajadores es 18(el maximo)");
-        }
-    }//GEN-LAST:event_jButton11ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        if(Global.getCartoonNetwork().getGuionistasPlotTwist().getSize() > 1){
-            Developer trabajadorDespedido = (Developer) Global.getCartoonNetwork().getGuionistasPlotTwist().getTail().getElement();//agarramos al ultimo guionista
-            Global.getCartoonNetwork().getGuionistasPlotTwist().deleteFinal();//eliminamos al ultimo guionista
-            trabajadorDespedido.stop();//detenemos el hilo del ultimo guionista
-            PlotTwistCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getGuionistasPlotTwist().getSize()));//actualizamos el label de la interfaz
-        }else{
-            JOptionPane.showMessageDialog(null, "No puedes despedir un guionista plot twist.Te quedarias sin guionistas plot twist.");
-        }
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        if(Global.getCartoonNetwork().getActoresDoblaje().getSize() > 1){
-            Developer trabajadorDespedido = (Developer) Global.getCartoonNetwork().getActoresDoblaje().getTail().getElement();//agarramos al ultimo actor
-            Global.getCartoonNetwork().getActoresDoblaje().deleteFinal();//eliminamos al ultimo actor
-            trabajadorDespedido.stop();//detenemos el hilo del ultimo actor
-            DoblajesCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getActoresDoblaje().getSize()));//actualizamos el label de la interfaz
-        }else{
-            JOptionPane.showMessageDialog(null, "No puedes despedir un actor de doblaje.Te quedarias sin actores de doblaje.");
-        }
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        if(Global.getCartoonNetwork().getAnimadores().getSize() > 1){
-            Developer trabajadorDespedido = (Developer) Global.getCartoonNetwork().getAnimadores().getTail().getElement();//agarramos al ultimo animador
-            Global.getCartoonNetwork().getAnimadores().deleteFinal();//eliminamos al ultimo animador
-            trabajadorDespedido.stop();//detenemos el hilo del ultimo animador
-            AnimadoresCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getAnimadores().getSize()));//actualizamos el label de la interfaz
-        }else{
-            JOptionPane.showMessageDialog(null, "No puedes despedir un animador.Te quedarias sin animadores.");
-        }
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        if(Global.getCartoonNetwork().getDisenadoresEscenarios().getSize() > 1){
-            Developer trabajadorDespedido = (Developer) Global.getCartoonNetwork().getDisenadoresEscenarios().getTail().getElement();//agarramos al ultimo diseñador
-            Global.getCartoonNetwork().getDisenadoresEscenarios().deleteFinal();//eliminamos al ultimo diseñador
-            trabajadorDespedido.stop();//detenemos el hilo del ultimo diseñador
-            EscenariosCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getDisenadoresEscenarios().getSize()));//actualizamos el label de la interfaz
-        }else{
-            JOptionPane.showMessageDialog(null, "No puedes despedir un diseñador de escenario.Te quedarias sin diseñador de escenarios.");
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        if(Global.getCartoonNetwork().getGuionistas().getSize() > 1){
-            Developer trabajadorDespedido = (Developer) Global.getCartoonNetwork().getGuionistas().getTail().getElement();//agarramos al ultimo guionista
-            Global.getCartoonNetwork().getGuionistas().deleteFinal();//eliminamos al ultimo guionista
-            trabajadorDespedido.stop();//detenemos el hilo del ultimo guionista
-            GuionistasCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getGuionistas().getSize()));//actualizamos el label de la interfaz
-        }else{
-            JOptionPane.showMessageDialog(null, "No puedes despedir un guionista.Te quedarias sin guionistas.");
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
         // TODO add your handling code here:
         if(this.permisoDeAumentoDeTrabajadorDisney() == true){
@@ -1974,6 +1835,150 @@ public class Interfaz extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "No puedes despedir un guionista.Te quedarias sin guionistas.");
         }
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+        if(this.permisoDeAumentoDeTrabajadorCartoonNetwork() == true){
+            Assembler ensambladorCNNuevo = new Assembler(5,50, Global.getMutexCartoonNetwork(),Global.getCartoonNetwork()); //creas al nuevo ensambladores
+            Global.getCartoonNetwork().getEnsambladores().insertFinal(ensambladorCNNuevo);//lo agregas a la lista de ensambladores de cartoon network
+            EnsambladoresCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getEnsambladores().getSize()));//actualizamos el label de la interfaz
+            ensambladorCNNuevo.start();//lo pones a trabajar
+        }else{
+            JOptionPane.showMessageDialog(null, "No puedes agregar otro ensamblador. El total de trabajadores es 18(el maximo)");
+        }
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        if(Global.getCartoonNetwork().getEnsambladores().getSize() > 1){
+            Assembler trabajadorDespedido = (Assembler) Global.getCartoonNetwork().getEnsambladores().getTail().getElement();//agarramos al ultimo ensamblador
+            Global.getCartoonNetwork().getEnsambladores().deleteFinal();//eliminamos al ultimo ensamblador
+            trabajadorDespedido.stop();//detenemos el hilo del ultimo ensamblador
+            EnsambladoresCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getEnsambladores().getSize()));//actualizamos el label de la interfaz
+        }else{
+            JOptionPane.showMessageDialog(null, "No puedes despedir un ensamblador.Te quedarias sin ensambladores.");
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+        if(this.permisoDeAumentoDeTrabajadorCartoonNetwork() == true){
+            Developer guionistaPLOTTWISTCNNuevo = new Developer(4,34, Global.getMutexCartoonNetwork(),Global.getCartoonNetwork()); //creas al nuevo guionista
+            Global.getCartoonNetwork().getGuionistasPlotTwist().insertFinal(guionistaPLOTTWISTCNNuevo);//lo agregas a la lista de guionistas de cartoon network
+            PlotTwistCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getGuionistasPlotTwist().getSize()));//actualizamos el label de la interfaz
+            guionistaPLOTTWISTCNNuevo.start();//lo pones a trabajar
+        }else{
+            JOptionPane.showMessageDialog(null, "No puedes agregar otro guionista plot twist. El total de trabajadores es 18(el maximo)");
+        }
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        if(this.permisoDeAumentoDeTrabajadorCartoonNetwork() == true){
+            Developer actorCNNuevo = new Developer(3,16, Global.getMutexCartoonNetwork(),Global.getCartoonNetwork()); //creas al nuevo actor
+            Global.getCartoonNetwork().getActoresDoblaje().insertFinal(actorCNNuevo);//lo agregas a la lista de actores de cartoon network
+            DoblajesCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getActoresDoblaje().getSize()));//actualizamos el label de la interfaz
+            actorCNNuevo.start();//lo pones a trabajar
+        }else{
+            JOptionPane.showMessageDialog(null, "No puedes agregar otro actor. El total de trabajadores es 18(el maximo)");
+        }
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        if(this.permisoDeAumentoDeTrabajadorCartoonNetwork() == true){
+            Developer animadorCNNuevo = new Developer(0,40, Global.getMutexCartoonNetwork(),Global.getCartoonNetwork()); //creas al nuevo animador
+            Global.getCartoonNetwork().getAnimadores().insertFinal(animadorCNNuevo);//lo agregas a la lista de animadores de cartoon network
+            AnimadoresCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getAnimadores().getSize()));//actualizamos el label de la interfaz
+            animadorCNNuevo.start();//lo pones a trabajar
+        }else{
+            JOptionPane.showMessageDialog(null, "No puedes agregar otro animador. El total de trabajadores es 18(el maximo)");
+        }
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        if(this.permisoDeAumentoDeTrabajadorCartoonNetwork() == true){
+            Developer diseñadorCNNuevo = new Developer(2,26, Global.getMutexCartoonNetwork(),Global.getCartoonNetwork()); //creas al nuevo diseñador
+            Global.getCartoonNetwork().getDisenadoresEscenarios().insertFinal(diseñadorCNNuevo);//lo agregas a la lista de diseñadores de cartoon network
+            EscenariosCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getDisenadoresEscenarios().getSize()));//actualizamos el label de la interfaz
+            diseñadorCNNuevo.start();//lo pones a trabajar
+        }else{
+            JOptionPane.showMessageDialog(null, "No puedes agregar otro diseñador. El total de trabajadores es 18(el maximo)");
+        }
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        if(this.permisoDeAumentoDeTrabajadorCartoonNetwork() == true){
+            Developer guionistaCNNuevo = new Developer(1,20, Global.getMutexCartoonNetwork(),Global.getCartoonNetwork()); //creas al nuevo guionista
+            Global.getCartoonNetwork().getGuionistas().insertFinal(guionistaCNNuevo);//lo agregas a la lista de guionistas de cartoon network
+            GuionistasCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getGuionistas().getSize()));//actualizamos el label de la interfaz
+            guionistaCNNuevo.start();//lo pones a trabajar
+        }else{
+            JOptionPane.showMessageDialog(null, "No puedes agregar otro guionista. El total de trabajadores es 18(el maximo)");
+        }
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        if(Global.getCartoonNetwork().getGuionistasPlotTwist().getSize() > 1){
+            Developer trabajadorDespedido = (Developer) Global.getCartoonNetwork().getGuionistasPlotTwist().getTail().getElement();//agarramos al ultimo guionista
+            Global.getCartoonNetwork().getGuionistasPlotTwist().deleteFinal();//eliminamos al ultimo guionista
+            trabajadorDespedido.stop();//detenemos el hilo del ultimo guionista
+            PlotTwistCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getGuionistasPlotTwist().getSize()));//actualizamos el label de la interfaz
+        }else{
+            JOptionPane.showMessageDialog(null, "No puedes despedir un guionista plot twist.Te quedarias sin guionistas plot twist.");
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        if(Global.getCartoonNetwork().getActoresDoblaje().getSize() > 1){
+            Developer trabajadorDespedido = (Developer) Global.getCartoonNetwork().getActoresDoblaje().getTail().getElement();//agarramos al ultimo actor
+            Global.getCartoonNetwork().getActoresDoblaje().deleteFinal();//eliminamos al ultimo actor
+            trabajadorDespedido.stop();//detenemos el hilo del ultimo actor
+            DoblajesCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getActoresDoblaje().getSize()));//actualizamos el label de la interfaz
+        }else{
+            JOptionPane.showMessageDialog(null, "No puedes despedir un actor de doblaje.Te quedarias sin actores de doblaje.");
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        if(Global.getCartoonNetwork().getAnimadores().getSize() > 1){
+            Developer trabajadorDespedido = (Developer) Global.getCartoonNetwork().getAnimadores().getTail().getElement();//agarramos al ultimo animador
+            Global.getCartoonNetwork().getAnimadores().deleteFinal();//eliminamos al ultimo animador
+            trabajadorDespedido.stop();//detenemos el hilo del ultimo animador
+            AnimadoresCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getAnimadores().getSize()));//actualizamos el label de la interfaz
+        }else{
+            JOptionPane.showMessageDialog(null, "No puedes despedir un animador.Te quedarias sin animadores.");
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        if(Global.getCartoonNetwork().getDisenadoresEscenarios().getSize() > 1){
+            Developer trabajadorDespedido = (Developer) Global.getCartoonNetwork().getDisenadoresEscenarios().getTail().getElement();//agarramos al ultimo diseñador
+            Global.getCartoonNetwork().getDisenadoresEscenarios().deleteFinal();//eliminamos al ultimo diseñador
+            trabajadorDespedido.stop();//detenemos el hilo del ultimo diseñador
+            EscenariosCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getDisenadoresEscenarios().getSize()));//actualizamos el label de la interfaz
+        }else{
+            JOptionPane.showMessageDialog(null, "No puedes despedir un diseñador de escenario.Te quedarias sin diseñador de escenarios.");
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        if(Global.getCartoonNetwork().getGuionistas().getSize() > 1){
+            Developer trabajadorDespedido = (Developer) Global.getCartoonNetwork().getGuionistas().getTail().getElement();//agarramos al ultimo guionista
+            Global.getCartoonNetwork().getGuionistas().deleteFinal();//eliminamos al ultimo guionista
+            trabajadorDespedido.stop();//detenemos el hilo del ultimo guionista
+            GuionistasCartoonNetworkActivos.setText(Integer.toString(Global.getCartoonNetwork().getGuionistas().getSize()));//actualizamos el label de la interfaz
+        }else{
+            JOptionPane.showMessageDialog(null, "No puedes despedir un guionista.Te quedarias sin guionistas.");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2191,6 +2196,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
