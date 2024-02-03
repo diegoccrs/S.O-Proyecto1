@@ -954,25 +954,25 @@ public class Interfaz extends javax.swing.JFrame {
         pmDisneyActividad2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 50, -1, -1));
 
         jLabel33.setText("PROJECT MANAGER");
-        pmDisneyActividad2.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 370, -1, -1));
+        pmDisneyActividad2.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, -1, -1));
 
         jLabel38.setText("ACTIVIDAD");
-        pmDisneyActividad2.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, -1, -1));
+        pmDisneyActividad2.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 390, -1, -1));
 
-        jLabel39.setText("SALARIO");
-        pmDisneyActividad2.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 480, -1, -1));
+        jLabel39.setText("SALARIO DESCONTADO");
+        pmDisneyActividad2.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 480, -1, -1));
 
         jLabel40.setText("FALTAS");
-        pmDisneyActividad2.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 430, -1, -1));
+        pmDisneyActividad2.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, -1, -1));
 
         jLabel26.setText("DIRECTOR");
-        pmDisneyActividad2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 370, -1, -1));
+        pmDisneyActividad2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 370, -1, -1));
 
         jLabel41.setText("ACTIVIDAD");
-        pmDisneyActividad2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, -1, -1));
+        pmDisneyActividad2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 390, -1, -1));
 
         jLabel27.setText("CAPITULOS ESTANDAR  LISTOS");
-        pmDisneyActividad2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 430, -1, -1));
+        pmDisneyActividad2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 430, -1, -1));
 
         jLabel28.setText("DIAS PARA LA ENTREGA");
         pmDisneyActividad2.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 490, -1, -1));
@@ -1029,25 +1029,25 @@ public class Interfaz extends javax.swing.JFrame {
         pmDisneyActividad2.add(utilidadesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 390, -1, -1));
 
         pmActividadDisney.setText("0");
-        pmDisneyActividad2.add(pmActividadDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 390, -1, -1));
+        pmDisneyActividad2.add(pmActividadDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 390, -1, -1));
 
         faltasPMDisney.setText("0");
-        pmDisneyActividad2.add(faltasPMDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 430, -1, -1));
+        pmDisneyActividad2.add(faltasPMDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 430, -1, -1));
 
         salarioDescontadoDisney.setText("0");
-        pmDisneyActividad2.add(salarioDescontadoDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 480, -1, -1));
+        pmDisneyActividad2.add(salarioDescontadoDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 480, -1, -1));
 
         actividadDirectorDisney.setText("0");
-        pmDisneyActividad2.add(actividadDirectorDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 390, -1, -1));
+        pmDisneyActividad2.add(actividadDirectorDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 390, -1, -1));
 
         capitulosListosDisney.setText("0");
-        pmDisneyActividad2.add(capitulosListosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 430, -1, -1));
+        pmDisneyActividad2.add(capitulosListosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 430, -1, -1));
 
         jLabel29.setText("CAPITULOS PLOTTWIST  LISTOS");
-        pmDisneyActividad2.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 480, -1, -1));
+        pmDisneyActividad2.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 480, -1, -1));
 
         capitulosPlotTwistListosDisney.setText("0");
-        pmDisneyActividad2.add(capitulosPlotTwistListosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 480, -1, -1));
+        pmDisneyActividad2.add(capitulosPlotTwistListosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 480, -1, -1));
 
         jLabel10.setText("DIAS:");
         pmDisneyActividad2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 550, -1, -1));
@@ -1058,7 +1058,7 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/disney fondo.jpeg"))); // NOI18N
         jLabel15.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        pmDisneyActividad2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 610));
+        pmDisneyActividad2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1100, 610));
 
         jTabbedPane1.addTab("Disney Channel ", pmDisneyActividad2);
 
@@ -1422,7 +1422,7 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 1100, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
