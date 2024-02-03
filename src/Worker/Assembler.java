@@ -41,7 +41,17 @@ public class Assembler extends Worker{
     }
 
     private void obtainSalary() {
-        this.salarioAcc = this.salarioAcc + this.getSalario()*24;
+        float salario = this.getSalario()*24;
+        try {
+            this.getMutex().acquire();
+            this.getCompania().getDrive().setCostosOperativos(this.getCompania().getDrive().getCostosOperativos() + salario,this.getCompania().getTipoCompania());
+            this.getCompania().getDrive().setUtilidades(this.getCompania().getDrive().getUtilidades() - salario,this.getCompania().getTipoCompania());
+            this.getCompania().getDrive().setEnsambladorAcc(salario + this.getCompania().getDrive().getEnsambladorAcc());
+            this.getMutex().release();
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Assembler.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
     
     //Para entender este metodo hay que saber que Cartoon Network=1 y Disney channel=0
