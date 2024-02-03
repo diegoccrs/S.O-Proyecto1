@@ -328,6 +328,7 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel48 = new javax.swing.JLabel();
         diasInicio = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
         salarioDescontadoCN2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -515,9 +516,7 @@ public class Interfaz extends javax.swing.JFrame {
         jButton48 = new javax.swing.JButton();
         ensambladoresDisney = new javax.swing.JLabel();
         jLabel94 = new javax.swing.JLabel();
-        jLabel68 = new javax.swing.JLabel();
         jLabel69 = new javax.swing.JLabel();
-        jLabel70 = new javax.swing.JLabel();
         jButton49 = new javax.swing.JButton();
         jButton50 = new javax.swing.JButton();
         jButton51 = new javax.swing.JButton();
@@ -525,6 +524,8 @@ public class Interfaz extends javax.swing.JFrame {
         diasEntrega = new javax.swing.JLabel();
         duracionDias = new javax.swing.JLabel();
         jButton53 = new javax.swing.JButton();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -532,10 +533,14 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel48.setText("DIAS:");
-        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 20, -1, -1));
+        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, -1, -1));
 
         diasInicio.setText("0");
-        jPanel1.add(diasInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, -1, -1));
+        jPanel1.add(diasInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, -1, -1));
+
+        jLabel70.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        jLabel70.setText("ESTUDIOS DE ANIMACION EN VENEZUELA");
+        jPanel1.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 990, 70));
 
         jTabbedPane1.addTab("Inicio", jPanel1);
 
@@ -1067,25 +1072,26 @@ public class Interfaz extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Disney Channel ", pmDisneyActividad2);
 
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel30.setText("TRABAJADORES");
-        jPanel5.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
+        jPanel5.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, -1));
 
         jLabel31.setText("GUIONISTAS ");
-        jPanel5.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
+        jPanel5.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, -1));
 
         jLabel42.setText("DISEÑADORES DE ESCENARIOS");
-        jPanel5.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, -1, -1));
+        jPanel5.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, -1, -1));
 
         jLabel57.setText("ANIMADORES DE PERSONAJES");
-        jPanel5.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, -1, -1));
+        jPanel5.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, -1, -1));
 
         jLabel58.setText("ACTORES DE DOBLAJE");
-        jPanel5.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, -1, -1));
+        jPanel5.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, -1, -1));
 
         jLabel59.setText("GUIONISTAS DE PLOT TWIST");
-        jPanel5.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, -1, -1));
+        jPanel5.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, -1, -1));
 
         jButton25.setText("-");
         jButton25.addActionListener(new java.awt.event.ActionListener() {
@@ -1093,7 +1099,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton25ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, -1, -1));
+        jPanel5.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, -1, -1));
 
         jButton26.setText("-");
         jButton26.addActionListener(new java.awt.event.ActionListener() {
@@ -1101,7 +1107,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton26ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, -1, -1));
+        jPanel5.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, -1, -1));
 
         jButton27.setText("-");
         jButton27.addActionListener(new java.awt.event.ActionListener() {
@@ -1109,7 +1115,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton27ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, -1, -1));
+        jPanel5.add(jButton27, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
 
         jButton28.setText("-");
         jButton28.addActionListener(new java.awt.event.ActionListener() {
@@ -1117,7 +1123,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton28ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, -1, -1));
+        jPanel5.add(jButton28, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, -1, -1));
 
         jButton29.setText("-");
         jButton29.addActionListener(new java.awt.event.ActionListener() {
@@ -1125,7 +1131,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton29ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, -1));
+        jPanel5.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, -1, -1));
 
         jButton30.setText("+");
         jButton30.addActionListener(new java.awt.event.ActionListener() {
@@ -1133,7 +1139,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton30ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, -1, -1));
+        jPanel5.add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, -1, -1));
 
         jButton31.setText("+");
         jButton31.addActionListener(new java.awt.event.ActionListener() {
@@ -1141,7 +1147,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton31ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, -1, -1));
+        jPanel5.add(jButton31, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, -1, -1));
 
         jButton32.setText("+");
         jButton32.addActionListener(new java.awt.event.ActionListener() {
@@ -1149,7 +1155,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton32ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, -1, -1));
+        jPanel5.add(jButton32, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 340, -1, -1));
 
         jButton33.setText("+");
         jButton33.addActionListener(new java.awt.event.ActionListener() {
@@ -1157,7 +1163,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton33ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, -1, -1));
+        jPanel5.add(jButton33, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, -1, -1));
 
         jButton34.setText("+");
         jButton34.addActionListener(new java.awt.event.ActionListener() {
@@ -1165,33 +1171,33 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton34ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, -1, -1));
+        jPanel5.add(jButton34, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 420, -1, -1));
 
         jLabel60.setText("ACTIVOS");
-        jPanel5.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, -1, -1));
+        jPanel5.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
 
         plottwistCN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         plottwistCN.setText("1");
-        jPanel5.add(plottwistCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, 20, -1));
+        jPanel5.add(plottwistCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 20, -1));
 
         animadoresCN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         animadoresCN.setText("1");
-        jPanel5.add(animadoresCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 20, -1));
+        jPanel5.add(animadoresCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 340, 20, -1));
 
         escenariosCN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         escenariosCN.setText("1");
-        jPanel5.add(escenariosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 20, -1));
+        jPanel5.add(escenariosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, 20, -1));
 
         doblajeCN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         doblajeCN.setText("1");
-        jPanel5.add(doblajeCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 20, -1));
+        jPanel5.add(doblajeCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, 20, -1));
 
         guionistasCN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         guionistasCN.setText("1");
-        jPanel5.add(guionistasCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 20, -1));
+        jPanel5.add(guionistasCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 20, -1));
 
         jLabel66.setText("ENSAMBLADORES");
-        jPanel5.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, -1, -1));
+        jPanel5.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 480, -1, -1));
 
         jButton35.setText("-");
         jButton35.addActionListener(new java.awt.event.ActionListener() {
@@ -1199,7 +1205,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton35ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, -1, -1));
+        jPanel5.add(jButton35, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 480, -1, -1));
 
         jButton36.setText("+");
         jButton36.addActionListener(new java.awt.event.ActionListener() {
@@ -1207,32 +1213,32 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton36ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, -1, -1));
+        jPanel5.add(jButton36, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, -1, -1));
 
         ensambladoresCN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ensambladoresCN.setText("1");
-        jPanel5.add(ensambladoresCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, 20, -1));
+        jPanel5.add(ensambladoresCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 480, 20, -1));
 
         jLabel78.setText("DIAS PARA LA ENTREGA");
-        jPanel5.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 520, -1, -1));
+        jPanel5.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 570, -1, -1));
 
         jLabel80.setText("TRABAJADORES");
-        jPanel5.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, -1, -1));
+        jPanel5.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 220, -1, -1));
 
         jLabel81.setText("GUIONISTAS ");
-        jPanel5.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 150, -1, -1));
+        jPanel5.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 260, -1, -1));
 
         jLabel82.setText("DISEÑADORES DE ESCENARIOS");
-        jPanel5.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, -1, -1));
+        jPanel5.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 300, -1, -1));
 
         jLabel83.setText("ANIMADORES DE PERSONAJES");
-        jPanel5.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, -1, -1));
+        jPanel5.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 340, -1, -1));
 
         jLabel84.setText("ACTORES DE DOBLAJE");
-        jPanel5.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, -1, -1));
+        jPanel5.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 380, -1, -1));
 
         jLabel85.setText("GUIONISTAS DE PLOT TWIST");
-        jPanel5.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, -1, -1));
+        jPanel5.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 420, -1, -1));
 
         jButton37.setText("-");
         jButton37.addActionListener(new java.awt.event.ActionListener() {
@@ -1240,7 +1246,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton37ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 150, -1, -1));
+        jPanel5.add(jButton37, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 260, -1, -1));
 
         jButton38.setText("-");
         jButton38.addActionListener(new java.awt.event.ActionListener() {
@@ -1248,7 +1254,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton38ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, -1, -1));
+        jPanel5.add(jButton38, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 300, -1, -1));
 
         jButton39.setText("-");
         jButton39.addActionListener(new java.awt.event.ActionListener() {
@@ -1256,7 +1262,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton39ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, -1, -1));
+        jPanel5.add(jButton39, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 340, -1, -1));
 
         jButton40.setText("-");
         jButton40.addActionListener(new java.awt.event.ActionListener() {
@@ -1264,7 +1270,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton40ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, -1, -1));
+        jPanel5.add(jButton40, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 380, -1, -1));
 
         jButton41.setText("-");
         jButton41.addActionListener(new java.awt.event.ActionListener() {
@@ -1272,7 +1278,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton41ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 310, -1, -1));
+        jPanel5.add(jButton41, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 420, -1, -1));
 
         jButton42.setText("+");
         jButton42.addActionListener(new java.awt.event.ActionListener() {
@@ -1280,7 +1286,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton42ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton42, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 150, -1, -1));
+        jPanel5.add(jButton42, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 260, -1, -1));
 
         jButton43.setText("+");
         jButton43.addActionListener(new java.awt.event.ActionListener() {
@@ -1288,7 +1294,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton43ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton43, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 190, -1, -1));
+        jPanel5.add(jButton43, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 300, -1, -1));
 
         jButton44.setText("+");
         jButton44.addActionListener(new java.awt.event.ActionListener() {
@@ -1296,7 +1302,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton44ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton44, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 230, -1, -1));
+        jPanel5.add(jButton44, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 340, -1, -1));
 
         jButton45.setText("+");
         jButton45.addActionListener(new java.awt.event.ActionListener() {
@@ -1304,7 +1310,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton45ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton45, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 270, -1, -1));
+        jPanel5.add(jButton45, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 380, -1, -1));
 
         jButton46.setText("+");
         jButton46.addActionListener(new java.awt.event.ActionListener() {
@@ -1312,33 +1318,33 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton46ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton46, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 310, -1, -1));
+        jPanel5.add(jButton46, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 420, -1, -1));
 
         jLabel86.setText("ACTIVOS");
-        jPanel5.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 110, -1, -1));
+        jPanel5.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 220, -1, -1));
 
         plottwistDisney.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         plottwistDisney.setText("1");
-        jPanel5.add(plottwistDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 310, 20, -1));
+        jPanel5.add(plottwistDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 420, 20, -1));
 
         animadoresDisney.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         animadoresDisney.setText("1");
-        jPanel5.add(animadoresDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 230, 20, -1));
+        jPanel5.add(animadoresDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 340, 20, -1));
 
         escenariosDisney.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         escenariosDisney.setText("1");
-        jPanel5.add(escenariosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 190, 20, -1));
+        jPanel5.add(escenariosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 300, 20, -1));
 
         doblajeDisney.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         doblajeDisney.setText("1");
-        jPanel5.add(doblajeDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 270, 20, -1));
+        jPanel5.add(doblajeDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 380, 20, -1));
 
         guionistasDisney.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         guionistasDisney.setText("1");
-        jPanel5.add(guionistasDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 150, 20, -1));
+        jPanel5.add(guionistasDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 260, 20, -1));
 
         jLabel92.setText("ENSAMBLADORES");
-        jPanel5.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, -1, -1));
+        jPanel5.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 480, -1, -1));
 
         jButton47.setText("-");
         jButton47.addActionListener(new java.awt.event.ActionListener() {
@@ -1346,7 +1352,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton47ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton47, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 370, -1, -1));
+        jPanel5.add(jButton47, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 480, -1, -1));
 
         jButton48.setText("+");
         jButton48.addActionListener(new java.awt.event.ActionListener() {
@@ -1354,26 +1360,18 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton48ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton48, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 370, -1, -1));
+        jPanel5.add(jButton48, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 480, -1, -1));
 
         ensambladoresDisney.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ensambladoresDisney.setText("1");
-        jPanel5.add(ensambladoresDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 370, 20, -1));
+        jPanel5.add(ensambladoresDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 480, 20, -1));
 
         jLabel94.setText("DURACION DE DIAS  EN SEGUNDOS");
-        jPanel5.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 480, -1, -1));
-
-        jLabel68.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
-        jLabel68.setText("CARTOON NETWORK");
-        jPanel5.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 480, 70));
+        jPanel5.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 570, -1, -1));
 
         jLabel69.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel69.setText("CONFIGURACION");
-        jPanel5.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 470, 70));
-
-        jLabel70.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
-        jLabel70.setText("DISNEY CHANNEL");
-        jPanel5.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 50, 470, 70));
+        jPanel5.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 470, 70));
 
         jButton49.setText("-");
         jButton49.addActionListener(new java.awt.event.ActionListener() {
@@ -1381,7 +1379,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton49ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton49, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 480, -1, -1));
+        jPanel5.add(jButton49, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 570, -1, -1));
 
         jButton50.setText("-");
         jButton50.addActionListener(new java.awt.event.ActionListener() {
@@ -1389,7 +1387,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton50ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton50, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 520, -1, -1));
+        jPanel5.add(jButton50, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 570, -1, -1));
 
         jButton51.setText("+");
         jButton51.addActionListener(new java.awt.event.ActionListener() {
@@ -1397,7 +1395,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton51ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton51, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 480, -1, -1));
+        jPanel5.add(jButton51, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 570, -1, -1));
 
         jButton52.setText("+");
         jButton52.addActionListener(new java.awt.event.ActionListener() {
@@ -1405,15 +1403,15 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton52ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton52, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 520, -1, -1));
+        jPanel5.add(jButton52, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 570, -1, -1));
 
         diasEntrega.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         diasEntrega.setText("0");
-        jPanel5.add(diasEntrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 520, 20, -1));
+        jPanel5.add(diasEntrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 570, 20, -1));
 
         duracionDias.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         duracionDias.setText("0");
-        jPanel5.add(duracionDias, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 480, 20, -1));
+        jPanel5.add(duracionDias, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 570, 20, -1));
 
         jButton53.setText("GUARDAR");
         jButton53.addActionListener(new java.awt.event.ActionListener() {
@@ -1421,24 +1419,33 @@ public class Interfaz extends javax.swing.JFrame {
                 jButton53ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton53, new org.netbeans.lib.awtextra.AbsoluteConstraints(801, 550, 120, 40));
+        jPanel5.add(jButton53, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 550, 120, 40));
+
+        jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/disney logo 1.jpg"))); // NOI18N
+        jPanel5.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, 400, 200));
+
+        jLabel63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cartoon n logo.png"))); // NOI18N
+        jPanel5.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 340, 160));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 1160, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 1160, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 10, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Configuracion", jPanel4);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 650));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -2187,8 +2194,9 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
