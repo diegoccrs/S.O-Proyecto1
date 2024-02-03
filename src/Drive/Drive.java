@@ -19,9 +19,13 @@ public class Drive {
     private int doblajes = 0; //Doblajes
     private int guionesPlotTwist = 0; // Guiones de PlotTwist
     
-    //Capitulos
+    //Capitulos que no se han enviado a las empresas
     private int capitulosPlotTwist = 0; // Capitulos PlotTwist
     private int capitulosEstandar = 0; //Capitulos Estandar
+    
+    //capitulos acumulados,es decir, contador de todos los capitulos creados
+    private int capitulosPlotTwistAcumulados = 0; // Capitulos PlotTwist
+    private int capitulosEstandarAcumulados = 0; //Capitulos Estandar
     
     //Semaforos
     private Semaphore salarioAccMutex = new Semaphore(1); //Este es para entrar al drive a gestionar los salarios
@@ -40,7 +44,12 @@ public class Drive {
     private float pmAcc = 0;
     private float directorAcc =0;
     
-    //
+    //DATOS IMPORTANTES DE CADA EMPRESA
+    private float ganancias = 0; 
+    private float costosOperativos = 0;
+    private float utilidades = 0;
+    
+    
     private int contadorPasoDeLosDias = 0;
     
     
@@ -64,7 +73,7 @@ public class Drive {
     }
     
     //ESTE METODO AGREGA EL SALARIO, AL ACUMULADO DE CADA TIPO DE TRABAJADOR
-    public void addSalary(int type,float salary){
+    public void addSalary(int type,float salary,int tipoCompania){
         if (type == 0){
             this.setAnimadoresAcc(this.getAnimadoresAcc() + salary*24);
         }else if(type == 1){
@@ -82,61 +91,54 @@ public class Drive {
         }else if(type == 7){
             this.setDirectorAcc(this.getDirectorAcc() + salary*24);
         }
+        this.setCostosOperativos(this.getCostosOperativos() + salary,tipoCompania);
+        this.setUtilidades(this.getUtilidades() - salary,tipoCompania);
     }
     
-    //ESTE METODO AGREGA LAS PARTES QUE HA HECHO CADA TRABAJADOR. ESTE METODO APLICA IGUAL PARA TODAS LAS COMPANIAS
-    public void addPart(int type){
-        if (type == 0 && this.getAnimaciones() < this.getAnimacionesMax()){
-            if(this.getAnimaciones() < 54){
-                this.setAnimaciones(this.getAnimaciones() + 2);
-                System.out.println("animaciones disponibles:" + this.getAnimaciones());
-            }else{
-                this.setAnimaciones(this.getAnimaciones() + 1);
-                System.out.println("animaciones disponibles:" + this.getAnimaciones());
+    //ESTE METODO AGREGA LAS PARTES QUE HA HECHO CADA TRABAJADOR DEPENDIENDO DE LA COMPANIA
+    public void addPart(int tipoTrabajador,int tipoCompania){
+        if(tipoCompania == 0){//Disney: ultimo numero del carnet de Kevin= 4
+            if (tipoTrabajador == 0 && this.getAnimaciones() < this.getAnimacionesMax()){
+                if(this.getAnimaciones() < 54){
+                    this.setAnimaciones(this.getAnimaciones() + 2,tipoCompania);
+                    //System.out.println("animaciones disponibles:" + this.getAnimaciones());
+                }else{
+                    this.setAnimaciones(this.getAnimaciones() + 1,tipoCompania);
+                    //System.out.println("animaciones disponibles:" + this.getAnimaciones());
+                }
+            }else if(tipoTrabajador == 1 && this.getGuiones() < this.getGuionesMax()){
+                this.setGuiones(this.getGuiones() + 1,tipoCompania);
+                //System.out.println("guiones disponibles:" + this.getGuiones());
+            }else if(tipoTrabajador == 2 && this.getEscenarios() < this.getEscenariosMax()){
+                this.setEscenarios(this.getEscenarios() + 1,tipoCompania);
+                //System.out.println("escenarios disponibles:" + this.getEscenarios());
+            }else if(tipoTrabajador == 3 && this.getDoblajes() < this.getDoblajesMax()){
+                if(this.getDoblajes() < 33){
+                    this.setDoblajes(this.getDoblajes() + 3,tipoCompania);
+                }else{
+                    this.setDoblajes(this.getDoblajes() + 2,tipoCompania);
+                }
+                //System.out.println("doblajes disponibles:" + this.getDoblajes());
+            }else if(tipoTrabajador == 4 && this.getGuionesPlotTwist() < this.getGuionesPlotTwistMax()){
+                this.setGuionesPlotTwist(this.getGuionesPlotTwist() + 1,tipoCompania);
+                //System.out.println("Guiones de PlotTwist disponibles:" + this.getGuionesPlotTwist());
             }
-        }else if(type == 1 && this.getGuiones() < this.getGuionesMax()){
-            this.setGuiones(this.getGuiones() + 1);
-            System.out.println("guiones disponibles:" + this.getGuiones());
-        }else if(type == 2 && this.getEscenarios() < this.getEscenariosMax()){
-            this.setEscenarios(this.getEscenarios() + 1);
-            System.out.println("escenarios disponibles:" + this.getEscenarios());
-        }else if(type == 3 && this.getDoblajes() < this.getDoblajesMax()){
-            this.setDoblajes(this.getDoblajes() + 3);
-            System.out.println("doblajes disponibles:" + this.getDoblajes());
-        }else if(type == 4 && this.getGuionesPlotTwist() < this.getGuionesPlotTwistMax()){
-            this.setGuionesPlotTwist(this.getGuionesPlotTwist() + 1);
-            System.out.println("Guiones de PlotTwist disponibles:" + this.getGuionesPlotTwist());
-        }
-    }
-    
-    //ESTE METODO AGREGA LOS CAPITULOS AL DRIVE Y ELIMINA LAS PARTES QUE SE USARON
-    //ES USADO POR LOS ENSAMBLADORES Y ES DIFERENTE PARA CADA COMPANIA
-    public void addChapter(int tipoCompania){
-        if(tipoCompania == 0){ //0 cartoon network
-            this.setGuiones(this.getGuiones() - 1);
-            this.setEscenarios(this.getEscenarios() - 2);
-            this.setAnimaciones(this.getAnimaciones() - 6);
-            this.setDoblajes(this.getDoblajes() - 5);
-            if(((this.getCapitulosEstandar()+this.getCapitulosPlotTwist()+1)% 4 == 0) && (this.getGuionesPlotTwist() >= 1)){
-                this.setGuionesPlotTwist(this.getGuionesPlotTwist() - 1);
-                this.setCapitulosPlotTwist(this.getCapitulosPlotTwist() + 1);
-                System.out.println("Capitulos PlotTwist disponibles:" + this.getCapitulosPlotTwist());
-            }else{
-                this.setCapitulosEstandar(this.getCapitulosEstandar() + 1);
-                System.out.println("Capitulos Estandar disponibles:" + this.getCapitulosEstandar());
-            }
-        }else if(tipoCompania == 1){ // 1 = disney channel
-            this.setGuiones(this.getGuiones() - 1);
-            this.setEscenarios(this.getEscenarios() - 1);
-            this.setAnimaciones(this.getAnimaciones() - 2);
-            this.setDoblajes(this.getDoblajes() - 4);
-            if(((this.getCapitulosEstandar()+this.getCapitulosPlotTwist()+1)% 3 == 0) && (this.getGuionesPlotTwist() >= 3)){
-                this.setGuionesPlotTwist(this.getGuionesPlotTwist() - 3);
-                this.setCapitulosPlotTwist(this.getCapitulosPlotTwist() + 1);
-                System.out.println("Capitulos PlotTwist disponibles:" + this.getCapitulosPlotTwist());
-            }else{
-                this.setCapitulosEstandar(this.getCapitulosEstandar() + 1);
-                System.out.println("Capitulos Estandar disponibles:" + this.getCapitulosEstandar());
+        }else if(tipoCompania == 1){//Cartoon Network: ultimo numero del carnet de Diego= 6
+            if (tipoTrabajador == 0 && this.getAnimaciones() < this.getAnimacionesMax()){
+                this.setAnimaciones(this.getAnimaciones() + 1,tipoCompania);
+                //System.out.println("animaciones disponibles:" + this.getAnimaciones());
+            }else if(tipoTrabajador == 1 && this.getGuiones() < this.getGuionesMax()){
+                this.setGuiones(this.getGuiones() + 1,tipoCompania);
+                //System.out.println("guiones disponibles:" + this.getGuiones());
+            }else if(tipoTrabajador == 2 && this.getEscenarios() < this.getEscenariosMax()){
+                this.setEscenarios(this.getEscenarios() + 2,tipoCompania);
+                //System.out.println("escenarios disponibles:" + this.getEscenarios());
+            }else if(tipoTrabajador == 3 && this.getDoblajes() < this.getDoblajesMax()){
+                this.setDoblajes(this.getDoblajes() + 5,tipoCompania);
+                //System.out.println("doblajes disponibles:" + this.getDoblajes());
+            }else if(tipoTrabajador == 4 && this.getGuionesPlotTwist() < this.getGuionesPlotTwistMax()){
+                this.setGuionesPlotTwist(this.getGuionesPlotTwist() + 1,tipoCompania);
+                //System.out.println("Guiones de PlotTwist disponibles:" + this.getGuionesPlotTwist());
             }
         }
     }
@@ -151,8 +153,13 @@ public class Drive {
     /**
      * @param animaciones the animaciones to set
      */
-    public void setAnimaciones(int animaciones) {
+    public void setAnimaciones(int animaciones,int tipoCompania) {
         this.animaciones = animaciones;
+        if(tipoCompania == 0){
+            ManejadorInterfaz.getInterfaz().cambiarAnimacionesDisney(animaciones);
+        }else if(tipoCompania == 1){
+            ManejadorInterfaz.getInterfaz().cambiarAnimacionesCartoonNetwork(animaciones);
+        }
     }
 
     /**
@@ -165,8 +172,13 @@ public class Drive {
     /**
      * @param guiones the guiones to set
      */
-    public void setGuiones(int guiones) {
+    public void setGuiones(int guiones,int tipoCompania) {
         this.guiones = guiones;
+        if(tipoCompania == 0){
+            ManejadorInterfaz.getInterfaz().cambiarGuionesDisney(guiones);
+        }else if(tipoCompania == 1){
+            ManejadorInterfaz.getInterfaz().cambiarGuionesCartoonNetwork(guiones);
+        }
     }
 
     /**
@@ -179,8 +191,13 @@ public class Drive {
     /**
      * @param escenarios the escenarios to set
      */
-    public void setEscenarios(int escenarios) {
+    public void setEscenarios(int escenarios,int tipoCompania) {
         this.escenarios = escenarios;
+        if(tipoCompania == 0){
+            ManejadorInterfaz.getInterfaz().cambiarEscenariosDisney(escenarios);
+        }else if(tipoCompania == 1){
+            ManejadorInterfaz.getInterfaz().cambiarEscenariosCartoonNetwork(escenarios);
+        }
     }
 
     /**
@@ -193,8 +210,13 @@ public class Drive {
     /**
      * @param doblajes the doblajes to set
      */
-    public void setDoblajes(int doblajes) {
+    public void setDoblajes(int doblajes,int tipoCompania) {
         this.doblajes = doblajes;
+        if(tipoCompania == 0){
+            ManejadorInterfaz.getInterfaz().cambiarDoblajesDisney(doblajes);
+        }else if(tipoCompania == 1){
+            ManejadorInterfaz.getInterfaz().cambiarDoblajesCartoonNetwork(doblajes);
+        }
     }
 
     /**
@@ -207,8 +229,13 @@ public class Drive {
     /**
      * @param guionesPlotTwist the guionesPlotTwist to set
      */
-    public void setGuionesPlotTwist(int guionesPlotTwist) {
+    public void setGuionesPlotTwist(int guionesPlotTwist,int tipoCompania) {
         this.guionesPlotTwist = guionesPlotTwist;
+        if(tipoCompania == 0){
+            ManejadorInterfaz.getInterfaz().cambiarGuionesPlowtTistDisney(guionesPlotTwist);
+        }else if(tipoCompania == 1){
+            ManejadorInterfaz.getInterfaz().cambiarGuionesPlowtTistCartoonNetwork(guionesPlotTwist);
+        }
     }
 
     /**
@@ -221,8 +248,9 @@ public class Drive {
     /**
      * @param capitulosPlotTwist the capitulosPlotTwist to set
      */
-    public void setCapitulosPlotTwist(int capitulosPlotTwist) {
+    public void setCapitulosPlotTwist(int capitulosPlotTwist,int tipoCompania) {
         this.capitulosPlotTwist = capitulosPlotTwist;
+        ManejadorInterfaz.getInterfaz().cambiarCapitulosPlotTwistListos(capitulosPlotTwist, tipoCompania);
     }
 
     /**
@@ -235,8 +263,9 @@ public class Drive {
     /**
      * @param capitulosEstandar the capitulosEstandar to set
      */
-    public void setCapitulosEstandar(int capitulosEstandar) {
+    public void setCapitulosEstandar(int capitulosEstandar,int tipoCompania) {
         this.capitulosEstandar = capitulosEstandar;
+        ManejadorInterfaz.getInterfaz().cambiarCapitulosListos(capitulosEstandar, tipoCompania);
     }
 
     /**
@@ -404,8 +433,13 @@ public class Drive {
     /**
      * @param estadorDirector the estadorDirector to set
      */
-    public void setEstadorDirector(int estadorDirector) {
+    public void setEstadorDirector(int estadorDirector,int tipoCompania) {
         this.estadorDirector = estadorDirector;
+        if(estadorDirector == 0){
+            ManejadorInterfaz.getInterfaz().cambiarActividadDirector("VIGILANDO", tipoCompania);
+        }else{
+            ManejadorInterfaz.getInterfaz().cambiarActividadDirector("TRABAJANDO", tipoCompania);
+        }
     }
 
     /**
@@ -418,8 +452,13 @@ public class Drive {
     /**
      * @param pmEstado the pmEstado to set
      */
-    public void setPmEstado(int pmEstado) {
+    public void setPmEstado(int pmEstado,int tipoCompania) {
         this.pmEstado = pmEstado;
+        if(pmEstado == 0){
+            ManejadorInterfaz.getInterfaz().cambiarPMActividad("TRABAJANDO", tipoCompania);
+        }else{
+            ManejadorInterfaz.getInterfaz().cambiarPMActividad("VIENDO ANIME", tipoCompania);
+        }
     }
 
     /**
@@ -432,8 +471,9 @@ public class Drive {
     /**
      * @param faltas the faltas to set
      */
-    public void setFaltas(int faltas) {
+    public void setFaltas(int faltas,int tipoCompania) {
         this.faltas = faltas;
+        ManejadorInterfaz.getInterfaz().cambiarFaltasPM(faltas, tipoCompania );
     }
 
     /**
@@ -446,8 +486,9 @@ public class Drive {
     /**
      * @param salarioDescontado the salarioDescontado to set
      */
-    public void setSalarioDescontado(int salarioDescontado) {
+    public void setSalarioDescontado(int salarioDescontado, int tipoCompania) {
         this.salarioDescontado = salarioDescontado;
+        ManejadorInterfaz.getInterfaz().cambiarSalarioDescontadoPM(salarioDescontado, tipoCompania);
     }
 
     /**
@@ -530,16 +571,10 @@ public class Drive {
     /**
      * @param estadoDeadline the estadoDeadline to set
      */
-    public void setEstadoDeadline(int estadoDeadlineNuevo) {
-        if(estadoDeadlineNuevo == -1){ //SI ES IGUAL A -1, REINICIA EL CONTADOR
-            this.estadoDeadline = deadline;
-            ManejadorInterfaz.getInterfaz().cambiarDiasLanzamientoDisney(estadoDeadline);
-        }else{ // SINO ES IGUAL A 0, SIGUE DISMINUYENDO DE 1 EN 1
-            this.estadoDeadline = estadoDeadlineNuevo;
-            ManejadorInterfaz.getInterfaz().cambiarDiasLanzamientoDisney(estadoDeadline);
-        }
-                
-        
+    public void setEstadoDeadline(int estadoDeadlineNuevo,int tipoCompania) {
+        System.out.println(estadoDeadlineNuevo);
+        this.estadoDeadline = estadoDeadlineNuevo;
+        ManejadorInterfaz.getInterfaz().cambiarDiasLanzamiento(estadoDeadline,tipoCompania);
     }
 
     /**
@@ -554,6 +589,80 @@ public class Drive {
      */
     public void setContadorPasoDeLosDias(int contadorPasoDeLosDias) {
         this.contadorPasoDeLosDias = contadorPasoDeLosDias;
+        ManejadorInterfaz.getInterfaz().cambiarPasoDeDias(contadorPasoDeLosDias);
+    }
+
+    /**
+     * @return the ganancias
+     */
+    public float getGanancias() {
+        return ganancias;
+    }
+
+    /**
+     * @param ganancias the ganancias to set
+     */
+    public void setGanancias(float ganancias,int tipoCompania) {
+        this.ganancias = ganancias;
+        ManejadorInterfaz.getInterfaz().cambiarGanancias(ganancias, tipoCompania);
+    }
+
+    /**
+     * @return the costosOperativos
+     */
+    public float getCostosOperativos() {
+        return costosOperativos;
+    }
+
+    /**
+     * @param costosOperativos the costosOperativos to set
+     */
+    public void setCostosOperativos(float costosOperativos,int tipoCompania) {
+        this.costosOperativos = costosOperativos;
+        ManejadorInterfaz.getInterfaz().cambiarCostosOperativos(costosOperativos, tipoCompania);
+    }
+
+    /**
+     * @return the utilidades
+     */
+    public float getUtilidades() {
+        return utilidades;
+    }
+
+    /**
+     * @param utilidades the utilidades to set
+     */
+    public void setUtilidades(float utilidades,int tipoCompania) {
+        this.utilidades = utilidades;
+        ManejadorInterfaz.getInterfaz().cambiarUtilidades(utilidades, tipoCompania);
+    }
+
+    /**
+     * @return the capitulosPlotTwistAcumulados
+     */
+    public int getCapitulosPlotTwistAcumulados() {
+        return capitulosPlotTwistAcumulados;
+    }
+
+    /**
+     * @param capitulosPlotTwistAcumulados the capitulosPlotTwistAcumulados to set
+     */
+    public void setCapitulosPlotTwistAcumulados(int capitulosPlotTwistAcumulados) {
+        this.capitulosPlotTwistAcumulados = capitulosPlotTwistAcumulados;
+    }
+
+    /**
+     * @return the capitulosEstandarAcumulados
+     */
+    public int getCapitulosEstandarAcumulados() {
+        return capitulosEstandarAcumulados;
+    }
+
+    /**
+     * @param capitulosEstandarAcumulados the capitulosEstandarAcumulados to set
+     */
+    public void setCapitulosEstandarAcumulados(int capitulosEstandarAcumulados) {
+        this.capitulosEstandarAcumulados = capitulosEstandarAcumulados;
     }
 
 }

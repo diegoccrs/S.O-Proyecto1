@@ -17,8 +17,6 @@ public class Company {
     private int duracionDia;
     private int tipoCompania;
     private Drive drive;
-    private float ganancias; //Ganancias
-    private float costosOperativos; //Costos operativos
     private float utilidades; //Utilidad
     private ListaDoble ensambladores; //ensambladores
     private ListaDoble animadores; //animadores
@@ -30,11 +28,9 @@ public class Company {
     public Company() {
     }
     
-    public Company(Drive drive,int companyType,int duracionDia) {
+    public Company(Drive drive,int companyType) {
         this.tipoCompania = companyType;
         this.drive = drive;
-        this.ganancias = 0;
-        this.costosOperativos = 0;
         this.utilidades = 0;
         this.animadores = new ListaDoble();
         this.ensambladores = new ListaDoble();
@@ -42,7 +38,6 @@ public class Company {
         this.guionistas = new ListaDoble();
         this.actoresDoblaje = new ListaDoble();
         this.guionistasPlotTwist = new ListaDoble();
-        this.duracionDia = duracionDia;
     }
     
     public int cantidadTrabajadores(){
@@ -81,34 +76,6 @@ public class Company {
      */
     public void setDrive(Drive drive) {
         this.drive = drive;
-    }
-
-    /**
-     * @return the ganancias
-     */
-    public float getGanancias() {
-        return ganancias;
-    }
-
-    /**
-     * @param ganancias the ganancias to set
-     */
-    public void setGanancias(float ganancias) {
-        this.ganancias = ganancias;
-    }
-
-    /**
-     * @return the costosOperativos
-     */
-    public float getCostosOperativos() {
-        return costosOperativos;
-    }
-
-    /**
-     * @param costosOperativos the costosOperativos to set
-     */
-    public void setCostosOperativos(float costosOperativos) {
-        this.costosOperativos = costosOperativos;
     }
 
     /**
