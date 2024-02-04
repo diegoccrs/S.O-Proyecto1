@@ -135,7 +135,6 @@ public class Interfaz extends javax.swing.JFrame {
     
     public void cambiarCapitulosPlotTwistListos(int t,int tipoCompania){
         if(tipoCompania == 0){
-            //System.out.println(t+"hjjjjjjj");
             capitulosPlotTwistListosDisney.setText(Integer.toString(t));
         }else{
             //System.out.println(t+"hj");

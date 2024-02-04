@@ -82,8 +82,33 @@ public class Assembler extends Worker{
         
         return respuesta;
     }
+    
+    //devolvera 0 si toca hacer un capitulo estandar y 1 si toca hacer un capitulo plottwist
+    private int verificarCapituloQueToca(){
+        int respuesta = 0;
+        if(this.getCompania().getTipoCompania() == 0){
+            //si le toca hacer un capitulo estandar entrara
+            if((this.getCompania().getDrive().getCapitulosEstandarAcumulados()+this.getCompania().getDrive().getCapitulosPlotTwistAcumulados()+1)%3 != 0){
+                respuesta = 0;
+            //si al assembler le toca hacer un capitulo PlotTwist y el drive tiene los guiones plotTwist necesarios, entrara en el siguiente else if
+            }else if(((this.getCompania().getDrive().getCapitulosEstandarAcumulados()+this.getCompania().getDrive().getCapitulosPlotTwistAcumulados()+1)%3 == 0)){
+                respuesta = 1;
+            }
+        }else if(this.getCompania().getTipoCompania() == 1){
+            //si al assembler le toca hacer un capitulo estandar entrara en el siguiente if
+            if((this.getCompania().getDrive().getCapitulosEstandarAcumulados()+this.getCompania().getDrive().getCapitulosPlotTwistAcumulados()+1)%4 != 0){
+                respuesta = 0;
+            //si al assembler le toca hacer un capitulo PlotTwist y el drive tiene los guiones plotTwist necesarios, entrara en el siguiente else if
+            }else if(((this.getCompania().getDrive().getCapitulosEstandarAcumulados()+this.getCompania().getDrive().getCapitulosPlotTwistAcumulados()+1)%4 == 0)){
+                respuesta = 1;
+            }
+        }
+        
+        return respuesta;
+    }
 
     private void work() {
+        //si el ensamblador no esta ensamblando un capitulo, entra aqui
         if(this.capitulosEstandar == 0 && this.capitulosPlotTwist == 0){
             try {
                 this.getMutex().acquire(); //wait
@@ -96,12 +121,16 @@ public class Assembler extends Worker{
             } catch (InterruptedException ex) {
                 Logger.getLogger(Developer.class.getName()).log(Level.SEVERE, null, ex);
             }
+        //entrara aqui si esta ensamblando un capitulo
         }else{
             this.acc = this.acc + this.getCantidadDeTrabajoPorDia();
             if (this.acc >= 1){
                     try {
                         this.getMutex().acquire(); //wait
-                        this.agregarCapitulo();//critica
+                        //agregara un capitulo,si y solo si, el capitulo que termino de ensamblar es el que corresponde mandar.
+                        if((this.capitulosEstandar == 1 && this.verificarCapituloQueToca() == 0) || (this.capitulosPlotTwist == 1 && this.verificarCapituloQueToca() == 1)){
+                            this.agregarCapitulo();//critica
+                        }
                         this.getMutex().release();// signal
                         this.acc = 0;
 
@@ -130,15 +159,15 @@ public class Assembler extends Worker{
     //ESTE METODO TOMA LAS PARTES DE CAPITULO, PUEDE DARSE CUENTA DE SI TOCA UN ESTANDAR O UN PLOTTWIST
     public void tomarPartesDeCapitulos(){
         if(this.getCompania().getTipoCompania() == 1){ //1 cartoon network
+            //Tomamos las partes del drive
             this.getCompania().getDrive().setGuiones(this.getCompania().getDrive().getGuiones() - 1,this.getCompania().getTipoCompania());
             this.getCompania().getDrive().setEscenarios(this.getCompania().getDrive().getEscenarios() - 2,this.getCompania().getTipoCompania());
             this.getCompania().getDrive().setAnimaciones(this.getCompania().getDrive().getAnimaciones() - 6,this.getCompania().getTipoCompania());
             this.getCompania().getDrive().setDoblajes(this.getCompania().getDrive().getDoblajes() - 5,this.getCompania().getTipoCompania());
             if(((this.getCompania().getDrive().getCapitulosEstandarAcumulados()+this.getCompania().getDrive().getCapitulosPlotTwistAcumulados()+1)% 4 == 0) && (this.getCompania().getDrive().getGuionesPlotTwist() >= 1)){
-                this.getCompania().getDrive().setGuionesPlotTwist(this.getCompania().getDrive().getGuionesPlotTwist() - 1,this.getCompania().getTipoCompania());
+                this.getCompania().getDrive().setGuionesPlotTwist(this.getCompania().getDrive().getGuionesPlotTwist() - 1,this.getCompania().getTipoCompania());//quitas el guion plottwist del drive
                 this.capitulosPlotTwist = this.capitulosPlotTwist + 1;
-                System.out.println("Capitulos PlotTwist disponibles:" + this.getCompania().getDrive().getCapitulosPlotTwist());
-            }else{
+            }else if((this.getCompania().getDrive().getCapitulosEstandarAcumulados()+this.getCompania().getDrive().getCapitulosPlotTwistAcumulados()+1)% 4 != 0){
                 this.capitulosEstandar = this.capitulosEstandar + 1;
                 //System.out.println("Capitulos Estandar disponibles:" + this.getCapitulosEstandar());
             }
@@ -151,7 +180,7 @@ public class Assembler extends Worker{
                 this.getCompania().getDrive().setGuionesPlotTwist(this.getCompania().getDrive().getGuionesPlotTwist() - 3,this.getCompania().getTipoCompania());
                 this.capitulosPlotTwist = this.capitulosPlotTwist + 1;
                 //System.out.println("Capitulos PlotTwist disponibles:" + this.getCompania().getDrive().getCapitulosPlotTwist());
-            }else{
+            }else if((this.getCompania().getDrive().getCapitulosEstandarAcumulados()+this.getCompania().getDrive().getCapitulosPlotTwistAcumulados()+1)% 3 != 0){
                 this.capitulosEstandar = this.capitulosEstandar + 1;
                 //System.out.println("Capitulos Estandar disponibles:" + this.getCapitulosEstandar());
             }
