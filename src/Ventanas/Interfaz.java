@@ -9,10 +9,20 @@ import Drive.Drive;
 import Worker.Assembler;
 import Worker.Developer;
 import Worker.ProjectManager;
+import java.awt.Color;
 import static java.lang.Integer.parseInt;
 import java.text.DecimalFormat;
 import java.util.concurrent.Semaphore;
 import javax.swing.JOptionPane;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
+import org.jfree.data.xy.DefaultXYDataset;
 
 /**
  *
@@ -2146,6 +2156,31 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
         // TODO add your handling code here:
+        JFreeChart grafico;
+        DefaultXYDataset dataset = new DefaultXYDataset();
+        
+        double[][] datosCartoonNetwork = {{Integer.parseInt(diasInicio.getText())}, {Integer.parseInt(utilidadescninicio.getText())}};
+        double[][] datosDisneyChannel = {{Integer.parseInt(diasInicio.getText())}, {Integer.parseInt(utilidadesdcinicio.getText())}};
+
+        dataset.addSeries("Cartoon Network", datosCartoonNetwork);
+        dataset.addSeries("Disney Channel", datosDisneyChannel);
+        
+        XYPlot plot = new XYPlot(dataset, new NumberAxis("Tiempo"), new NumberAxis("Utilidad"), new XYLineAndShapeRenderer(true, false));
+        grafico = new JFreeChart("Utilidades en tiempo real", JFreeChart.DEFAULT_TITLE_FONT, plot, true);
+        
+        ChartPanel panelGrafico = new ChartPanel(grafico);
+        panelGrafico.setVisible(true);
+        
+        
+//        grafico.setBackgroundPaint(Color.WHITE);
+//        grafico.getTitle().setPaint(Color.BLACK);
+//        CategoryPlot p = grafico.getCategoryPlot();
+//        p.setRangeGridlinePaint(Color.BLUE);
+//        ChartFrame frame = new ChartFrame("Grafico de dispersion",grafico);
+//        frame.setVisible(true);
+//        frame.setSize(450,330);
+        
+        
     }//GEN-LAST:event_jButton54ActionPerformed
 
     /**
