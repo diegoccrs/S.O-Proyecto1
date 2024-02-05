@@ -572,7 +572,6 @@ public class Drive {
      * @param estadoDeadline the estadoDeadline to set
      */
     public void setEstadoDeadline(int estadoDeadlineNuevo,int tipoCompania) {
-        System.out.println(estadoDeadlineNuevo);
         this.estadoDeadline = estadoDeadlineNuevo;
         ManejadorInterfaz.getInterfaz().cambiarDiasLanzamiento(estadoDeadline,tipoCompania);
     }
