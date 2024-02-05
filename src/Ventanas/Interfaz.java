@@ -128,17 +128,21 @@ public class Interfaz extends javax.swing.JFrame {
     public void cambiarCapitulosListos(int t,int tipoCompania){
         if(tipoCompania == 0){
             capitulosListosDisney.setText(Integer.toString(t));
+            estandardcinicio.setText(Integer.toString(t));
         }else{
             capitulosListosCN.setText(Integer.toString(t));
+            estandarcninicio.setText(Integer.toString(t));
         }
     }
     
     public void cambiarCapitulosPlotTwistListos(int t,int tipoCompania){
         if(tipoCompania == 0){
             capitulosPlotTwistListosDisney.setText(Integer.toString(t));
+            plottwistdcinicio.setText(Integer.toString(t));
         }else{
             //System.out.println(t+"hj");
             capitulosPlotTwistListosCN.setText(Integer.toString(t));
+            plotwistcninicio.setText(Integer.toString(t));
         }
     }
     
@@ -148,8 +152,10 @@ public class Interfaz extends javax.swing.JFrame {
         
         if(tipoCompania == 0){
             costosOperativosDisney.setText(numeroFormateado);
+            operativosdcinicio.setText(numeroFormateado);
         }else{
             costosOperativosCN.setText(numeroFormateado);
+            operativoscninicio.setText(numeroFormateado);
         }
     }
     
@@ -158,8 +164,10 @@ public class Interfaz extends javax.swing.JFrame {
         String numeroFormateado = formato.format((int)t);
         if(tipoCompania == 0){
             gananciasDisney.setText(numeroFormateado);
+            gananciasdcinicio.setText(numeroFormateado);
         }else{
             gananciasCN.setText(numeroFormateado);
+            gananciascninicio.setText(numeroFormateado);
         }
     }
     
@@ -168,8 +176,10 @@ public class Interfaz extends javax.swing.JFrame {
         String numeroFormateado = formato.format((int)t);
         if(tipoCompania == 0){
             utilidadesDisney.setText(numeroFormateado);
+            utilidadesdcinicio.setText(numeroFormateado);
         }else{
             utilidadesCN.setText(numeroFormateado);
+            utilidadescninicio.setText(numeroFormateado);
         }
     }
     
@@ -328,6 +338,24 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel48 = new javax.swing.JLabel();
         diasInicio = new javax.swing.JLabel();
         jLabel70 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        utilidadescninicio = new javax.swing.JLabel();
+        utilidadesdcinicio = new javax.swing.JLabel();
+        operativoscninicio = new javax.swing.JLabel();
+        operativosdcinicio = new javax.swing.JLabel();
+        gananciascninicio = new javax.swing.JLabel();
+        gananciasdcinicio = new javax.swing.JLabel();
+        estandarcninicio = new javax.swing.JLabel();
+        estandardcinicio = new javax.swing.JLabel();
+        plotwistcninicio = new javax.swing.JLabel();
+        plottwistdcinicio = new javax.swing.JLabel();
+        jButton54 = new javax.swing.JButton();
         salarioDescontadoCN2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -529,17 +557,96 @@ public class Interfaz extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel48.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel48.setText("DIAS:");
-        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, -1, -1));
+        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
+        diasInicio.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         diasInicio.setText("0");
-        jPanel1.add(diasInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, -1, -1));
+        jPanel1.add(diasInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, -1, -1));
 
         jLabel70.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel70.setText("ESTUDIOS DE ANIMACION EN VENEZUELA");
         jPanel1.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 990, 70));
+
+        jLabel54.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel54.setText("CARTOON NETWORK");
+        jPanel1.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+
+        jLabel64.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel64.setText("DISNEY CHANNEL");
+        jPanel1.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
+
+        jLabel65.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel65.setText("Utilidades");
+        jPanel1.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, -1, -1));
+
+        jLabel67.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel67.setText("Costos Operativos");
+        jPanel1.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, -1, -1));
+
+        jLabel68.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel68.setText("Ganancias en bruto");
+        jPanel1.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 180, -1, -1));
+
+        jLabel74.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel74.setText("Capitulos Estandar ");
+        jPanel1.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 180, -1, -1));
+
+        jLabel75.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel75.setText("Capitulos Plot Twist");
+        jPanel1.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 180, -1, -1));
+
+        utilidadescninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        utilidadescninicio.setText("0");
+        jPanel1.add(utilidadescninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, -1, -1));
+
+        utilidadesdcinicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        utilidadesdcinicio.setText("0");
+        jPanel1.add(utilidadesdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, -1, -1));
+
+        operativoscninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        operativoscninicio.setText("0");
+        jPanel1.add(operativoscninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, -1, -1));
+
+        operativosdcinicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        operativosdcinicio.setText("0");
+        jPanel1.add(operativosdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, -1, -1));
+
+        gananciascninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        gananciascninicio.setText("0");
+        jPanel1.add(gananciascninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 240, -1, -1));
+
+        gananciasdcinicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        gananciasdcinicio.setText("0");
+        jPanel1.add(gananciasdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 370, -1, -1));
+
+        estandarcninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        estandarcninicio.setText("0");
+        jPanel1.add(estandarcninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 240, -1, -1));
+
+        estandardcinicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        estandardcinicio.setText("0");
+        jPanel1.add(estandardcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 370, -1, -1));
+
+        plotwistcninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        plotwistcninicio.setText("0");
+        jPanel1.add(plotwistcninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 240, -1, -1));
+
+        plottwistdcinicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        plottwistdcinicio.setText("0");
+        jPanel1.add(plottwistdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 370, -1, -1));
+
+        jButton54.setText("GRAFICO UTILIDAD EN TIEMPO REAL");
+        jButton54.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton54ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton54, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, -1, -1));
 
         jTabbedPane1.addTab("Inicio", jPanel1);
 
@@ -2037,6 +2144,10 @@ public class Interfaz extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton54ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2125,10 +2236,14 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel ensambladoresDisney;
     private javax.swing.JLabel escenariosCN;
     private javax.swing.JLabel escenariosDisney;
+    private javax.swing.JLabel estandarcninicio;
+    private javax.swing.JLabel estandardcinicio;
     private javax.swing.JLabel faltasPMCN;
     private javax.swing.JLabel faltasPMDisney;
     private javax.swing.JLabel gananciasCN;
     private javax.swing.JLabel gananciasDisney;
+    private javax.swing.JLabel gananciascninicio;
+    private javax.swing.JLabel gananciasdcinicio;
     private javax.swing.JLabel guionistasCN;
     private javax.swing.JLabel guionistasDisney;
     private javax.swing.JButton jButton1;
@@ -2180,6 +2295,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton jButton51;
     private javax.swing.JButton jButton52;
     private javax.swing.JButton jButton53;
+    private javax.swing.JButton jButton54;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -2236,6 +2352,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
@@ -2246,13 +2363,19 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
@@ -2271,8 +2394,12 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel operativoscninicio;
+    private javax.swing.JLabel operativosdcinicio;
     private javax.swing.JLabel plottwistCN;
     private javax.swing.JLabel plottwistDisney;
+    private javax.swing.JLabel plottwistdcinicio;
+    private javax.swing.JLabel plotwistcninicio;
     private javax.swing.JLabel pmActividadDisney;
     private javax.swing.JLabel pmCNActividad;
     private javax.swing.JLabel pmCNActividadd;
@@ -2282,6 +2409,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel salarioDescontadocn23;
     private javax.swing.JLabel utilidadesCN;
     private javax.swing.JLabel utilidadesDisney;
+    private javax.swing.JLabel utilidadescninicio;
+    private javax.swing.JLabel utilidadesdcinicio;
     // End of variables declaration//GEN-END:variables
 
     /**
