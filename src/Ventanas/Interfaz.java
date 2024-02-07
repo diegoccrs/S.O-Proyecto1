@@ -9,10 +9,20 @@ import Drive.Drive;
 import Worker.Assembler;
 import Worker.Developer;
 import Worker.ProjectManager;
+import java.awt.Color;
 import static java.lang.Integer.parseInt;
 import java.text.DecimalFormat;
 import java.util.concurrent.Semaphore;
 import javax.swing.JOptionPane;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
+import org.jfree.data.xy.DefaultXYDataset;
 
 /**
  *
@@ -128,17 +138,21 @@ public class Interfaz extends javax.swing.JFrame {
     public void cambiarCapitulosListos(int t,int tipoCompania){
         if(tipoCompania == 0){
             capitulosListosDisney.setText(Integer.toString(t));
+            estandardcinicio.setText(Integer.toString(t));
         }else{
             capitulosListosCN.setText(Integer.toString(t));
+            estandarcninicio.setText(Integer.toString(t));
         }
     }
     
     public void cambiarCapitulosPlotTwistListos(int t,int tipoCompania){
         if(tipoCompania == 0){
             capitulosPlotTwistListosDisney.setText(Integer.toString(t));
+            plottwistdcinicio.setText(Integer.toString(t));
         }else{
             //System.out.println(t+"hj");
             capitulosPlotTwistListosCN.setText(Integer.toString(t));
+            plotwistcninicio.setText(Integer.toString(t));
         }
     }
     
@@ -148,8 +162,10 @@ public class Interfaz extends javax.swing.JFrame {
         
         if(tipoCompania == 0){
             costosOperativosDisney.setText(numeroFormateado);
+            operativosdcinicio.setText(numeroFormateado);
         }else{
             costosOperativosCN.setText(numeroFormateado);
+            operativoscninicio.setText(numeroFormateado);
         }
     }
     
@@ -157,10 +173,11 @@ public class Interfaz extends javax.swing.JFrame {
         DecimalFormat formato = new DecimalFormat("#,###.##");
         String numeroFormateado = formato.format((int)t);
         if(tipoCompania == 0){
-            System.out.println(numeroFormateado);
             gananciasDisney.setText(numeroFormateado);
+            gananciasdcinicio.setText(numeroFormateado);
         }else{
             gananciasCN.setText(numeroFormateado);
+            gananciascninicio.setText(numeroFormateado);
         }
     }
     
@@ -169,8 +186,10 @@ public class Interfaz extends javax.swing.JFrame {
         String numeroFormateado = formato.format((int)t);
         if(tipoCompania == 0){
             utilidadesDisney.setText(numeroFormateado);
+            utilidadesdcinicio.setText(numeroFormateado);
         }else{
             utilidadesCN.setText(numeroFormateado);
+            utilidadescninicio.setText(numeroFormateado);
         }
     }
     
@@ -329,6 +348,24 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel48 = new javax.swing.JLabel();
         diasInicio = new javax.swing.JLabel();
         jLabel70 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        utilidadescninicio = new javax.swing.JLabel();
+        utilidadesdcinicio = new javax.swing.JLabel();
+        operativoscninicio = new javax.swing.JLabel();
+        operativosdcinicio = new javax.swing.JLabel();
+        gananciascninicio = new javax.swing.JLabel();
+        gananciasdcinicio = new javax.swing.JLabel();
+        estandarcninicio = new javax.swing.JLabel();
+        estandardcinicio = new javax.swing.JLabel();
+        plotwistcninicio = new javax.swing.JLabel();
+        plottwistdcinicio = new javax.swing.JLabel();
+        jButton54 = new javax.swing.JButton();
         salarioDescontadoCN2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -460,7 +497,6 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         diasDisney = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        utilidadesDisney1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
@@ -531,17 +567,96 @@ public class Interfaz extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel48.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel48.setText("DIAS:");
-        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, -1, -1));
+        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
+        diasInicio.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         diasInicio.setText("0");
-        jPanel1.add(diasInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, -1, -1));
+        jPanel1.add(diasInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, -1, -1));
 
         jLabel70.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel70.setText("ESTUDIOS DE ANIMACION EN VENEZUELA");
         jPanel1.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 990, 70));
+
+        jLabel54.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel54.setText("CARTOON NETWORK");
+        jPanel1.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+
+        jLabel64.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel64.setText("DISNEY CHANNEL");
+        jPanel1.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
+
+        jLabel65.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel65.setText("Utilidades");
+        jPanel1.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, -1, -1));
+
+        jLabel67.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel67.setText("Costos Operativos");
+        jPanel1.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, -1, -1));
+
+        jLabel68.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel68.setText("Ganancias en bruto");
+        jPanel1.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 180, -1, -1));
+
+        jLabel74.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel74.setText("Capitulos Estandar ");
+        jPanel1.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 180, -1, -1));
+
+        jLabel75.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel75.setText("Capitulos Plot Twist");
+        jPanel1.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 180, -1, -1));
+
+        utilidadescninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        utilidadescninicio.setText("0");
+        jPanel1.add(utilidadescninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, -1, -1));
+
+        utilidadesdcinicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        utilidadesdcinicio.setText("0");
+        jPanel1.add(utilidadesdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, -1, -1));
+
+        operativoscninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        operativoscninicio.setText("0");
+        jPanel1.add(operativoscninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, -1, -1));
+
+        operativosdcinicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        operativosdcinicio.setText("0");
+        jPanel1.add(operativosdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, -1, -1));
+
+        gananciascninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        gananciascninicio.setText("0");
+        jPanel1.add(gananciascninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 240, -1, -1));
+
+        gananciasdcinicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        gananciasdcinicio.setText("0");
+        jPanel1.add(gananciasdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 370, -1, -1));
+
+        estandarcninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        estandarcninicio.setText("0");
+        jPanel1.add(estandarcninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 240, -1, -1));
+
+        estandardcinicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        estandardcinicio.setText("0");
+        jPanel1.add(estandardcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 370, -1, -1));
+
+        plotwistcninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        plotwistcninicio.setText("0");
+        jPanel1.add(plotwistcninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 240, -1, -1));
+
+        plottwistdcinicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        plottwistdcinicio.setText("0");
+        jPanel1.add(plottwistdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 370, -1, -1));
+
+        jButton54.setText("GRAFICO UTILIDAD EN TIEMPO REAL");
+        jButton54.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton54ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton54, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, -1, -1));
 
         jTabbedPane1.addTab("Inicio", jPanel1);
 
@@ -749,13 +864,13 @@ public class Interfaz extends javax.swing.JFrame {
         salarioDescontadoCN2.add(AnimacionesCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 20, 20));
 
         jLabel55.setText("COSTOS OPERATIVOS");
-        salarioDescontadoCN2.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 430, -1, -1));
+        salarioDescontadoCN2.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 430, -1, -1));
 
         jLabel56.setText("GANANCIAS EN BRUTO");
-        salarioDescontadoCN2.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 530, -1, -1));
+        salarioDescontadoCN2.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 530, -1, -1));
 
         jLabel61.setText("UTILIDADES");
-        salarioDescontadoCN2.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 480, -1, -1));
+        salarioDescontadoCN2.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 480, -1, -1));
 
         costosOperativosCN.setText("0");
         salarioDescontadoCN2.add(costosOperativosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 450, -1, -1));
@@ -777,7 +892,7 @@ public class Interfaz extends javax.swing.JFrame {
         salarioDescontadoCN2.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, -1, -1));
 
         actividadDirectorCN.setText("0");
-        salarioDescontadoCN2.add(actividadDirectorCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, -1, -1));
+        salarioDescontadoCN2.add(actividadDirectorCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, -1, -1));
 
         capitulosListosCN.setText("0");
         salarioDescontadoCN2.add(capitulosListosCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, -1, -1));
@@ -786,7 +901,7 @@ public class Interfaz extends javax.swing.JFrame {
         salarioDescontadoCN2.add(faltasPMCN, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, -1, -1));
 
         pmCNActividadd.setText("0");
-        salarioDescontadoCN2.add(pmCNActividadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, -1, -1));
+        salarioDescontadoCN2.add(pmCNActividadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
 
         salarioDescontadocn23.setText("0");
         salarioDescontadoCN2.add(salarioDescontadocn23, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 530, -1, -1));
@@ -811,21 +926,27 @@ public class Interfaz extends javax.swing.JFrame {
 
         pmDisneyActividad2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("TRABAJADORES");
         pmDisneyActividad2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 20, -1, -1));
 
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("GUIONISTAS ");
         pmDisneyActividad2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 80, -1, -1));
 
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("DISEÑADORES DE ESCENARIOS");
         pmDisneyActividad2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, -1, -1));
 
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("ANIMADORES DE PERSONAJES");
         pmDisneyActividad2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, -1, -1));
 
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("ACTORES DE DOBLAJE");
         pmDisneyActividad2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 200, -1, -1));
 
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("GUIONISTAS DE PLOT TWIST");
         pmDisneyActividad2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, -1, -1));
 
@@ -909,29 +1030,36 @@ public class Interfaz extends javax.swing.JFrame {
         });
         pmDisneyActividad2.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 240, -1, -1));
 
+        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
         jLabel50.setText("ACTIVOS");
         pmDisneyActividad2.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 20, -1, -1));
 
         PlotTwistDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        PlotTwistDisneyActivos.setForeground(new java.awt.Color(255, 255, 255));
         PlotTwistDisneyActivos.setText("0");
         pmDisneyActividad2.add(PlotTwistDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 240, 20, -1));
 
         AnimadoresDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        AnimadoresDisneyActivos.setForeground(new java.awt.Color(255, 255, 255));
         AnimadoresDisneyActivos.setText("0");
         pmDisneyActividad2.add(AnimadoresDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 160, 20, -1));
 
         EscenariosDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        EscenariosDisneyActivos.setForeground(new java.awt.Color(255, 255, 255));
         EscenariosDisneyActivos.setText("0");
         pmDisneyActividad2.add(EscenariosDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 120, 20, -1));
 
         DoblajesDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        DoblajesDisneyActivos.setForeground(new java.awt.Color(255, 255, 255));
         DoblajesDisneyActivos.setText("0");
         pmDisneyActividad2.add(DoblajesDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 200, 20, -1));
 
         GuionistasDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        GuionistasDisneyActivos.setForeground(new java.awt.Color(255, 255, 255));
         GuionistasDisneyActivos.setText("0");
         pmDisneyActividad2.add(GuionistasDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 80, 20, -1));
 
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("ENSAMBLADORES");
         pmDisneyActividad2.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, -1, -1));
 
@@ -952,127 +1080,162 @@ public class Interfaz extends javax.swing.JFrame {
         pmDisneyActividad2.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 300, -1, -1));
 
         EnsambladoresDisneyActivos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        EnsambladoresDisneyActivos.setForeground(new java.awt.Color(255, 255, 255));
         EnsambladoresDisneyActivos.setText("0");
         pmDisneyActividad2.add(EnsambladoresDisneyActivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 300, 20, -1));
 
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("COSTOS OPERATIVOS");
-        pmDisneyActividad2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 310, -1, -1));
+        pmDisneyActividad2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 310, -1, -1));
 
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
         jLabel24.setText("ACTUAL");
         pmDisneyActividad2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 50, -1, -1));
 
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("MAXIMA");
         pmDisneyActividad2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 50, -1, -1));
 
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
         jLabel33.setText("PROJECT MANAGER");
         pmDisneyActividad2.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 360, -1, -1));
 
+        jLabel38.setForeground(new java.awt.Color(255, 255, 255));
         jLabel38.setText("ACTIVIDAD");
         pmDisneyActividad2.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 390, -1, -1));
 
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
         jLabel39.setText("SALARIO DESCONTADO");
         pmDisneyActividad2.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 500, -1, -1));
 
+        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
         jLabel40.setText("FALTAS");
         pmDisneyActividad2.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 440, -1, -1));
 
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("DIRECTOR");
         pmDisneyActividad2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 360, -1, -1));
 
+        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
         jLabel41.setText("ACTIVIDAD");
         pmDisneyActividad2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, -1, -1));
 
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("CAPITULOS ESTANDAR  LISTOS");
         pmDisneyActividad2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 440, -1, -1));
 
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setText("DIAS PARA LA ENTREGA");
-        pmDisneyActividad2.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 490, -1, -1));
+        pmDisneyActividad2.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 490, -1, -1));
 
+        diasEntregaDisney.setForeground(new java.awt.Color(255, 255, 255));
         diasEntregaDisney.setText("0");
-        pmDisneyActividad2.add(diasEntregaDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 510, 50, 20));
+        pmDisneyActividad2.add(diasEntregaDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 510, 50, 20));
 
+        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
         jLabel47.setText("25");
         pmDisneyActividad2.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 80, 20, 20));
 
+        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
         jLabel49.setText("20");
         pmDisneyActividad2.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 120, 20, 20));
 
+        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
         jLabel51.setText("10");
         pmDisneyActividad2.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 240, 20, 20));
 
+        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
         jLabel52.setText("35");
         pmDisneyActividad2.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 200, 20, 20));
 
+        jLabel53.setForeground(new java.awt.Color(255, 255, 255));
         jLabel53.setText("55");
         pmDisneyActividad2.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 160, 20, 20));
 
+        GuionesDisney.setForeground(new java.awt.Color(255, 255, 255));
         GuionesDisney.setText("0");
         pmDisneyActividad2.add(GuionesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 80, 20, 20));
 
+        EscenariosDisney.setForeground(new java.awt.Color(255, 255, 255));
         EscenariosDisney.setText("0");
         pmDisneyActividad2.add(EscenariosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 120, 20, 20));
 
+        PlotTwistDisney.setForeground(new java.awt.Color(255, 255, 255));
         PlotTwistDisney.setText("0");
         pmDisneyActividad2.add(PlotTwistDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 240, 20, 20));
 
+        DoblajesDisney.setForeground(new java.awt.Color(255, 255, 255));
         DoblajesDisney.setText("0");
         pmDisneyActividad2.add(DoblajesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 200, 20, 20));
 
+        AnimacionesDisney.setForeground(new java.awt.Color(255, 255, 255));
         AnimacionesDisney.setText("0");
         pmDisneyActividad2.add(AnimacionesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 160, 20, 20));
 
+        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
         jLabel44.setText("GANANCIAS EN BRUTO");
-        pmDisneyActividad2.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 420, -1, -1));
+        pmDisneyActividad2.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 420, -1, -1));
 
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setText("UTILIDADES");
         pmDisneyActividad2.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 370, -1, -1));
 
+        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
         jLabel46.setText("CAPACIDAD DE DRIVE");
         pmDisneyActividad2.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, -1, -1));
 
+        costosOperativosDisney.setForeground(new java.awt.Color(255, 255, 255));
         costosOperativosDisney.setText("0");
-        pmDisneyActividad2.add(costosOperativosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 330, -1, -1));
+        pmDisneyActividad2.add(costosOperativosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 330, -1, -1));
 
+        gananciasDisney.setForeground(new java.awt.Color(255, 255, 255));
         gananciasDisney.setText("0");
-        pmDisneyActividad2.add(gananciasDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 450, 130, -1));
+        pmDisneyActividad2.add(gananciasDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 450, 100, -1));
 
+        utilidadesDisney.setForeground(new java.awt.Color(255, 255, 255));
         utilidadesDisney.setText("0");
-        pmDisneyActividad2.add(utilidadesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 390, -1, -1));
+        pmDisneyActividad2.add(utilidadesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 390, -1, -1));
 
+        pmActividadDisney.setForeground(new java.awt.Color(255, 255, 255));
         pmActividadDisney.setText("0");
-        pmDisneyActividad2.add(pmActividadDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, -1, -1));
+        pmDisneyActividad2.add(pmActividadDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 410, -1, -1));
 
+        faltasPMDisney.setForeground(new java.awt.Color(255, 255, 255));
         faltasPMDisney.setText("0");
         pmDisneyActividad2.add(faltasPMDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 460, -1, -1));
 
+        salarioDescontadoDisney.setForeground(new java.awt.Color(255, 255, 255));
         salarioDescontadoDisney.setText("0");
         pmDisneyActividad2.add(salarioDescontadoDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 530, -1, -1));
 
+        actividadDirectorDisney.setForeground(new java.awt.Color(255, 255, 255));
         actividadDirectorDisney.setText("0");
-        pmDisneyActividad2.add(actividadDirectorDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 410, -1, -1));
+        pmDisneyActividad2.add(actividadDirectorDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 410, -1, -1));
 
+        capitulosListosDisney.setForeground(new java.awt.Color(255, 255, 255));
         capitulosListosDisney.setText("0");
         pmDisneyActividad2.add(capitulosListosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 460, -1, -1));
 
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
         jLabel29.setText("CAPITULOS PLOTTWIST  LISTOS");
         pmDisneyActividad2.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 500, -1, -1));
 
+        capitulosPlotTwistListosDisney.setForeground(new java.awt.Color(255, 255, 255));
         capitulosPlotTwistListosDisney.setText("0");
         pmDisneyActividad2.add(capitulosPlotTwistListosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 530, 10, -1));
 
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("DIAS:");
-        pmDisneyActividad2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 550, -1, -1));
+        pmDisneyActividad2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 550, -1, -1));
 
+        diasDisney.setForeground(new java.awt.Color(255, 255, 255));
         diasDisney.setText("0");
-        pmDisneyActividad2.add(diasDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 570, -1, -1));
+        pmDisneyActividad2.add(diasDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 570, -1, -1));
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/disney fondo.jpeg"))); // NOI18N
         jLabel15.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        pmDisneyActividad2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1170, 620));
-
-        utilidadesDisney1.setText("0");
-        pmDisneyActividad2.add(utilidadesDisney1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 390, -1, -1));
+        pmDisneyActividad2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1110, 610));
 
         jTabbedPane1.addTab("Disney Channel ", pmDisneyActividad2);
 
@@ -1991,6 +2154,35 @@ public class Interfaz extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
+        // TODO add your handling code here:
+        JFreeChart grafico;
+        DefaultXYDataset dataset = new DefaultXYDataset();
+        
+        double[][] datosCartoonNetwork = {{Integer.parseInt(diasInicio.getText())}, {Integer.parseInt(utilidadescninicio.getText())}};
+        double[][] datosDisneyChannel = {{Integer.parseInt(diasInicio.getText())}, {Integer.parseInt(utilidadesdcinicio.getText())}};
+
+        dataset.addSeries("Cartoon Network", datosCartoonNetwork);
+        dataset.addSeries("Disney Channel", datosDisneyChannel);
+        
+        XYPlot plot = new XYPlot(dataset, new NumberAxis("Tiempo"), new NumberAxis("Utilidad"), new XYLineAndShapeRenderer(true, false));
+        grafico = new JFreeChart("Utilidades en tiempo real", JFreeChart.DEFAULT_TITLE_FONT, plot, true);
+        
+        ChartPanel panelGrafico = new ChartPanel(grafico);
+        panelGrafico.setVisible(true);
+        
+        
+//        grafico.setBackgroundPaint(Color.WHITE);
+//        grafico.getTitle().setPaint(Color.BLACK);
+//        CategoryPlot p = grafico.getCategoryPlot();
+//        p.setRangeGridlinePaint(Color.BLUE);
+//        ChartFrame frame = new ChartFrame("Grafico de dispersion",grafico);
+//        frame.setVisible(true);
+//        frame.setSize(450,330);
+        
+        
+    }//GEN-LAST:event_jButton54ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2016,6 +2208,30 @@ public class Interfaz extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -2079,10 +2295,14 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel ensambladoresDisney;
     private javax.swing.JLabel escenariosCN;
     private javax.swing.JLabel escenariosDisney;
+    private javax.swing.JLabel estandarcninicio;
+    private javax.swing.JLabel estandardcinicio;
     private javax.swing.JLabel faltasPMCN;
     private javax.swing.JLabel faltasPMDisney;
     private javax.swing.JLabel gananciasCN;
     private javax.swing.JLabel gananciasDisney;
+    private javax.swing.JLabel gananciascninicio;
+    private javax.swing.JLabel gananciasdcinicio;
     private javax.swing.JLabel guionistasCN;
     private javax.swing.JLabel guionistasDisney;
     private javax.swing.JButton jButton1;
@@ -2134,6 +2354,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton jButton51;
     private javax.swing.JButton jButton52;
     private javax.swing.JButton jButton53;
+    private javax.swing.JButton jButton54;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -2190,6 +2411,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
@@ -2200,13 +2422,19 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
@@ -2225,8 +2453,12 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel operativoscninicio;
+    private javax.swing.JLabel operativosdcinicio;
     private javax.swing.JLabel plottwistCN;
     private javax.swing.JLabel plottwistDisney;
+    private javax.swing.JLabel plottwistdcinicio;
+    private javax.swing.JLabel plotwistcninicio;
     private javax.swing.JLabel pmActividadDisney;
     private javax.swing.JLabel pmCNActividad;
     private javax.swing.JLabel pmCNActividadd;
@@ -2236,7 +2468,8 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel salarioDescontadocn23;
     private javax.swing.JLabel utilidadesCN;
     private javax.swing.JLabel utilidadesDisney;
-    private javax.swing.JLabel utilidadesDisney1;
+    private javax.swing.JLabel utilidadescninicio;
+    private javax.swing.JLabel utilidadesdcinicio;
     // End of variables declaration//GEN-END:variables
 
     /**
