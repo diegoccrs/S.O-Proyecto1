@@ -18,6 +18,9 @@ import javax.swing.JOptionPane;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.axis.NumberTickUnit;
+import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
@@ -2162,12 +2165,10 @@ public class Interfaz extends javax.swing.JFrame {
         XYSeries disneyChannel = new XYSeries("Disney Channel");
 
         // Agrega datos de utilidades (x: tiempo, y: utilidad)
-        cartoonNetwork.add(1, 1000);
-        cartoonNetwork.add(2, 1200);
+        cartoonNetwork.add(Global.getCartoonNetwork().getDrive().getContadorPasoDeLosDias(), Global.getCartoonNetwork().getDrive().getUtilidades());
         // ... Agrega más datos para cartoon network (datos genericos por los momentos)
 
-        disneyChannel.add(1, 800);
-        disneyChannel.add(2, 950);
+        disneyChannel.add(Global.getDisney().getDrive().getContadorPasoDeLosDias(), Global.getDisney().getDrive().getUtilidades());
         // ... Agrega más datos para disney (datos genericos por los momentos)
 
         dataset.addSeries(cartoonNetwork);
