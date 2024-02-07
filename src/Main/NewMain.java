@@ -28,9 +28,6 @@ public class NewMain {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        //Interfaz inicio = new Interfaz();
-        //inicio.setLocationRelativeTo(null);
-        //inicio.show();
         ManejadorInterfaz.getInterfaz().show();
         
         //Creamos la compania Disney y la cargamos a Global

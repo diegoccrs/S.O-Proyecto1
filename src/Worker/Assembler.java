@@ -43,11 +43,9 @@ public class Assembler extends Worker{
     private void obtainSalary() {
         float salario = this.getSalario()*24;
         try {
-            this.getMutex().acquire();
-            this.getCompania().getDrive().setCostosOperativos(this.getCompania().getDrive().getCostosOperativos() + salario,this.getCompania().getTipoCompania());
-            this.getCompania().getDrive().setUtilidades(this.getCompania().getDrive().getUtilidades() - salario,this.getCompania().getTipoCompania());
-            this.getCompania().getDrive().setEnsambladorAcc(salario + this.getCompania().getDrive().getEnsambladorAcc());
-            this.getMutex().release();
+            this.getCompania().getDrive().getSalarioAccMutex().acquire();
+            this.getCompania().getDrive().addSalary(this.getTipo(), this.getSalario()*24, this.getCompania().getTipoCompania());
+            this.getCompania().getDrive().getSalarioAccMutex().release();
         } catch (InterruptedException ex) {
             Logger.getLogger(Assembler.class.getName()).log(Level.SEVERE, null, ex);
         }

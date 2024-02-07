@@ -28,7 +28,7 @@ public class ProjectManager extends Worker{
                 // Media hora = un dia entre 48
                 double halfHour = this.getCompania().getDuracionDia() / 48;
                 int counter = 0;
-
+                float salario_final = salarioAcumulado;
                 // 16 horas al dia
                 while (counter < 16) {
                     this.getCompania().getDrive().setPmEstado(1,this.getCompania().getTipoCompania()); //Actualizamos Su estado a Viendo Anime
@@ -38,7 +38,7 @@ public class ProjectManager extends Worker{
                         //TODO: poner lo que va a hacer 
                         this.getCompania().getDrive().setFaltas(this.getCompania().getDrive().getFaltas() + 1,this.getCompania().getTipoCompania());
                         this.getCompania().getDrive().setSalarioDescontado(this.getCompania().getDrive().getSalarioDescontado() + 100,this.getCompania().getTipoCompania());
-                        this.salarioAcumulado = this.salarioAcumulado - 100;
+                        salario_final = salario_final - 100;
                     }
 
                     sleep(Math.round(halfHour));
@@ -48,7 +48,10 @@ public class ProjectManager extends Worker{
                 }
 
                 this.getCompania().getDrive().setPmEstado(0,this.getCompania().getTipoCompania());
-
+                //Cobrando su dia de trabajo
+                this.getCompania().getDrive().getSalarioAccMutex().acquire();
+                this.getCompania().getDrive().addSalary(this.getTipo(), salario_final, this.getCompania().getTipoCompania());
+                this.getCompania().getDrive().getSalarioAccMutex().release();
                 sleep(Math.round(halfHour * 16));
                 
                 this.getCompania().getDrive().getDiasMutex().acquire();
@@ -57,14 +60,6 @@ public class ProjectManager extends Worker{
                 }
                 this.getCompania().getDrive().setContadorPasoDeLosDias(this.getCompania().getDrive().getContadorPasoDeLosDias() + 1);
                 this.getCompania().getDrive().getDiasMutex().release();
-                
-
-                //Cobrando su dia de trabajo
-                this.getCompania().getDrive().getSalarioAccMutex().acquire();
-                this.getCompania().getDrive().setPmAcc(this.getCompania().getDrive().getPmAcc() + this.salarioAcumulado);//actualizamos lo acumulado por los PM
-                this.getCompania().getDrive().setCostosOperativos(this.getCompania().getDrive().getCostosOperativos()+salarioAcumulado, this.getCompania().getTipoCompania());//actualizamos los costos operativos
-                this.getCompania().getDrive().setUtilidades(this.getCompania().getDrive().getUtilidades() - salarioAcumulado, this.getCompania().getTipoCompania());//actualizamos las utilidades
-                this.getCompania().getDrive().getSalarioAccMutex().release();
 
             } catch (Exception e) {
                 System.out.println(e);

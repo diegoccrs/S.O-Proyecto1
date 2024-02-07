@@ -13,17 +13,14 @@ import java.awt.Color;
 import static java.lang.Integer.parseInt;
 import java.text.DecimalFormat;
 import java.util.concurrent.Semaphore;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartFrame;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.chart.axis.NumberAxis;
-import org.jfree.chart.plot.CategoryPlot;
-import org.jfree.chart.plot.XYPlot;
-import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
-import org.jfree.data.xy.DefaultXYDataset;
-
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
 /**
  *
  * @author Diego
@@ -1190,7 +1187,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         gananciasDisney.setForeground(new java.awt.Color(255, 255, 255));
         gananciasDisney.setText("0");
-        pmDisneyActividad2.add(gananciasDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 450, 20, -1));
+        pmDisneyActividad2.add(gananciasDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 450, 100, -1));
 
         utilidadesDisney.setForeground(new java.awt.Color(255, 255, 255));
         utilidadesDisney.setText("0");
@@ -2157,28 +2154,31 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
         // TODO add your handling code here:
         JFreeChart grafico;
-        DefaultXYDataset dataset = new DefaultXYDataset();
         
-        double[][] datosCartoonNetwork = {{Integer.parseInt(diasInicio.getText())}, {Integer.parseInt(utilidadescninicio.getText())}};
-        double[][] datosDisneyChannel = {{Integer.parseInt(diasInicio.getText())}, {Integer.parseInt(utilidadesdcinicio.getText())}};
+        JFrame miJFrame = new JFrame("Gráfico de Dispersión");
+        
+        XYSeriesCollection dataset = new XYSeriesCollection();
+        XYSeries cartoonNetwork = new XYSeries("Cartoon Network");
+        XYSeries disneyChannel = new XYSeries("Disney Channel");
 
-        dataset.addSeries("Cartoon Network", datosCartoonNetwork);
-        dataset.addSeries("Disney Channel", datosDisneyChannel);
+        // Agrega datos de utilidades (x: tiempo, y: utilidad)
+        cartoonNetwork.add(1, 1000);
+        cartoonNetwork.add(2, 1200);
+        // ... Agrega más datos para cartoon network (datos genericos por los momentos)
+
+        disneyChannel.add(1, 800);
+        disneyChannel.add(2, 950);
+        // ... Agrega más datos para disney (datos genericos por los momentos)
+
+        dataset.addSeries(cartoonNetwork);
+        dataset.addSeries(disneyChannel);
         
-        XYPlot plot = new XYPlot(dataset, new NumberAxis("Tiempo"), new NumberAxis("Utilidad"), new XYLineAndShapeRenderer(true, false));
-        grafico = new JFreeChart("Utilidades en tiempo real", JFreeChart.DEFAULT_TITLE_FONT, plot, true);
+        grafico = ChartFactory.createScatterPlot("Utilidades vs. Tiempo","Tiempo (días)","Utilidad",dataset,PlotOrientation.VERTICAL,true,true,false);
         
-        ChartPanel panelGrafico = new ChartPanel(grafico);
-        panelGrafico.setVisible(true);
-        
-        
-//        grafico.setBackgroundPaint(Color.WHITE);
-//        grafico.getTitle().setPaint(Color.BLACK);
-//        CategoryPlot p = grafico.getCategoryPlot();
-//        p.setRangeGridlinePaint(Color.BLUE);
-//        ChartFrame frame = new ChartFrame("Grafico de dispersion",grafico);
-//        frame.setVisible(true);
-//        frame.setSize(450,330);
+        ChartPanel chartPanel = new ChartPanel(grafico, false);
+        miJFrame.setContentPane(chartPanel);
+        miJFrame.setSize(800, 600);
+        miJFrame.setVisible(true);
         
         
     }//GEN-LAST:event_jButton54ActionPerformed
@@ -2208,6 +2208,30 @@ public class Interfaz extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>

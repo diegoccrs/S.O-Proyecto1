@@ -72,27 +72,31 @@ public class Drive {
     public Drive(){
     }
     
-    //ESTE METODO AGREGA EL SALARIO, AL ACUMULADO DE CADA TIPO DE TRABAJADOR
+    //ESTE METODO AGREGA EL SALARIO, AL ACUMULADO DE CADA TIPO DE TRABAJADOR: el parametro salary es el salario acumulado del trabajador(salario_por_hora *24)
     public void addSalary(int type,float salary,int tipoCompania){
         if (type == 0){
-            this.setAnimadoresAcc(this.getAnimadoresAcc() + salary*24);
+            this.setAnimadoresAcc(this.getAnimadoresAcc() + salary);
         }else if(type == 1){
-            this.setGuionistasAcc(this.getGuionistasAcc() + salary*24);
+            this.setGuionistasAcc(this.getGuionistasAcc() + salary);
         }else if(type == 2){
-            this.setEscenariosAcc(this.getEscenariosAcc() + salary*24);
+            this.setEscenariosAcc(this.getEscenariosAcc() + salary);
         }else if(type == 3){
-            this.setDoblajesAcc(this.getDoblajesAcc() + salary*24);
+            this.setDoblajesAcc(this.getDoblajesAcc() + salary);
         }else if(type == 4){
-            this.setDisenadoresGuionesPlotTwistAcc(this.getDisenadoresGuionesPlotTwistAcc() + salary*24);
+            this.setDisenadoresGuionesPlotTwistAcc(this.getDisenadoresGuionesPlotTwistAcc() + salary);
         }else if(type == 5){
-            this.setEnsambladorAcc(this.getEnsambladorAcc() + salary*24);
+            this.setEnsambladorAcc(this.getEnsambladorAcc() + salary);
         }else if(type == 6){
-            this.setPmAcc(this.getPmAcc() + salary*24);
+            this.setPmAcc(this.getPmAcc() + salary);
         }else if(type == 7){
-            this.setDirectorAcc(this.getDirectorAcc() + salary*24);
+            this.setDirectorAcc(this.getDirectorAcc() + salary);
         }
-        this.setCostosOperativos(this.getCostosOperativos() + salary,tipoCompania);
-        this.setUtilidades(this.getUtilidades() - salary,tipoCompania);
+        //el siguiente if es solo para comprobar en la consola,no es necesario
+        if(tipoCompania == 0){
+            System.out.println(type +"   "+(int)this.getCostosOperativos()+"+"+(int)(salary)+"="+(this.getCostosOperativos() + salary));
+        }
+        this.setCostosOperativos(this.getCostosOperativos() + (salary),tipoCompania);
+        this.setUtilidades(this.getUtilidades() - (salary),tipoCompania);
     }
     
     //ESTE METODO AGREGA LAS PARTES QUE HA HECHO CADA TRABAJADOR DEPENDIENDO DE LA COMPANIA

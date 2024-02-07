@@ -42,7 +42,7 @@ public class Developer extends Worker{
         this.salarioAcc += this.getSalario()*24;
         try {
             this.getCompania().getDrive().getSalarioAccMutex().acquire(); //wait
-            this.getCompania().getDrive().addSalary(this.getTipo(), this.getSalario(),this.getCompania().getTipoCompania());
+            this.getCompania().getDrive().addSalary(this.getTipo(), this.getSalario()*24,this.getCompania().getTipoCompania());
             this.getCompania().getDrive().getSalarioAccMutex().release();// signal
             } catch (InterruptedException ex) {
                 Logger.getLogger(Developer.class.getName()).log(Level.SEVERE, null, ex);
