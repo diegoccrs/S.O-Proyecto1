@@ -82,7 +82,7 @@ public class Funciones {
                             }
                         }else if(i == 1){
                             for (int j = 0; j < Integer.parseInt(cn[i]); j++) {
-                                Developer guionistaNuevo = new Developer(1,25,Global.getMutexCartoonNetwork(),Global.getCartoonNetwork());
+                                Developer guionistaNuevo = new Developer(1,20,Global.getMutexCartoonNetwork(),Global.getCartoonNetwork());
                                 guionistaNuevo.start();
                                 Global.getCartoonNetwork().getGuionistas().insertFinal(guionistaNuevo);
                             }
@@ -112,6 +112,7 @@ public class Funciones {
                             }
                         }
                     }
+                    //actualizamos la interfaz con la cantidad de trabjadores que estan activos
                     this.ActualizarPestanaCartoonNetwork(cn);
                     
                     //Cargamos trabajadores de Disney
@@ -124,7 +125,7 @@ public class Funciones {
                             }
                         }else if(i == 1){
                             for (int j = 0; j < Integer.parseInt(disney[i]); j++) {
-                                Developer guionistaNuevo = new Developer(1,25,Global.getMutexDisney(),Global.getDisney());
+                                Developer guionistaNuevo = new Developer(1,20,Global.getMutexDisney(),Global.getDisney());
                                 guionistaNuevo.start();
                                 Global.getDisney().getGuionistas().insertFinal(guionistaNuevo);
                             }
@@ -154,6 +155,7 @@ public class Funciones {
                             }
                         }
                     }
+                    //actualizamos la interfaz con la cantidad de trabjadores que estan activos
                     this.ActualizarPestanaDisney(disney);
                     
                     //Cargamos duracion dias

@@ -24,14 +24,14 @@ public abstract class Worker extends Thread{
     private float CantidadDeTrabajoPorDia; //esta es la cantidad que se ira acumulando a la variable ACC
     
     /*TIPOS DE TRABAJADORES:
-        animadores                = 0
-        guionistas                = 1
-        disenadores de escenarios = 2
-        actores de doblaje        = 3
-        guionistas de plottwist   = 4
-        ensambladores             = 5
-        Project manager           = 6
-        director                  = 7
+        animadores                = 0            $40
+        guionistas                = 1            $20
+        disenadores de escenarios = 2            $26
+        actores de doblaje        = 3            $16
+        guionistas de plottwist   = 4            $34
+        ensambladores             = 5            $50
+        Project manager           = 6            $40
+        director                  = 7            $60
     */
     
     

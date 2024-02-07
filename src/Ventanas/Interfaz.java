@@ -157,6 +157,7 @@ public class Interfaz extends javax.swing.JFrame {
         DecimalFormat formato = new DecimalFormat("#,###.##");
         String numeroFormateado = formato.format((int)t);
         if(tipoCompania == 0){
+            System.out.println(numeroFormateado);
             gananciasDisney.setText(numeroFormateado);
         }else{
             gananciasCN.setText(numeroFormateado);
@@ -459,6 +460,7 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         diasDisney = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        utilidadesDisney1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
@@ -1032,7 +1034,7 @@ public class Interfaz extends javax.swing.JFrame {
         pmDisneyActividad2.add(costosOperativosDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 330, -1, -1));
 
         gananciasDisney.setText("0");
-        pmDisneyActividad2.add(gananciasDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 450, 20, -1));
+        pmDisneyActividad2.add(gananciasDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 450, 130, -1));
 
         utilidadesDisney.setText("0");
         pmDisneyActividad2.add(utilidadesDisney, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 390, -1, -1));
@@ -1067,7 +1069,10 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/disney fondo.jpeg"))); // NOI18N
         jLabel15.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        pmDisneyActividad2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1100, 610));
+        pmDisneyActividad2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1170, 620));
+
+        utilidadesDisney1.setText("0");
+        pmDisneyActividad2.add(utilidadesDisney1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 390, -1, -1));
 
         jTabbedPane1.addTab("Disney Channel ", pmDisneyActividad2);
 
@@ -2231,6 +2236,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel salarioDescontadocn23;
     private javax.swing.JLabel utilidadesCN;
     private javax.swing.JLabel utilidadesDisney;
+    private javax.swing.JLabel utilidadesDisney1;
     // End of variables declaration//GEN-END:variables
 
     /**

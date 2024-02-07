@@ -85,9 +85,7 @@ public class Director extends Worker{
         try {
             //Cobrando su dia de trabajo
             this.getCompania().getDrive().getSalarioAccMutex().acquire();
-            this.getCompania().getDrive().setDirectorAcc(this.getCompania().getDrive().getDirectorAcc() + this.getSalario() * 24);
-            this.getCompania().getDrive().setCostosOperativos(this.getCompania().getDrive().getCostosOperativos() + this.getSalario() * 24, this.getCompania().getTipoCompania());
-            this.getCompania().getDrive().setUtilidades(this.getCompania().getDrive().getUtilidades() - this.getSalario() * 24, this.getCompania().getTipoCompania());
+            this.getCompania().getDrive().addSalary(this.getTipo(), this.getSalario()*24, this.getCompania().getTipoCompania());
             this.getCompania().getDrive().getSalarioAccMutex().release();
         } catch (InterruptedException ex) {
             Logger.getLogger(Director.class.getName()).log(Level.SEVERE, null, ex);
