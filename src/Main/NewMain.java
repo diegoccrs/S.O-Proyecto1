@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import Ventanas.Global;
+import Ventanas.Grafico;
 import Worker.Director;
 /**
  *
@@ -57,6 +58,8 @@ public class NewMain {
         directorDisney.start();
         Director directorCN = new Director(7,60,mutexCN,Global.getCartoonNetwork());
         directorCN.start();
+        
+        Global.getGrafico().start();
         
     }
     

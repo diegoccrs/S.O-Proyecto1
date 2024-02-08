@@ -9,6 +9,7 @@ import Drive.Drive;
 import Worker.Assembler;
 import Worker.Developer;
 import Worker.ProjectManager;
+import java.awt.BasicStroke;
 import java.awt.Color;
 import static java.lang.Integer.parseInt;
 import java.text.DecimalFormat;
@@ -16,14 +17,18 @@ import java.util.concurrent.Semaphore;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
-import org.jfree.chart.axis.NumberTickUnit;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
+import org.jfree.data.xy.DefaultXYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
+
 /**
  *
  * @author Diego
@@ -121,9 +126,9 @@ public class Interfaz extends javax.swing.JFrame {
     
     public void cambiarSalarioDescontadoPM(int t,int tipoCompania){
         if(tipoCompania == 0){
-            salarioDescontadoDisney.setText(Integer.toString(t));
+            salarioDescontadoDisney.setText("$"+Integer.toString(t));
         }else{
-            salarioDescontadocn23.setText(Integer.toString(t));
+            salarioDescontadocn23.setText("$"+Integer.toString(t));
         }
     }
     
@@ -161,11 +166,11 @@ public class Interfaz extends javax.swing.JFrame {
         String numeroFormateado = formato.format((int)t);
         
         if(tipoCompania == 0){
-            costosOperativosDisney.setText(numeroFormateado);
-            operativosdcinicio.setText(numeroFormateado);
+            costosOperativosDisney.setText("$"+numeroFormateado);
+            operativosdcinicio.setText("$"+numeroFormateado);
         }else{
-            costosOperativosCN.setText(numeroFormateado);
-            operativoscninicio.setText(numeroFormateado);
+            costosOperativosCN.setText("$"+numeroFormateado);
+            operativoscninicio.setText("$"+numeroFormateado);
         }
     }
     
@@ -173,11 +178,11 @@ public class Interfaz extends javax.swing.JFrame {
         DecimalFormat formato = new DecimalFormat("#,###.##");
         String numeroFormateado = formato.format((int)t);
         if(tipoCompania == 0){
-            gananciasDisney.setText(numeroFormateado);
-            gananciasdcinicio.setText(numeroFormateado);
+            gananciasDisney.setText("$"+numeroFormateado);
+            gananciasdcinicio.setText("$"+numeroFormateado);
         }else{
-            gananciasCN.setText(numeroFormateado);
-            gananciascninicio.setText(numeroFormateado);
+            gananciasCN.setText("$"+numeroFormateado);
+            gananciascninicio.setText("$"+numeroFormateado);
         }
     }
     
@@ -185,11 +190,11 @@ public class Interfaz extends javax.swing.JFrame {
         DecimalFormat formato = new DecimalFormat("#,###.##");
         String numeroFormateado = formato.format((int)t);
         if(tipoCompania == 0){
-            utilidadesDisney.setText(numeroFormateado);
-            utilidadesdcinicio.setText(numeroFormateado);
+            utilidadesDisney.setText("$"+numeroFormateado);
+            utilidadesdcinicio.setText("$"+numeroFormateado);
         }else{
-            utilidadesCN.setText(numeroFormateado);
-            utilidadescninicio.setText(numeroFormateado);
+            utilidadesCN.setText("$"+numeroFormateado);
+            utilidadescninicio.setText("$"+numeroFormateado);
         }
     }
     
@@ -612,27 +617,27 @@ public class Interfaz extends javax.swing.JFrame {
 
         utilidadescninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         utilidadescninicio.setText("0");
-        jPanel1.add(utilidadescninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, -1, -1));
+        jPanel1.add(utilidadescninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, -1, -1));
 
         utilidadesdcinicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         utilidadesdcinicio.setText("0");
-        jPanel1.add(utilidadesdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, -1, -1));
+        jPanel1.add(utilidadesdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, -1, -1));
 
         operativoscninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         operativoscninicio.setText("0");
-        jPanel1.add(operativoscninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, -1, -1));
+        jPanel1.add(operativoscninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, -1, -1));
 
         operativosdcinicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         operativosdcinicio.setText("0");
-        jPanel1.add(operativosdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, -1, -1));
+        jPanel1.add(operativosdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 370, -1, -1));
 
         gananciascninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         gananciascninicio.setText("0");
-        jPanel1.add(gananciascninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 240, -1, -1));
+        jPanel1.add(gananciascninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 240, -1, -1));
 
         gananciasdcinicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         gananciasdcinicio.setText("0");
-        jPanel1.add(gananciasdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 370, -1, -1));
+        jPanel1.add(gananciasdcinicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 370, -1, -1));
 
         estandarcninicio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         estandarcninicio.setText("0");
@@ -2155,32 +2160,8 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
-        // TODO add your handling code here:
-        JFreeChart grafico;
-        
-        JFrame miJFrame = new JFrame("Gráfico de Dispersión");
-        
-        XYSeriesCollection dataset = new XYSeriesCollection();
-        XYSeries cartoonNetwork = new XYSeries("Cartoon Network");
-        XYSeries disneyChannel = new XYSeries("Disney Channel");
-
-        // Agrega datos de utilidades (x: tiempo, y: utilidad)
-        cartoonNetwork.add(Global.getCartoonNetwork().getDrive().getContadorPasoDeLosDias(), Global.getCartoonNetwork().getDrive().getUtilidades());
-        // ... Agrega más datos para cartoon network (datos genericos por los momentos)
-
-        disneyChannel.add(Global.getDisney().getDrive().getContadorPasoDeLosDias(), Global.getDisney().getDrive().getUtilidades());
-        // ... Agrega más datos para disney (datos genericos por los momentos)
-
-        dataset.addSeries(cartoonNetwork);
-        dataset.addSeries(disneyChannel);
-        
-        grafico = ChartFactory.createScatterPlot("Utilidades vs. Tiempo","Tiempo (días)","Utilidad",dataset,PlotOrientation.VERTICAL,true,true,false);
-        
-        ChartPanel chartPanel = new ChartPanel(grafico, false);
-        miJFrame.setContentPane(chartPanel);
-        miJFrame.setSize(800, 600);
-        miJFrame.setVisible(true);
-        
+        //Informacion
+        Global.getGrafico().getVentana().setVisible(true);
         
     }//GEN-LAST:event_jButton54ActionPerformed
 

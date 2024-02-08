@@ -8,6 +8,7 @@ import Companies.Company;
 import Drive.Drive;
 import FunctionsTXT.Funciones;
 import java.util.concurrent.Semaphore;
+import javax.swing.JFrame;
 
 /**
  *
@@ -22,6 +23,7 @@ public class Global {
     private static Semaphore mutexDisney = new Semaphore(1);
     private static Semaphore mutexCartoonNetwork = new Semaphore(1);
     private static Funciones  funciones = new Funciones();
+    private static Grafico grafico = new Grafico();
 
     
     public static Drive getDriveDisney(){
@@ -96,6 +98,20 @@ public class Global {
      */
     public static void setFunciones(Funciones aFunciones) {
         funciones = aFunciones;
+    }
+
+    /**
+     * @return the grafico
+     */
+    public static Grafico getGrafico() {
+        return grafico;
+    }
+
+    /**
+     * @param aGrafico the grafico to set
+     */
+    public static void setGrafico(Grafico aGrafico) {
+        grafico = aGrafico;
     }
     
     

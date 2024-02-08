@@ -665,7 +665,7 @@ public class Drive {
      * @param capitulosEstandarAcumulados the capitulosEstandarAcumulados to set
      */
     public void setCapitulosEstandarAcumulados(int capitulosEstandarAcumulados) {
-        this.capitulosEstandarAcumulados = capitulosEstandarAcumulados;
+        this.capitulosEstandarAcumulados = capitulosEstandarAcumulados;   
     }
 
 }
