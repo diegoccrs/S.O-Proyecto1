@@ -26,7 +26,7 @@ import org.jfree.data.xy.XYSeriesCollection;
 
 /**
  *
- * @author Kevin
+ * @author Diego
  */
 public class Grafico extends Thread{
    private JFrame ventana = new JFrame("Grafica");

@@ -1,12 +1,6 @@
 package EDD;
 
-
-
 import Worker.Worker;
-
-
-
-
 
 public class ListaDoble {
     private Nodo head;//cabeza
