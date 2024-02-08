@@ -19,38 +19,70 @@ public abstract class Worker extends Thread{
     private Company compania;
     private float salario;
     private float salarioAcumulado;
-    private String nombre;
     private Semaphore mutex;
     private int tipo;
-    private float CantidadDeTrabajoPorDia;
+    private float CantidadDeTrabajoPorDia; //esta es la cantidad que se ira acumulando a la variable ACC
     
-    public Worker(int tipo,float salario, String nombre, Semaphore mutex,Company compania) {
+    /*TIPOS DE TRABAJADORES:
+        animadores                = 0            $40
+        guionistas                = 1            $20
+        disenadores de escenarios = 2            $26
+        actores de doblaje        = 3            $16
+        guionistas de plottwist   = 4            $34
+        ensambladores             = 5            $50
+        Project manager           = 6            $40
+        director                  = 7            $60
+    */
+    
+    
+    public Worker(int tipo,float salario, Semaphore mutex,Company compania) {
            this.salarioAcumulado = 0;
            this.salario = salario;
-           this.nombre = nombre;
            this.mutex = mutex;
            this.tipo = tipo;
-           this.CantidadDeTrabajoPorDia = obtainCantidadPorDia();
            this.compania = compania;
+           this.CantidadDeTrabajoPorDia = obtainCantidadPorDia(); //cantidad de trabajo por dia
            
            
     }
     public float obtainCantidadPorDia(){
         Float numero_retorno = null;
-        if(this.getTipo() == 0){
-            numero_retorno = (float) 2.0;
-        }else if(this.getTipo() == 1){
-            numero_retorno = (float) 0.34;
-        }else if(this.getTipo() == 2){
-            numero_retorno = (float) 0.34;
-        }else if(this.getTipo() == 3){
-            numero_retorno = (float) 3.0;
-        }else if(this.getTipo() == 4){
-            numero_retorno = (float) 0.34;
-        }else if(this.getTipo() == 5){
-            numero_retorno = (float) 0.5;
-        }else if(this.getTipo() == 6){
-            numero_retorno = (float) 1.0;
+        if(this.compania.getTipoCompania() == 0){//Disney: se tomara el carnet de Kevin, ultimo numero = 4
+            if(this.getTipo() == 0){
+                numero_retorno = (float) 2.0;
+            }else if(this.getTipo() == 1){
+                numero_retorno = (float) 0.34;
+            }else if(this.getTipo() == 2){
+                numero_retorno = (float) 0.34;
+            }else if(this.getTipo() == 3){
+                numero_retorno = (float) 3.0;
+            }else if(this.getTipo() == 4){
+                numero_retorno = (float) 0.34;
+            }else if(this.getTipo() == 5){
+                numero_retorno = (float) 0.5;
+            }else if(this.getTipo() == 6){
+                numero_retorno = (float) 1.0;
+            }else if(this.getTipo() == 7){
+                numero_retorno = (float) 1;
+            }
+        }else if(this.compania.getTipoCompania() == 1){//Cartoon network: se tomara el carnet de Diego, ultimo numero = 6
+            if(this.getTipo() == 0){
+                numero_retorno = (float) 1.0;
+            }else if(this.getTipo() == 1){
+                numero_retorno = (float) 0.25;
+            }else if(this.getTipo() == 2){
+                numero_retorno = (float) 0.25;
+            }else if(this.getTipo() == 3){
+                numero_retorno = (float) 5.0;
+            }else if(this.getTipo() == 4){
+                numero_retorno = (float) 0.34;
+            }else if(this.getTipo() == 5){
+                numero_retorno = (float) 0.5;
+            }else if(this.getTipo() == 6){
+                numero_retorno = (float) 0.5;
+            }else if(this.getTipo() == 7){
+                numero_retorno = (float) 1;
+            }
         }
         
         return numero_retorno;
@@ -85,20 +117,6 @@ public abstract class Worker extends Thread{
      */
     public void setSalarioAcumulado(float salarioAcumulado) {
         this.salarioAcumulado = salarioAcumulado;
-    }
-
-    /**
-     * @return the nombre
-     */
-    public String getNombre() {
-        return nombre;
-    }
-
-    /**
-     * @param nombre the nombre to set
-     */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     /**

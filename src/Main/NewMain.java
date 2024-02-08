@@ -15,6 +15,9 @@ import java.util.concurrent.Semaphore;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import Ventanas.Global;
+import Ventanas.Grafico;
+import Worker.Director;
 /**
  *
  * @author Diego
@@ -26,44 +29,37 @@ public class NewMain {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        //Interfaz inicio = new Interfaz();
-        //inicio.setLocationRelativeTo(null);
-        //inicio.show();
         ManejadorInterfaz.getInterfaz().show();
-        Semaphore mutex = new Semaphore(1);
-        Drive drive = new Drive(7);
-        Company compania = new Company(drive,0,1000);
-     
-        Developer trabajador1 = new Developer(0,240, "perez", mutex,compania);
-        Developer trabajador2 = new Developer(1,100, "Juan", mutex,compania);
-        Developer trabajador3 = new Developer(2,300, "Julián", mutex,compania);
-        Developer trabajador4 = new Developer(3,300, "alvaro", mutex,compania);
-        Developer trabajador5 = new Developer(4,300, "pepe", mutex,compania);
-        Assembler ensamblador1 = new Assembler(5,40,"albeto",mutex,compania);
-        ProjectManager pm = new ProjectManager(6,240,"pedro",mutex,compania);
         
-        //compania..insertBegin(trabajador1);
-        //compania.getDevelopers().insertBegin(ensamblador1);
-        //System.out.println(compania.getDevelopers().getHead().getNext().getElement().getType());
-        //System.out.println(compania.getDevelopers().getHead().getElement().getType());
+        //Creamos la compania Disney y la cargamos a Global
+        Company disney = new Company(Global.getDriveDisney(),0);
+        Global.setDisney(disney);
+        //Creamos la compania Cartoon Network y la cargamos a Global
+        Company cartoonNetwork = new Company(Global.getDriveCartoonNetwork(),1);
+        Global.setCartoonNetwork(cartoonNetwork);
         
-        trabajador1.start();
-        trabajador2.start();
-        trabajador3.start();
-        trabajador4.start();
-        trabajador5.start();
-        ensamblador1.start();
+        //Creamos los semaforos y los cargamos  a Global
+        Semaphore mutexDisney = new Semaphore(1);
+        Semaphore mutexCN = new Semaphore(1);
+        Global.setMutexCartoonNetwork(mutexCN);
+        Global.setMutexDisney(mutexDisney);
+        
+        Global.getFunciones().leer_txt();
+        
+        
+        //Creamos y ponemos a trabjar los PM de ambas empresas
+        ProjectManager pm = new ProjectManager(6,40,mutexDisney,       Global.getDisney());
+        ProjectManager pm2 = new ProjectManager(6,40,mutexDisney,Global.getCartoonNetwork());
         pm.start();
+        pm2.start();
         
-        //Creacion de archivo TXT 
-        try {
-            File file = new File("datos.txt");
-            FileWriter fileWriter = new FileWriter(file, true);
-            fileWriter.write("Duración en segundos del dia: \nDeadline de entrega: \nCantidad inicial  de trabajadores: \nCantidad inicial de ensambladores: ");
-            fileWriter.close();
-        } catch (IOException ex) {
-            System.out.println(ex);
-        }
+        //Creamos y ponemos a trabjar los DIRECTORES de ambas empresas
+        Director directorDisney = new Director(7,60,mutexDisney,Global.getDisney());
+        directorDisney.start();
+        Director directorCN = new Director(7,60,mutexCN,Global.getCartoonNetwork());
+        directorCN.start();
+        
+        Global.getGrafico().start();
         
     }
     

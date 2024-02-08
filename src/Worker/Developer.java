@@ -18,8 +18,8 @@ import java.util.logging.Logger;
 public class Developer extends Worker{
     float salarioAcc;
     float acc;
-    public Developer(int tipo,float salario, String nombre, Semaphore mutex, Company compania) {
-        super(tipo,salario, nombre, mutex,compania);
+    public Developer(int tipo,float salario, Semaphore mutex, Company compania) {
+        super(tipo,salario, mutex,compania);
         this.salarioAcc = 0;
         this.acc = 0;
     }
@@ -40,6 +40,13 @@ public class Developer extends Worker{
     
     public void obtainSalary(){
         this.salarioAcc += this.getSalario()*24;
+        try {
+            this.getCompania().getDrive().getSalarioAccMutex().acquire(); //wait
+            this.getCompania().getDrive().addSalary(this.getTipo(), this.getSalario()*24,this.getCompania().getTipoCompania());
+            this.getCompania().getDrive().getSalarioAccMutex().release();// signal
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Developer.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     
@@ -48,14 +55,10 @@ public class Developer extends Worker{
             try {
                 if (this.acc >= 1){
                     this.getMutex().acquire(); //wait
-                    this.getCompania().getDrive().addPart(this.getTipo());//critica
+                    this.getCompania().getDrive().addPart(this.getTipo(),this.getCompania().getTipoCompania());//critica
                     this.getMutex().release();// signal
                     this.acc = 0;
                 }
-                
-                this.getCompania().getDrive().getSalarioAccMutex().acquire(); //wait
-                this.getCompania().getDrive().addSalary(this.getTipo(), this.getSalario());
-                this.getCompania().getDrive().getSalarioAccMutex().release();// signal
             } catch (InterruptedException ex) {
                 Logger.getLogger(Developer.class.getName()).log(Level.SEVERE, null, ex);
             } 
