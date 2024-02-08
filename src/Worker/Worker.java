@@ -176,5 +176,3 @@ public abstract class Worker extends Thread{
     }
 
 }
-
-

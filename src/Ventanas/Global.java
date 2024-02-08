@@ -113,7 +113,4 @@ public class Global {
     public static void setGrafico(Grafico aGrafico) {
         grafico = aGrafico;
     }
-    
-    
-
 }

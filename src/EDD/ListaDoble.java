@@ -1,12 +1,6 @@
 package EDD;
 
-
-
 import Worker.Worker;
-
-
-
-
 
 public class ListaDoble {
     private Nodo head;//cabeza
@@ -215,7 +209,5 @@ public class ListaDoble {
             System.out.println(aux.getElement());
             aux = aux.getPrevious();
         }
-    }
-    
-    
+    } 
 }

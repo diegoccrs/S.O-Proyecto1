@@ -62,5 +62,4 @@ public class NewMain {
         Global.getGrafico().start();
         
     }
-    
 }

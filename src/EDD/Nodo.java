@@ -1,11 +1,6 @@
 package EDD;
 
-
-
 import Worker.Worker;
-
-
-
 
 public class Nodo {
     private Worker element;
@@ -47,6 +42,4 @@ public class Nodo {
     public void setPrevious(Nodo previous) {
         this.previous = previous;
     }
-    
-    
 }

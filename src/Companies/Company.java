@@ -188,6 +188,5 @@ public class Company {
      */
     public void setDuracionDia(int duracionDia) {
         this.duracionDia = duracionDia;
-    }
-    
+    } 
 }
